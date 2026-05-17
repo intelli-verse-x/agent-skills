@@ -7,14 +7,16 @@ metadata:
     app.kubernetes.io/managed-by: kagent
     intelli-verse-x/scope: evaluation
 ---
-# RBAC: kagent's controller gets read-only watch over content-factory
-# plus write access ONLY to its own kagent-eval namespace. Tightens
-# the default helm chart which gives cluster-wide access.
+# RBAC: kagent's controller gets read-only watch over the Content
+# Factory namespace plus write access ONLY to its own kagent-eval
+# namespace. Tightens the default helm chart which gives cluster-wide
+# access. The target namespace is patched in by install.sh from the
+# CF_NAMESPACE env var (default: content-factory; this cluster: aicart).
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: kagent-cf-reader
-  namespace: content-factory
+  namespace: __CF_NAMESPACE__
 rules:
   - apiGroups: [""]
     resources: ["pods", "services", "configmaps", "events", "persistentvolumeclaims"]
@@ -39,7 +41,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: kagent-cf-reader
-  namespace: content-factory
+  namespace: __CF_NAMESPACE__
 subjects:
   - kind: ServiceAccount
     name: kagent-controller

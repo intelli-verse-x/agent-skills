@@ -1,6 +1,6 @@
-# kagent — evaluation kit for `content-factory` namespace
+# kagent — evaluation kit for the Content Factory namespace
 
-This kit is a **scoped evaluation** of [kagent](https://github.com/kagent-dev/kagent) (CNCF, Apache 2.0) before rolling cluster-wide. It only touches the `content-factory` namespace and a single `kagent-eval` namespace for kagent's own controller / engine / UI.
+This kit is a **scoped evaluation** of [kagent](https://github.com/kagent-dev/kagent) (CNCF, Apache 2.0) before rolling cluster-wide. It only touches the Content Factory namespace (default `content-factory`, set `CF_NAMESPACE=aicart` for the intelli-verse-x EKS cluster) and a single `kagent-eval` namespace for kagent's own controller / engine / UI.
 
 We use it for:
 
@@ -36,8 +36,17 @@ We use it for:
 
 ```bash
 export OPENAI_API_KEY=sk-...
+
+# Default cluster (namespace 'content-factory'):
 ./scripts/install.sh
+
+# intelli-verse-x EKS cluster (ai-cart-auto-cluster):
+CF_NAMESPACE=aicart ./scripts/install.sh
 ```
+
+The installer fails fast if `${CF_NAMESPACE}` does not exist in the
+current `kubectl` context, so you cannot accidentally bind RBAC to a
+non-existent namespace.
 
 The installer:
 1. Creates the `kagent-eval` namespace.

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # One-shot installer for the kagent eval kit. Scoped to a single
-# `kagent-eval` namespace; only touches `content-factory` via RBAC.
+# `kagent-eval` namespace; only touches the Content Factory namespace
+# (default: content-factory; override with CF_NAMESPACE=aicart for the
+# intelli-verse-x EKS cluster) via read-only RBAC.
 #
 # Prereqs: kubectl context set, helm 3.x, $OPENAI_API_KEY exported.
 
@@ -8,6 +10,8 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 KIT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+CF_NAMESPACE="${CF_NAMESPACE:-content-factory}"
 
 if [[ -z "${OPENAI_API_KEY:-}" ]]; then
   echo "ERROR: OPENAI_API_KEY env var not set" >&2
@@ -22,8 +26,15 @@ if ! command -v helm >/dev/null 2>&1; then
   exit 1
 fi
 
+if ! kubectl get ns "${CF_NAMESPACE}" >/dev/null 2>&1; then
+  echo "ERROR: target namespace '${CF_NAMESPACE}' does not exist in the current cluster." >&2
+  echo "       Set CF_NAMESPACE to an existing namespace (e.g. CF_NAMESPACE=aicart)." >&2
+  exit 1
+fi
+
 CTX="$(kubectl config current-context)"
 echo "Installing kagent eval into context: ${CTX}"
+echo "Content Factory namespace (read-only scope): ${CF_NAMESPACE}"
 echo "Press Ctrl-C in 5s to abort..."
 sleep 5
 
@@ -39,8 +50,9 @@ helm upgrade --install kagent kagent/kagent \
   --timeout 5m 2>&1 | sed 's/^/    /'
 
 echo
-echo "== Step 2: Apply RBAC (scoped read of content-factory) =="
-kubectl apply -f "${KIT_DIR}/01-namespace-eval.yaml" 2>&1 | sed 's/^/    /'
+echo "== Step 2: Apply RBAC (scoped read of ${CF_NAMESPACE}) =="
+sed "s|__CF_NAMESPACE__|${CF_NAMESPACE}|g" "${KIT_DIR}/01-namespace-eval.yaml" \
+  | kubectl apply -f - 2>&1 | sed 's/^/    /'
 
 echo
 echo "== Step 3: Apply OpenAI secret (key from env) =="
