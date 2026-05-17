@@ -1,0 +1,50 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kagent-eval
+  labels:
+    app.kubernetes.io/managed-by: kagent
+    intelli-verse-x/scope: evaluation
+---
+# RBAC: kagent's controller gets read-only watch over content-factory
+# plus write access ONLY to its own kagent-eval namespace. Tightens
+# the default helm chart which gives cluster-wide access.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: kagent-cf-reader
+  namespace: content-factory
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "services", "configmaps", "events", "persistentvolumeclaims"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["apps"]
+    resources: ["deployments", "statefulsets", "daemonsets", "replicasets"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["autoscaling"]
+    resources: ["horizontalpodautoscalers"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["keda.sh"]
+    resources: ["scaledobjects", "scaledjobs"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["policy"]
+    resources: ["poddisruptionbudgets"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: [""]
+    resources: ["pods/log"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: kagent-cf-reader
+  namespace: content-factory
+subjects:
+  - kind: ServiceAccount
+    name: kagent-controller
+    namespace: kagent-eval
+roleRef:
+  kind: Role
+  name: kagent-cf-reader
+  apiGroup: rbac.authorization.k8s.io

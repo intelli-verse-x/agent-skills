@@ -1,0 +1,11 @@
+---
+apiVersion: kagent.dev/v1alpha1
+kind: ToolServer
+metadata:
+  name: grafana-cf
+  namespace: kagent-eval
+spec:
+  type: http
+  url: http://grafana.monitoring.svc.cluster.local:3000
+  # For dashboard listing + screenshotting only; no edits during eval.
+  readOnly: true

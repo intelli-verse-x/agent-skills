@@ -1,0 +1,57 @@
+# Drop this block into ~/.hermes/config.yaml (under the existing
+# top-level keys). install-config.sh does the merge for you.
+
+mcp_servers:
+
+  # Content Factory FastMCP wrapper around the FastAPI control plane.
+  # Exposes ~50 trigger_<pipeline> tools + get_task_status + brand-kit
+  # + analytics. See content-factory/mcp_server/server.py.
+  content-factory:
+    command: "python"
+    args: ["-m", "mcp_server.server"]
+    cwd: "${IVX_CONTENT_FACTORY_DIR:-${HOME}/dev/content-factory}"
+    env:
+      CF_API_URL: "${CF_API_URL:-http://localhost:8001}"
+      CF_API_KEY: "${CF_API_KEY:-}"
+      DIRECTOR_URL: "${DIRECTOR_URL:-http://localhost:8000}"
+
+  # Provider-agnostic media generation (image / video / tts / music /
+  # motion). Routes to ElevenLabs / FAL / Replicate / Kling / Veo /
+  # Beatoven / HY-Motion based on availability.
+  content-factory-media:
+    command: "python"
+    args: ["-m", "media_mcp_server.server"]
+    cwd: "${IVX_CONTENT_FACTORY_DIR:-${HOME}/dev/content-factory}"
+
+  # Firecrawl — the canonical web/research layer. Used by ASO ideation
+  # (via signals_provider.set_firecrawl), by researcher profiles, by
+  # the github-sheriff / quality-review gastown plugins.
+  firecrawl:
+    command: "firecrawl"
+    args: ["mcp"]
+
+  # Gas Town swarm — once intelli-verse-x/gastown PR #7 is merged,
+  # this enables Hermes kanban workers to call gt_sling, gt_show,
+  # gt_mail_send, gt_nudge, gt_convoy_create, etc.
+  gastown:
+    url: "${GASTOWN_MCP_URL:-http://localhost:7878/mcp}"
+
+  # n8n workflow automation (already in use across content-factory).
+  n8n:
+    url: "https://n8n.intelli-verse-x.ai/mcp-server/http"
+    headers:
+      Authorization: "Bearer ${N8N_MCP_TOKEN}"
+
+# Cheaper model for subagents (delegate_task children) — keep the
+# parent on whatever the user picked. ~5-10x cost reduction on fan-out
+# work like council voting and parallel research.
+delegation:
+  model: "google/gemini-flash-2.0"
+  max_concurrent_children: 6
+
+# Kanban dispatcher tuning for the intelli-verse-x scale of work.
+kanban:
+  dispatch_in_gateway: true
+  dispatch_interval_seconds: 30      # default 60; halve for snappier swarm
+  failure_limit: 2                   # auto-block after 2 spawn failures
+  reclaim_after_seconds: 600         # reclaim crashed workers after 10 min

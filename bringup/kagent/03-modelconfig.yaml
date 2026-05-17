@@ -1,0 +1,18 @@
+---
+# Default model for all eval agents. gpt-4.1-mini keeps cost low; bump
+# to gpt-4.1 or claude-opus-4 for the alert-triage agent if quality
+# matters more than $$.
+apiVersion: kagent.dev/v1alpha1
+kind: ModelConfig
+metadata:
+  name: cf-eval-default
+  namespace: kagent-eval
+spec:
+  provider: openai
+  model: gpt-4.1-mini
+  apiKeySecretRef:
+    name: kagent-openai
+    key: api-key
+  # Conservative limits — eval, not production.
+  temperature: 0.2
+  maxTokens: 4096

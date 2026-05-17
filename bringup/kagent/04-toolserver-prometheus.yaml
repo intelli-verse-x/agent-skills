@@ -1,0 +1,20 @@
+---
+# Points kagent at the existing in-cluster Prometheus. Update the
+# `url` to match your actual Prometheus service DNS (typical defaults
+# below; the intelli-verse-kube-infra/content-factory/monitoring.yaml
+# stack uses a Prometheus operator setup so the URL may differ).
+apiVersion: kagent.dev/v1alpha1
+kind: ToolServer
+metadata:
+  name: prometheus-cf
+  namespace: kagent-eval
+spec:
+  type: mcp
+  # If your Prometheus is exposed via an MCP server (recommended), set
+  # url to its endpoint. If not, kagent's built-in Prometheus tools
+  # work with the raw HTTP API too — set type: http and url to the
+  # Prometheus API.
+  url: http://prometheus-server.monitoring.svc.cluster.local:9090
+  # Restrict which Prometheus metric queries this ToolServer can run.
+  # The eval agents only need read-only PromQL.
+  readOnly: true
