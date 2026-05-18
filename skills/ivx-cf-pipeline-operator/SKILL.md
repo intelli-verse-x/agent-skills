@@ -86,6 +86,42 @@ Track: `status, progress, message, error, worker_id`.
 
 Cadence floor is 60s. Do not poll faster.
 
+### 1a. TURN BUDGET — self-respawn (mandatory)
+
+The hermes worker has a `max_turns` cap (default 60) and each WATCH iteration
+burns 2–3 turns. A full CF pipeline can take 30–60 min, which far exceeds one
+worker's turn budget. **If you naively loop, you will silently exit rc=0 at the
+turn cap without calling `kanban_complete()` or `kanban_block()` — protocol
+violation, card auto-blocks, no progress comment written.**
+
+To prevent this, count your WATCH iterations and self-respawn before you run
+out of turns:
+
+```python
+WATCH_BUDGET_POLLS = 6   # ≈ 6 minutes of in-process polling
+
+# inside your WATCH loop:
+if polls_in_this_run >= WATCH_BUDGET_POLLS and status not in ("completed", "failed", "error"):
+    kanban_heartbeat(note=f"progress={progress}%, message='{message}', polls={polls_in_this_run}")
+    kanban_block(reason=(
+        f"watch-respawn: pipeline still {status} at {progress}%, "
+        f"burned {polls_in_this_run} polls this turn-window. "
+        f"Unblock to resume polling (the dispatcher respawns me with a fresh budget)."
+    ))
+    # STOP — do not call kanban_complete; the next respawn will continue WATCH.
+    sys.exit(0)
+```
+
+The kanban dispatcher reclaims `blocked` cards on a timer (`reclaim_after_seconds`
+in `~/.hermes/config.yaml`, default 600s). To get fast respawn instead of
+waiting for reclaim, the dispatcher card or a sibling skill posts an
+`hermes kanban unblock <id>` comment on a schedule — or the human operator
+unblocks once they see "watch-respawn:" in the block reason. Either way,
+respawn is the correct lifecycle, NOT silent exit.
+
+Heartbeat once per poll so observers can see live progress without opening
+the workspace.
+
 ### 2. DIAGNOSE
 
 Pull worker logs. The status response includes `worker_id` like `worker-<podname>-<N>`. Strip the trailing `-N` to get the pod name.
