@@ -26,6 +26,11 @@ right subfolders.
 | [`ivx-game-trailer`](skills/ivx-game-trailer/) | End-to-end game trailer (storyboard → animatic → audio → final) via Content Factory | Cursor, Hermes |
 | [`ivx-k8s-gpu-rollout`](skills/ivx-k8s-gpu-rollout/) | Safe rollout of GPU sidecar manifests in `intelli-verse-kube-infra/content-factory/` (comfyui, vllm-coder-pro, musetalk, …) via kagent | Cursor, kagent, Hermes |
 | [`ivx-gastown-sling`](skills/ivx-gastown-sling/) | Dispatch coding work across the gastown swarm — pick a polecat, sling a bead, monitor convoy | Cursor, Hermes, Mayor |
+| [`ivx-cf-run-dispatcher`](skills/ivx-cf-run-dispatcher/) | Trigger a CF pipeline run via public API + post an operator kanban card so a swarm worker drives it to completion | Hermes (cron, webhooks) |
+| [`ivx-cf-pipeline-operator`](skills/ivx-cf-pipeline-operator/) | Own a CF run end-to-end: watch API, pull EKS pod logs on stalls, diagnose, open fix PRs, watch deploy, retry, iterate until success | Hermes (1 worker per active run) |
+| [`ivx-cf-run-improver`](skills/ivx-cf-run-improver/) | After a CF run completes, harvest prompts/characters/cost/quality, diff vs registry, open prompt + character PRs, file improver CSV row | Hermes (1 worker per completed run) |
+| [`ivx-cf-prompt-librarian`](skills/ivx-cf-prompt-librarian/) | Weekly maintenance: 30-day metric roll-up, 7-dimension audit score, version promotions, registry pruning, weekly digest PR with 30/60/90-day plan | Hermes (weekly cron, Sun 03:00 UTC) |
+| [`ivx-cf-context-bootstrap`](skills/ivx-cf-context-bootstrap/) | Apply Intelliverse-X-AI context-engineering pattern to a target repo: `.cursorrules` + `AGENT.md` + `.cursor/{HOT_CONTEXT,ANTI_PATTERNS,DECISION_TREE,...}.md` + 26 command rules | Hermes, Cursor (one-shot per repo) |
 
 ## Format
 
