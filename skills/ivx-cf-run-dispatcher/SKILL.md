@@ -27,22 +27,28 @@ tags:       extra tags to add to the CF run       # optional
 | CF API | `https://content-factory.intelli-verse-x.ai/api` |
 | Auth | `X-API-Key: $CF_API_KEY` (already in your `~/.hermes/.env`) |
 | Trigger path | `POST /api/pipelines/{pipeline}` |
+| Task lookup | `GET  /api/pipelines/tasks/{task_id}`  ← NOT `/api/tasks/{id}` or `/api/pipelines/runs/{id}` (both 404) |
+| OpenAPI spec | `GET  /openapi` (returns JSON; NOT `/openapi.json`, that returns the UI HTML) |
+| Queue status | `GET  /api/pipelines/queue/status` (may return 500 transiently — do NOT treat as a hard preflight failure) |
 
 ## The dispatch flow (one-shot, no loop)
 
 ### 1. PREFLIGHT
 
 ```bash
-# Verify the pipeline endpoint exists (avoids 404 on dispatch)
+# Verify the pipeline endpoint exists (avoids 404 on dispatch).
+# IMPORTANT: the spec lives at /openapi (NOT /openapi.json — that returns the SPA HTML).
 curl -fsS -H "X-API-Key: $CF_API_KEY" \
-  "https://content-factory.intelli-verse-x.ai/openapi.json" \
+  "https://content-factory.intelli-verse-x.ai/openapi" \
   | jq -e ".paths[\"/api/pipelines/$PIPELINE\"].post" >/dev/null \
   || { echo "FAIL: pipeline $PIPELINE not in CF API"; exit 1; }
 
-# Verify we can auth (try a cheap GET)
+# Verify we can auth. /api/pipelines/queue/status flakes with 500 occasionally,
+# so the canonical auth probe is the openapi fetch above + a HEAD on the trigger.
 curl -fsS -o /dev/null -w "%{http_code}" \
   -H "X-API-Key: $CF_API_KEY" \
-  "https://content-factory.intelli-verse-x.ai/api/pipelines/queue/status" | grep -qE "^[23]" \
+  -X OPTIONS "https://content-factory.intelli-verse-x.ai/api/pipelines/$PIPELINE" \
+  | grep -qE "^[234]" \
   || { echo "FAIL: CF API auth or service down"; exit 1; }
 ```
 
