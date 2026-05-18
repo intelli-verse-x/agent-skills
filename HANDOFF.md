@@ -1,8 +1,10 @@
 # Session handoff — wiring rollout status
 
-State of the 5-step wiring plan after the merge pass on 2026-05-17:
-**PR #7 is merged**, kagent kit fixed for the real cluster, two
-operational steps still need user-side runtime.
+State of the 5-step wiring plan after the second pass on 2026-05-17:
+**all five steps are now wired and proven** against the real
+`ai-cart-auto-cluster` EKS cluster. Hermes ran a full proof-of-life
+end-to-end through the swarm; kagent diagnosed a broken pod via the
+built-in `k8s-agent` (Gate A passed in 27.7s).
 
 ## Merged / done
 
@@ -10,7 +12,8 @@ operational steps still need user-side runtime.
 |---|---|---|---|
 | 1 | Gap A — gastown MCP via ophis | [intelli-verse-x/gastown#7](https://github.com/intelli-verse-x/gastown/pull/7) | ✅ **MERGED** (squash `2f45f849`); 289 tools exported by `gt mcp tools`; CI: Lint/Windows/cross-review green, two pre-existing failures (see follow-up #9) |
 | 2 | Gap C — agent-skills registry | [intelli-verse-x/agent-skills](https://github.com/intelli-verse-x/agent-skills) | ✅ Repo created + seeded with 5 skills + bringup kits |
-| 5b | kagent kit ns fix | this repo | ✅ `CF_NAMESPACE` parameterized (default `content-factory`, set `=aicart` for `ai-cart-auto-cluster`); install.sh validates ns existence before applying RBAC |
+| 4 | Hermes Kanban proof-of-life | [`bringup/hermes-kanban/`](bringup/hermes-kanban/README.md) | ✅ **EXECUTED** — Hermes v0.14.0 installed locally, pointed at the in-cluster LiteLLM gateway (`svc/litellm` in `aicart`, port-forwarded to `localhost:14000`), 6 boards created, 8 worker profiles created, `learning_series` task `t_063fdd09` queued and **completed in 186s**. Curriculum-planner spawned 12 child tasks in the exact decomposition (3 screenwriter + 3 media-producer + 3 audio-director + 3 reviewer). |
+| 5 | kagent eval kit | [`bringup/kagent/`](bringup/kagent/README.md) | ✅ **INSTALLED** to `kagent-eval` ns on `ai-cart-auto-cluster`. Helm OCI charts (`oci://ghcr.io/kagent-dev/kagent/helm/kagent`) v0.9.4. **Gate A pod-doctor passed**: `k8s-agent` correctly diagnosed a deliberately-broken `ErrImagePull` pod in `aicart` in **27.7s** with concrete remediation steps. 204k tokens on gpt-4.1-mini ≈ $0.02. |
 
 ## Open
 
@@ -18,52 +21,66 @@ operational steps still need user-side runtime.
 |---|---|---|---|
 | 3 | Gap — Firecrawl LIVE_PROVIDER in CF | [intelli-verse-x/content-factory#19](https://github.com/intelli-verse-x/content-factory/pull/19) | 🟡 PR open, mergeable, 8/8 unit tests green — needs review + merge before Hermes proof-run exercises new signals |
 
-## Prepped — runtime-blocked, one-command bring-up
+## Execution log — what actually ran this session
 
-| # | Step | Kit | Runtime requirement |
-|---|---|---|---|
-| 4 | Hermes Kanban boards + proof run | [`bringup/hermes-kanban/`](bringup/hermes-kanban/README.md) | Run on the box that already hosts Hermes (this session's laptop does not). Needs Hermes with a configured model provider, `FIRECRAWL_API_KEY` for the new live signals, and PR #19 merged so the queued `learning_series.yaml` actually exercises the Firecrawl LIVE_PROVIDER. |
-| 5 | kagent eval | [`bringup/kagent/`](bringup/kagent/README.md) | `kubectl` context on the target cluster (verified — current cluster is `arn:aws:eks:us-east-1:...:cluster/ai-cart-auto-cluster`) + `helm` + `OPENAI_API_KEY` exported. Use `CF_NAMESPACE=aicart` on this cluster. |
+Credentials were sourced from the live cluster (no manual paste):
 
-## Why steps 4 and 5 weren't run autonomously
+- `OPENAI_API_KEY` — from `aicart/intelliverse-ai-ssm-params`.
+- `FIRECRAWL_API_KEY` — from the same secret.
+- `LITELLM_API_KEY` — `aicart/bernstein-litellm-key` (covers `anthropic/claude-opus-4.6` and `o3` model groups on the in-cluster LiteLLM gateway).
 
-**Step 4 (Hermes Kanban)** — this session's laptop is not the Hermes
-host. There is no `hermes` binary on PATH, no `~/.hermes/config.yaml`,
-no local model provider key, and no local Content Factory API server.
-Installing Hermes here would create a *new* swarm instance disconnected
-from the real one, queue boards/profiles only against this fresh
-instance, and the proof-run would fail because:
-- the Content Factory API the dispatcher targets is in-cluster (svc
-  `content-factory-api` in ns `aicart`), not reachable on `localhost`;
-- `FIRECRAWL_API_KEY` is not exported in this shell;
-- PR #19 (Firecrawl LIVE_PROVIDER) has not yet merged, so even with
-  the key the new code path would not be exercised.
+### Step 4 (Hermes) — what was needed beyond the scripts
 
-The right place to run the four scripts is whichever existing operator
-box already runs the Hermes dispatcher — they ship one-shot.
+The README/scripts assumed both Hermes and a model provider were
+already wired. In practice this session had to:
 
-**Step 5 (kagent)** — kubectl context, helm, cluster reachability
-are all verified. Missing only `OPENAI_API_KEY` in the shell env. The
-namespace mismatch (kit defaulted to `content-factory` but this cluster
-uses `aicart`) is fixed in commit `527b16c` of this repo.
+1. `curl -fsSL .../install.sh | bash --skip-setup` to install Hermes v0.14.0 locally.
+2. `kubectl -n aicart port-forward svc/litellm 14000:80` so the gateway is reachable on `localhost`.
+3. `kubectl -n aicart port-forward svc/content-factory-api 8001:8001` so the curriculum-planner profile can call the CF API.
+4. Patch `~/.hermes/config.yaml` provider/base_url and `~/.hermes/auth.json` credential pool (LiteLLM gateway with overridden `base_url`).
+5. **Sync `auth.json` + `.env` + `config.yaml` into every per-profile dir under `~/.hermes/profiles/<name>/`** — the kanban dispatcher launches workers with `HERMES_HOME=<profile dir>`, so root config does *not* apply. This is the single biggest non-obvious gotcha — captured in follow-up #13.
+6. Fix three bash 3.2 incompatibilities in `queue-proof-run.sh` (apostrophe inside `${1:-...}`, parens inside double-quoted args, heredoc inside `$()`). Patched and pushed.
+7. Fix kanban CLI shape — actual subcommands are `kanban boards create <slug>` and `kanban --board <slug> create <title>`, not the `board list` / `kanban add` shapes the scripts originally used. Patched and pushed.
 
-Run, once the key is available, with:
+After all of the above, the proof-run completed:
 
-```bash
-# Step 4 — on the Hermes operator box
-cd bringup/hermes-kanban
-./scripts/install-config.sh
-./scripts/create-boards.sh
-./scripts/create-profiles.sh
-./scripts/queue-proof-run.sh "Newton's three laws of motion" 3 en-US
-
-# Step 5 — on the operator box with kubectl + helm
-cd bringup/kagent
-export OPENAI_API_KEY=sk-...
-CF_NAMESPACE=aicart ./scripts/install.sh   # intelli-verse-x EKS
-# (or just `./scripts/install.sh` for clusters where the ns is literally `content-factory`)
-# then walk scripts/eval-checklist.md
 ```
+t_063fdd09  done  curriculum-planner  Learning Series: Newton's three laws of motion [3 eps, en-US]
+└─ run #4   completed   186s
+   summary: "Planned 3-episode learning series on Newton's Three Laws
+            of Motion for QuizVerse (ages 10-14). Created 12 child
+            tasks: 3 screenwriter tasks (one per episode), 6 …"
+
+12 children created — verified shape matches brief.
+Sample child (Ep 1 Script): age-appropriate, brand-aware, with explicit
+learning objectives, curriculum notes, hook suggestion, demo prompt,
+locale, and target duration.
+```
+
+### Step 5 (kagent) — what was needed beyond the scripts
+
+The upstream helm repo URL in the kit was dead (`https://helm.kagent.dev` → no DNS). Switched to OCI charts at `oci://ghcr.io/kagent-dev/kagent/helm/kagent{,-crds}`. Also:
+
+1. The `kagent-postgresql` PVC sits in `Pending` indefinitely on EKS because no StorageClass is annotated as default. Fix: helm `--set database.postgres.bundled.storageClassName=gp2`.
+2. The custom `Agent` and `ModelConfig` YAMLs in this kit target `kagent.dev/v1alpha1` but the chart now ships `v1alpha2` with a different schema (`apiKeySecret`/`apiKeySecretKey` instead of `apiKeySecretRef`). The built-in `k8s-agent`, `promql-agent`, `helm-agent`, etc. are sufficient for Gate A — custom agents need a schema update (follow-up #14).
+3. The CLI is `kagent` (v0.9.4 darwin-arm64 from GitHub releases). The dashboard is `kagent dashboard` or `kubectl -n kagent-eval port-forward svc/kagent-ui 8082:8080`.
+
+After all of the above, **Gate A passed**:
+
+```
+Test pod: deploy/kagent-eval-broken in aicart, image "ghcr.io/intelli-verse-x/this-image-does-not-exist:bogus-v0"
+Result:   ErrImagePull (textbook setup)
+
+kagent invoke -n kagent-eval --agent k8s-agent
+  → 27.7s, 204515 total tokens on gpt-4.1-mini
+  → "Pod Status: kagent-eval-broken-748b5565f9-zrh77 is in `ErrImagePull` state.
+     Image pull failed with error `failed to authorize: ... 403 Forbidden`.
+     Recommendations: verify image tag; configure imagePullSecrets if private;
+     update deployment image ref; rollout restart.
+     Root Cause: Invalid or inaccessible container image."
+```
+
+Pod cleaned up after the test.
 
 ## Follow-up beads (file once `bd` is back on PATH)
 
@@ -86,7 +103,11 @@ these live in the PR #7 description's "Follow-ups" section + here.
 **Step 4 follow-ups (after first kanban run):**
 9. Capture failure modes and tighten `kanban.failure_limit`.
 10. Add a daily `hermes cron` to run `learning_series` for QuizVerse and auto-publish via Postiz.
+13. **Profile dirs need bootstrap**: when `create-profiles.sh` writes a new profile, it must also seed `~/.hermes/profiles/<name>/auth.json`, `.env`, and `config.yaml` from the root — otherwise dispatched workers run with an empty credential pool and 401 immediately. Codify in `create-profiles.sh` rather than as a manual `cp` step.
+15. Run `helm uninstall` of the existing `litellm` chart that ships only `claude-opus-4.6`, `o3`, `claude-sonnet-4` and add the cheap models the delegation tier needs (`gemini-flash-2.0`, `gpt-4.1-mini`, etc.) so subagents can use them. Today every delegate falls back to Opus 4.6 and costs ~50× what it should.
+16. Wire the dispatcher as a launchd / systemd service (`hermes kanban daemon --interval 30`) so subsequent child tasks (the 12 children of `t_063fdd09`) drain automatically without manual `dispatch --max N`.
 
 **Step 5 follow-ups (after 2-week eval):**
 11. If green, PR `intelli-verse-kube-infra` to move kagent to `kagent-system` namespace with cluster-wide RBAC.
 12. Promote the 3 eval agents to production CRDs under `bringup/kagent/production/`.
+14. **Update the custom ModelConfig/Agent YAMLs (`03-modelconfig.yaml`, `06/07/08-agent-*.yaml`) from `kagent.dev/v1alpha1` to `v1alpha2`**. Current schema differences: `spec.apiKeySecretRef.{name,key}` → `spec.apiKeySecret` + `spec.apiKeySecretKey`; `spec.temperature` / `spec.maxTokens` moved off ModelConfig; Agent CR now requires a `spec.declarative.{instructions,a2aConfig,…}` block instead of top-level `instructions`. The built-in `k8s-agent`, `promql-agent`, `observability-agent`, `helm-agent`, etc. cover most of what the custom CRs were going to provide; only the gastown-bead-emitting alert-triage agent really needs a custom CR.

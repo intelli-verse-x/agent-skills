@@ -39,15 +39,24 @@ echo "Press Ctrl-C in 5s to abort..."
 sleep 5
 
 echo
-echo "== Step 1: Add kagent helm repo + install controller =="
-helm repo add kagent https://helm.kagent.dev 2>&1 | sed 's/^/    /' || true
-helm repo update kagent 2>&1 | sed 's/^/    /'
-helm upgrade --install kagent kagent/kagent \
+echo "== Step 1a: Install kagent CRDs from OCI registry =="
+# Upstream moved from helm.kagent.dev to OCI ghcr.io charts (v0.9+).
+helm upgrade --install kagent-crds \
+  oci://ghcr.io/kagent-dev/kagent/helm/kagent-crds \
   --namespace kagent-eval \
   --create-namespace \
-  --set profile=minimal \
   --wait \
   --timeout 5m 2>&1 | sed 's/^/    /'
+
+echo
+echo "== Step 1b: Install kagent controller + UI from OCI registry =="
+helm upgrade --install kagent \
+  oci://ghcr.io/kagent-dev/kagent/helm/kagent \
+  --namespace kagent-eval \
+  --set providers.default=openAI \
+  --set providers.openAI.apiKey="${OPENAI_API_KEY}" \
+  --wait \
+  --timeout 10m 2>&1 | sed 's/^/    /'
 
 echo
 echo "== Step 2: Apply RBAC (scoped read of ${CF_NAMESPACE}) =="
@@ -56,6 +65,8 @@ sed "s|__CF_NAMESPACE__|${CF_NAMESPACE}|g" "${KIT_DIR}/01-namespace-eval.yaml" \
 
 echo
 echo "== Step 3: Apply OpenAI secret (key from env) =="
+# Kept for tools that read directly from a secret rather than the
+# kagent-injected provider config; harmless if unused.
 sed "s|REPLACE_WITH_OPENAI_API_KEY|${OPENAI_API_KEY}|" "${KIT_DIR}/02-openai-secret.yaml" \
   | kubectl apply -f - 2>&1 | sed 's/^/    /'
 
@@ -81,7 +92,7 @@ cat <<EOF
 ✓ kagent eval installed.
 
 Open the UI:
-  kubectl -n kagent-eval port-forward svc/kagent-ui 8082:80
+  kubectl -n kagent-eval port-forward svc/kagent-ui 8082:8080
   # then http://localhost:8082
 
 Walk the gates in scripts/eval-checklist.md.

@@ -15,7 +15,7 @@
 set -euo pipefail
 
 BOARD="content-factory"
-TOPIC="${1:-Newton's three laws of motion}"
+TOPIC="${1:-Newtons three laws of motion}"
 EPISODE_COUNT="${2:-3}"
 LOCALE="${3:-en-US}"
 
@@ -24,7 +24,7 @@ if ! command -v hermes >/dev/null 2>&1; then
   exit 1
 fi
 
-if ! hermes kanban board list 2>/dev/null | grep -q "^${BOARD}\b"; then
+if ! hermes kanban boards list 2>/dev/null | awk '{print $1}' | grep -qx "${BOARD}"; then
   echo "ERROR: board '$BOARD' does not exist. Run ./scripts/create-boards.sh first." >&2
   exit 1
 fi
@@ -44,12 +44,9 @@ echo "  locale:        $LOCALE"
 echo "  CF dir:        $CF_DIR"
 echo
 
-PARENT_ID="$(hermes kanban add \
-  --board "$BOARD" \
-  --assignee curriculum-planner \
-  --workspace "dir:${CF_DIR}" \
-  --title "Learning Series: ${TOPIC} (${EPISODE_COUNT} eps, ${LOCALE})" \
-  --body "$(cat <<EOF
+BODY_FILE="$(mktemp -t kanban-body.XXXXXX)"
+trap 'rm -f "$BODY_FILE"' EXIT
+cat > "$BODY_FILE" <<EOF
 PROOF-OF-LIFE RUN for the Hermes Kanban wiring.
 
 Pipeline:    configs/pipelines/learning_series.yaml
@@ -74,16 +71,25 @@ call shape.
 DO NOT consume more than \$10 in model + media spend on this proof run.
 If exceeded, kanban_block and wait for human review.
 EOF
-)" \
-  --output-format json | python3 -c 'import sys,json; print(json.load(sys.stdin)["id"])')"
+
+BODY_CONTENT=$(cat "$BODY_FILE")
+TITLE="Learning Series: ${TOPIC} [${EPISODE_COUNT} eps, ${LOCALE}]"
+WORKSPACE="dir:${CF_DIR}"
+RAW_JSON=$(hermes kanban --board "$BOARD" create \
+  --assignee curriculum-planner \
+  --workspace "$WORKSPACE" \
+  --body "$BODY_CONTENT" \
+  --json \
+  "$TITLE")
+PARENT_ID=$(printf '%s' "$RAW_JSON" | python3 -c 'import sys,json; print(json.load(sys.stdin)["id"])')
 
 echo "Created parent kanban task: $PARENT_ID"
 echo
 echo "Watch live:"
-echo "  hermes kanban tail --board $BOARD"
+echo "  hermes kanban --board $BOARD tail"
 echo
 echo "Inspect:"
-echo "  hermes kanban show $PARENT_ID"
+echo "  hermes kanban --board $BOARD show $PARENT_ID"
 echo
-echo "Cancel (if needed):"
-echo "  hermes kanban block $PARENT_ID --reason 'aborting proof run'"
+echo "Cancel/abort:"
+echo "  hermes kanban --board $BOARD block $PARENT_ID --reason aborting"

@@ -21,12 +21,17 @@ fi
 
 for board in "${BOARDS[@]}"; do
   echo "→ board: $board"
-  hermes kanban board create "$board" 2>&1 | sed 's/^/    /' || true
+  # Idempotent: bail if it already exists, otherwise create.
+  if hermes kanban boards list 2>/dev/null | awk '{print $1}' | grep -qx "$board"; then
+    echo "    already exists"
+  else
+    hermes kanban boards create "$board" 2>&1 | sed 's/^/    /' || true
+  fi
 done
 
 echo
 echo "Existing boards:"
-hermes kanban board list 2>&1 | sed 's/^/    /'
+hermes kanban boards list 2>&1 | sed 's/^/    /'
 
 echo
 echo "Next: ./scripts/create-profiles.sh"

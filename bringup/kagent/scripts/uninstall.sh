@@ -25,8 +25,9 @@ sed "s|__CF_NAMESPACE__|${CF_NAMESPACE}|g" "${KIT_DIR}/01-namespace-eval.yaml" \
   | kubectl delete -f - --ignore-not-found 2>&1 | sed 's/^/    /' || true
 
 echo
-echo "Uninstalling helm release..."
+echo "Uninstalling helm releases (kagent + kagent-crds)..."
 helm uninstall kagent --namespace kagent-eval 2>&1 | sed 's/^/    /' || true
+helm uninstall kagent-crds --namespace kagent-eval 2>&1 | sed 's/^/    /' || true
 
 echo
 echo "Deleting kagent-eval namespace..."
