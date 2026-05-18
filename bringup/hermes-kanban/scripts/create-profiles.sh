@@ -5,8 +5,18 @@
 
 set -euo pipefail
 
-PROFILES_DIR="${HERMES_HOME:-${HOME}/.hermes}/profiles"
+HERMES_HOME_DEFAULT="${HERMES_HOME:-${HOME}/.hermes}"
+PROFILES_DIR="${HERMES_HOME_DEFAULT}/profiles"
 mkdir -p "$PROFILES_DIR"
+
+# Required: the root ~/.hermes/{config.yaml,.env,auth.json} must already
+# be populated with a working model provider before workers are spawned.
+# The kanban dispatcher launches each worker with HERMES_HOME=<profile dir>,
+# so per-profile dirs need their own copies of these files — otherwise the
+# worker's credential pool is empty and every model call 401s.
+ROOT_AUTH="${HERMES_HOME_DEFAULT}/auth.json"
+ROOT_ENV="${HERMES_HOME_DEFAULT}/.env"
+ROOT_CFG="${HERMES_HOME_DEFAULT}/config.yaml"
 
 write_profile() {
   local name="$1"
@@ -24,6 +34,22 @@ name: "$name"
 toolsets:
 $(echo "$toolset" | tr ',' '\n' | sed 's/^/  - /')
 EOF
+  # Seed the profile with the root's auth + env + config so the dispatched
+  # worker inherits a working credential pool. Without this, every kanban
+  # worker spawns with an empty auth.json and 401s on the first model call.
+  # Idempotent: we overwrite auth.json + .env (they reflect current secrets)
+  # but only seed config.yaml if the profile doesn't already have one (so
+  # per-profile customization survives a re-run).
+  if [[ -f "$ROOT_AUTH" ]]; then
+    cp "$ROOT_AUTH" "$dir/auth.json"
+  fi
+  if [[ -f "$ROOT_ENV" ]]; then
+    cp "$ROOT_ENV" "$dir/.env"
+    chmod 600 "$dir/.env"
+  fi
+  if [[ -f "$ROOT_CFG" && ! -f "$dir/config.yaml" ]]; then
+    cp "$ROOT_CFG" "$dir/config.yaml"
+  fi
   echo "  ✓ $name (toolsets: $toolset)"
 }
 

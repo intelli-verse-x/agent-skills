@@ -33,8 +33,13 @@ mcp_servers:
   # Gas Town swarm — once intelli-verse-x/gastown PR #7 is merged,
   # this enables Hermes kanban workers to call gt_sling, gt_show,
   # gt_mail_send, gt_nudge, gt_convoy_create, etc.
+  # Stdio MCP — invokes the locally-installed gt binary. The ophis
+  # MCP server in gt v1.1+ exposes ~289 tools (sling, mail, nudge,
+  # convoy, town, audit, geo, seo, kanban, etc.). Workers spawned
+  # under any profile that includes the `gastown` toolset get this.
   gastown:
-    url: "${GASTOWN_MCP_URL:-http://localhost:7878/mcp}"
+    command: "gt"
+    args: ["mcp", "serve"]
 
   # n8n workflow automation (already in use across content-factory).
   n8n:
@@ -45,9 +50,13 @@ mcp_servers:
 # Cheaper model for subagents (delegate_task children) — keep the
 # parent on whatever the user picked. ~5-10x cost reduction on fan-out
 # work like council voting and parallel research.
+# Delegation tier: subagent model for delegate_task children.
+# Must be a model the in-cluster LiteLLM gateway actually serves —
+# follow-up #15 tracks adding cheaper models (gpt-4.1-mini, flash) so
+# this can drop to ~1/50th the cost. For now we share the parent tier.
 delegation:
-  model: "google/gemini-flash-2.0"
-  max_concurrent_children: 6
+  model: "anthropic/claude-opus-4.6"
+  max_concurrent_children: 3
 
 # Kanban dispatcher tuning for the intelli-verse-x scale of work.
 kanban:

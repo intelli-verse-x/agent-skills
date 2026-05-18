@@ -1,10 +1,22 @@
 # Session handoff — wiring rollout status
 
-State of the 5-step wiring plan after the second pass on 2026-05-17:
-**all five steps are now wired and proven** against the real
+State of the 5-step wiring plan after the third pass on 2026-05-17:
+**all five steps are wired and proven** against the real
 `ai-cart-auto-cluster` EKS cluster. Hermes ran a full proof-of-life
 end-to-end through the swarm; kagent diagnosed a broken pod via the
-built-in `k8s-agent` (Gate A passed in 27.7s).
+built-in `k8s-agent` (Gate A passed in 27.7s); the coder profile
+completed a file + terminal + gastown-MCP round-trip in 46s; the
+gateway-managed dispatcher fanned out and drained 2 of 3 screenwriter
+children (third was auto-blocked by the protocol-violation watchdog).
+
+## Capability claim audit (third pass)
+
+| Claim | Status | Proof |
+|---|---|---|
+| Firecrawl is the canonical web/research signal layer | 🟡 plumbing OK, **gated on `intelli-verse-x/content-factory#19`** | Firecrawl CLI installed; MCP registered in every profile config; `FIRECRAWL_API_KEY` pulled from `aicart/intelliverse-ai-ssm-params` and seeded into every `~/.hermes/profiles/<name>/.env`. PR #19 is `MERGEABLE`, 8/8 unit tests green, 2/3 CI checks pass (the third is a pre-existing failure unrelated to this PR — see follow-up #9). |
+| Hermes Kanban is the durable run engine | ✅ proven end-to-end | `hermes gateway run` autodispatches: parent `t_063fdd09` → 12 children → 2 of 3 screenwriter children completed in ~76s each (Ep 1 produced a 205-line broadcast-quality script artefact at `…/workspaces/t_ec30a547/ep1_newtons_first_law_script.md`). The third (Ep 2) was correctly caught by the auto-block watchdog (worker exited rc=0 without `kanban_complete` — protocol violation → blocked, not silently lost). |
+| `delegate_task` parallelism | 🟡 config now valid (was broken) | Originally `delegation.model: google/gemini-flash-2.0` — that model is **not** served by the in-cluster LiteLLM gateway. Patched to `anthropic/claude-opus-4.6` (a model the gateway actually serves). Not yet *exercised* by a worker — follow-up #17 captures a small "research-and-pick-a-winner" task that proves the spawn. |
+| Gastown coding swarm + Cursor + Refinery merges | ✅ proven for coder, refinery already running | Coder profile completed `t_1f5f0a40` in 46s: wrote `/tmp/coder-proof.py`, ran it (`WIRED` + UTC timestamp), and successfully called `mcp_gastown_gt_agents_list` against the locally-served `gt mcp serve` (stdio). 289 gastown tools available to any profile that loads the `gastown` toolset. Refinery merge-gate workflow already shipped to `intelli-verse-x/agent-skills` (commit `c54a952`, PR #1). |
 
 ## Merged / done
 
@@ -111,3 +123,9 @@ these live in the PR #7 description's "Follow-ups" section + here.
 11. If green, PR `intelli-verse-kube-infra` to move kagent to `kagent-system` namespace with cluster-wide RBAC.
 12. Promote the 3 eval agents to production CRDs under `bringup/kagent/production/`.
 14. **Update the custom ModelConfig/Agent YAMLs (`03-modelconfig.yaml`, `06/07/08-agent-*.yaml`) from `kagent.dev/v1alpha1` to `v1alpha2`**. Current schema differences: `spec.apiKeySecretRef.{name,key}` → `spec.apiKeySecret` + `spec.apiKeySecretKey`; `spec.temperature` / `spec.maxTokens` moved off ModelConfig; Agent CR now requires a `spec.declarative.{instructions,a2aConfig,…}` block instead of top-level `instructions`. The built-in `k8s-agent`, `promql-agent`, `observability-agent`, `helm-agent`, etc. cover most of what the custom CRs were going to provide; only the gastown-bead-emitting alert-triage agent really needs a custom CR.
+
+**Capability-audit follow-ups (third pass):**
+17. **Exercise `delegate_task`** with a small kanban task whose body explicitly says *"use `delegate_task` to spawn N=3 children, one per X, then pick a winner."* Confirms the delegation tier model + concurrency cap actually fire. Cheap (~$1 on the cap-3 setting).
+18. **Build & deploy a `gastown-mcp` Kubernetes service** so workers running inside the cluster (i.e. the future production dispatcher pod, not just this laptop) can reach the 289-tool gastown surface over the network. Today the only path is local `gt mcp serve` over stdio — fine for dev, not for the kanban daemon running in `aicart`.
+19. **Drain the remaining 8 `learning_series` children** (3 media-producer + 3 audio-director + 3 reviewer minus the auto-blocked Ep 2 chain) to exercise the media generation toolchain end-to-end (Veo / Beatoven / etc.). Capped: only run if PR #19 is merged AND `IMAGE_API_KEY / VIDEO_API_KEY / TTS_API_KEY / MUSIC_API_KEY` are set; otherwise media-producer / audio-director workers will block on missing creds.
+20. **Codify the per-profile auth seeding** that this session had to do manually. Captured in the updated `create-profiles.sh`: it now copies `~/.hermes/{auth.json,.env,config.yaml}` into every profile dir on creation, so a fresh `./scripts/create-profiles.sh` produces workers that can actually authenticate.
