@@ -31,6 +31,7 @@ right subfolders.
 | [`ivx-cf-run-improver`](skills/ivx-cf-run-improver/) | After a CF run completes, harvest prompts/characters/cost/quality, diff vs registry, open prompt + character PRs, file improver CSV row | Hermes (1 worker per completed run) |
 | [`ivx-cf-prompt-librarian`](skills/ivx-cf-prompt-librarian/) | Weekly maintenance: 30-day metric roll-up, 7-dimension audit score, version promotions, registry pruning, weekly digest PR with 30/60/90-day plan | Hermes (weekly cron, Sun 03:00 UTC) |
 | [`ivx-cf-context-bootstrap`](skills/ivx-cf-context-bootstrap/) | Apply Intelliverse-X-AI context-engineering pattern to a target repo: `.cursorrules` + `AGENT.md` + `.cursor/{HOT_CONTEXT,ANTI_PATTERNS,DECISION_TREE,...}.md` + 26 command rules | Hermes, Cursor (one-shot per repo) |
+| [`hermes-tweet`](skills/hermes-tweet/) | Install and operate the native Hermes Agent X/Twitter plugin for endpoint discovery, read-only calls, and explicitly gated action-only workflows | Hermes, Codex, Cursor, Claude Code |
 
 ## Format
 
