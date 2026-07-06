@@ -1,0 +1,125 @@
+# App Context Pack — quizverse (wave 1, richest signals)
+# Schema: fixed across all apps (plan §5). Values: per-app, PR-reviewed.
+#
+# ⚠️ SPRINT P3 GATE: every value marked `# P3-PLACEHOLDER` below is a
+# conservative engineering placeholder, NOT an approved number. Growth
+# lead must review + replace before any write path goes live (M3).
+# Guardrail skills treat these as HARD caps either way — placeholders
+# are deliberately low, never high.
+
+schema_version: 1
+app_id: quizverse
+label: QuizVerse
+site_url: https://quizverse.world
+registry_source: intelli-verse-kube-infra/n8n/app-registry-for-n8n.json
+
+# ── Value model ────────────────────────────────────────────────────────
+monetization:
+  model: blended            # IAP + ad revenue + subscription (plan §5)
+  components:
+    - iap                   # pack-store bundles, one-time exam packs
+    - ad_revenue            # ILRD events via Nakama/Satori
+    - subscription          # T1–T3 subscription tiers
+  value_truth: server       # revenue truth = our backend, never platform dashboards (playbook §4)
+
+# ── Locales & store listings ───────────────────────────────────────────
+locales:
+  primary: en
+  active: [en, hi]
+store_listings:
+  ios_bundle_id: ""         # TODO(growth): fill from ASC before ASA wave (Phase 4)
+  android_package: ""       # TODO(growth): fill from Play Console before UAC wave
+  web: https://quizverse.world
+
+# ── Geo-tier KPI targets (playbook §4: pLTV ROAS vs tier target, never raw CPA) ──
+# Tiers follow Nakama's existing country_tier_get / shared/geo-tier.ts.
+geo_tiers:
+  t1:
+    countries_hint: "US, UK, CA, AU (per shared/geo-tier.ts)"
+    target_roas_d7: 0.35    # P3-PLACEHOLDER — d7 revenue / spend
+    max_cpi_usd: 2.50       # P3-PLACEHOLDER
+    max_daily_spend_usd: 50 # P3-PLACEHOLDER — sandbox-safe floor
+  t2:
+    countries_hint: "EU mid, LATAM top, SEA top"
+    target_roas_d7: 0.25    # P3-PLACEHOLDER
+    max_cpi_usd: 0.80       # P3-PLACEHOLDER
+    max_daily_spend_usd: 30 # P3-PLACEHOLDER
+  t3:
+    countries_hint: "IN, PK, BD, NG, ID (ad-revenue-led)"
+    target_roas_d7: 0.20    # P3-PLACEHOLDER
+    max_cpi_usd: 0.25       # P3-PLACEHOLDER
+    max_daily_spend_usd: 30 # P3-PLACEHOLDER
+
+# Per-network daily caps (plan §10.3 — enforced in-skill AND mirrored
+# platform-side; the allocator shifts budget only WITHIN these).
+spend_caps:
+  currency: USD
+  per_network_daily:
+    meta: 50                # P3-PLACEHOLDER — sandbox sprint cap
+    google: 30              # P3-PLACEHOLDER
+  total_daily: 80           # P3-PLACEHOLDER — sum guard across networks
+  explore_floor_pct: 10     # allocator keeps ≥10% sampling under-explored arms (plan §7)
+
+# ── Customer segments & starter cohorts (plan §5/§6, playbook §6.2) ────
+segments:
+  - id: exam_aspirants
+    note: "SAT/JEE/NEET prep, seasonal intent peaks around registration/exam windows"
+  - id: casual_quizzers
+    note: "ad-revenue-led, T3-heavy, streak-driven retention"
+  - id: educators
+    note: "quiz creators; low volume, high organic spread"
+
+starter_cohorts:
+  - id: t1_payers
+    kind: payer_seed        # → lookalike/similar 1–3% (priority 1)
+    source: "IAP + subscription events, T1 geos"
+  - id: t3_ad_whales
+    kind: payer_seed
+    source: "top-decile ILRD ad revenue, T3 geos"
+  - id: exam_intent_sat
+    kind: high_intent       # priority 2 — refresh weekly, intent decays
+    source: "SAT-tagged pack/quiz activity"
+  - id: exam_intent_jee
+    kind: high_intent
+    source: "JEE-tagged pack/quiz activity"
+  - id: exam_intent_neet
+    kind: high_intent
+    source: "NEET-tagged pack/quiz activity"
+  - id: churn_risk_d3
+    kind: reactivation      # priority 3 — MUST run vs holdout (G5)
+    source: "d3 retention drop signature"
+
+# ── CTA seeds (playbook §5.2 — knowledge layer refines with data) ──────
+cta_map:
+  tofu: ["Play Game"]                 # playable/quiz hook
+  mofu: ["Install Now"]               # + exam-intent hook (SAT/JEE/NEET)
+  bofu: ["Get Offer", "Play Game"]    # pack-store bundles; Play Game for lapsed
+
+# ── Brand voice ────────────────────────────────────────────────────────
+brand_voice:
+  tone: "energetic, encouraging, exam-credible; never condescending"
+  do: ["speak to the score/streak", "cite real exam formats", "celebrate progress"]
+  dont: ["fake urgency", "guarantee results/scores", "compare users negatively"]
+  claim_rules: "no accuracy/score-improvement claims without a citable source (librarian enforces)"
+
+# ── First-party signal sources (plan §6 — cohort engine inputs) ────────
+signals:
+  source: nakama            # Nakama + Satori modules (analytics-alerts.ts live)
+  rpcs:                     # ship in sprint M4 (define-only; export deferred)
+    - cohort_define
+    - cohort_members
+    - cohort_pltv
+  events:
+    - install
+    - activation
+    - iap_purchase
+    - ad_revenue_ilrd
+    - subscription_start
+    - retention_dn
+  geo_tier_source: "country_tier_get / shared/geo-tier.ts"
+
+# ── Network launch preferences (playbook §6.1 default first-launch map) ──
+launch_map:
+  first: ["meta:app_promotion_manual", "tiktok:in_feed", "asa:exam_keywords"]
+  deferred: ["google:uac", "meta:advantage_plus"]   # until value upload live (G4)
+  never_micro_bid: ["applovin", "moloco", "unity", "mintegral", "liftoff"]
