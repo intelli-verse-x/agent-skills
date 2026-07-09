@@ -102,3 +102,5 @@ Factory, Qodo, Mistral Vibe, Mux, Autohand, Laravel Boost.
 ## License
 
 MIT — copy, adapt, share.
+
+<!-- pr-review-agent smoke test 2026-07-10 -->
