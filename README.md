@@ -104,3 +104,4 @@ Factory, Qodo, Mistral Vibe, Mux, Autohand, Laravel Boost.
 MIT — copy, adapt, share.
 
 <!-- pr-review-agent smoke test 2026-07-10 -->
+<!-- retest 2 -->
