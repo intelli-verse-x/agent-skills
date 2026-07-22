@@ -4,6 +4,39 @@ description: Own an intelli-verse-x Content Factory pipeline run end-to-end. Wat
 when_to_use: Use when a kanban card describes a live Content Factory `task_id` that must reach `completed` status, and you are expected to fix-and-redeploy as needed (not just observe).
 ---
 
+# IVX CF Pipeline Operator — UPDATED PREAMBLE (2026-07-23)
+
+Read **before** the rest of this skill.
+
+## Architecture (do not invent alternate paths)
+
+| Piece | Role | Live channel |
+|---|---|---|
+| CF API (`content-factory-api`) | Kitchen — pipelines run here | image from **main** (`deploy.yml`) |
+| ContentX MCP (`content-factory-mcp`) | Tablet — plan/trigger/harvest | image tag **`:main`** |
+| Hermes | Engineer — uses ContentX MCP like end users | LiteLLM Haiku brain |
+
+## Prefer order
+
+1. **ContentX MCP** (`mcp_servers.content-factory`): `plan_generation` → `trigger_pipeline(plan_id, approval_token, user_approved=True)` for **your** plan → `get_task_status` → `harvest_task`
+2. In-cluster CF API: `$CF_API_URL` + `$CF_API_KEY` (health / fallback only)
+3. Public ingress only if in-cluster URLs fail
+
+## Hard locks
+
+- Code PRs / deploy: **main only** (never Sid_CF runtime)
+- Pipeline generation models: **SiliconFlow only**
+- Hermes brain: LiteLLM only (already configured — do not switch to direct SiliconFlow chat for Hermes)
+- Do **not** edit kube-infra or wait on open kube PRs for CF proof
+- Always `kanban_complete` or `kanban_block` before exit (protocol)
+
+## Repo paths on this worker
+
+- CF clone: `/root/.hermes/repos/content-factory` (not laptop paths)
+- Worktrees: under that repo's `.worktrees/`
+
+---
+
 # IVX CF Pipeline Operator
 
 You own a live **intelli-verse-x Content Factory** (CF) pipeline run. CF does the heavy lifting (script → media → audio → assembly → S3 upload). You do the operator loop: **watch → diagnose → PR → deploy → retry → iterate**.
@@ -16,7 +49,7 @@ You own a live **intelli-verse-x Content Factory** (CF) pipeline run. CF does th
 | **CF API auth** | `X-API-Key: $CF_API_KEY` (header) |
 | **EKS cluster** | `arn:aws:eks:us-east-1:970547373533:cluster/ai-cart-auto-cluster` |
 | **EKS namespace** | `aicart` |
-| **Repo** | `intelli-verse-x/content-factory` (also cloned at `/Users/devashishbadlani/dev/content-factory`) |
+| **Repo** | `intelli-verse-x/content-factory` (also cloned at `/root/.hermes/repos/content-factory`) |
 | **Deploy workflow** | `.github/workflows/deploy.yml` — name `"Build & Deploy to EKS"`, id `244806003` |
 | **ECR registry** | `970547373533.dkr.ecr.us-east-1.amazonaws.com` |
 | **Image repos** | `content-factory-api`, `content-factory-pipeline-worker`, `content-factory-frontend` |
@@ -154,7 +187,7 @@ Classify into ONE of:
 ### 3. FIX (only classes A and B)
 
 ```bash
-cd /Users/devashishbadlani/dev/content-factory
+cd /root/.hermes/repos/content-factory
 git fetch --quiet origin
 git checkout main
 git pull --rebase --quiet origin main
