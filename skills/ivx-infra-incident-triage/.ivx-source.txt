@@ -1,0 +1,4 @@
+source=office:intelli-verse-kube-infra/.agents/skills
+path=C:\Office\intelli-verse-kube-infra\.agents\skills\incident-triage
+ivx_name=ivx-infra-incident-triage
+imported=2026-07-22T23:46:56.9007515+05:30

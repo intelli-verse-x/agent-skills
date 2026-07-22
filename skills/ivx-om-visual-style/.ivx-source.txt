@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\visual-style
+ivx_name=ivx-om-visual-style
+imported=2026-07-22T23:46:56.6552902+05:30

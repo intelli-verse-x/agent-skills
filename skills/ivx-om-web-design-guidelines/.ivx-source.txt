@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\web-design-guidelines
+ivx_name=ivx-om-web-design-guidelines
+imported=2026-07-22T23:46:56.6653256+05:30

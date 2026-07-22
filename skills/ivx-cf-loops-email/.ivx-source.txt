@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\loops-email
+ivx_name=ivx-cf-loops-email
+imported=2026-07-22T23:46:52.8613395+05:30

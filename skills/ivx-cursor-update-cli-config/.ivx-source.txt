@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\update-cli-config
+ivx_name=ivx-cursor-update-cli-config
+imported=2026-07-22T23:46:59.0106429+05:30

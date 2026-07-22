@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\refactoring
+ivx_name=ivx-cf-refactoring
+imported=2026-07-22T23:46:53.2182543+05:30

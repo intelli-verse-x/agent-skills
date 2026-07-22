@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\threejs-loaders
+ivx_name=ivx-om-threejs-loaders
+imported=2026-07-22T23:46:56.2733421+05:30

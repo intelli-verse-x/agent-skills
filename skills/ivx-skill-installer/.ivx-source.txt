@@ -1,0 +1,4 @@
+source=global:.codex/skills
+path=C:\Users\msi\.codex\skills\.system\skill-installer
+ivx_name=ivx-skill-installer
+imported=2026-07-22T23:46:59.8988667+05:30

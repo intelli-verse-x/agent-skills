@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\threejs-geometry
+ivx_name=ivx-om-threejs-geometry
+imported=2026-07-22T23:46:56.1729232+05:30

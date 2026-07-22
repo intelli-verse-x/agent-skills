@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\sdk
+ivx_name=ivx-cursor-sdk
+imported=2026-07-22T23:46:58.9622306+05:30

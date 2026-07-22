@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\onboard
+ivx_name=ivx-cursor-onboard
+imported=2026-07-22T23:46:58.8871290+05:30

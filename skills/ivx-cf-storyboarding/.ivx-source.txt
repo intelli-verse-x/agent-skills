@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\storyboarding
+ivx_name=ivx-cf-storyboarding
+imported=2026-07-22T23:46:53.2804567+05:30

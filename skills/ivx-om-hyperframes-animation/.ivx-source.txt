@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\hyperframes-animation
+ivx_name=ivx-om-hyperframes-animation
+imported=2026-07-22T23:46:54.4635176+05:30

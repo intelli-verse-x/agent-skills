@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-outbound-engine
+ivx_name=ivx-ams-outbound-engine
+imported=2026-07-22T23:46:57.9256855+05:30

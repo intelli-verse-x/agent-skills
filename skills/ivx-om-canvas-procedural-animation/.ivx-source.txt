@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\canvas-procedural-animation
+ivx_name=ivx-om-canvas-procedural-animation
+imported=2026-07-22T23:46:53.7053772+05:30

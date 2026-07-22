@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\contentx-standards
+ivx_name=ivx-cf-contentx-standards
+imported=2026-07-22T23:46:52.5072443+05:30

@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\cf-graphify
+ivx_name=ivx-cf-graphify
+imported=2026-07-22T23:46:52.2674102+05:30

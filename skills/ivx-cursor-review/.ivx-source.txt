@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\review
+ivx_name=ivx-cursor-review
+imported=2026-07-22T23:46:58.8972205+05:30

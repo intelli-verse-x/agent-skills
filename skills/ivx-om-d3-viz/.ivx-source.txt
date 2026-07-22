@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\d3-viz
+ivx_name=ivx-om-d3-viz
+imported=2026-07-22T23:46:53.8208115+05:30

@@ -1,0 +1,4 @@
+source=global:.codex/skills
+path=C:\Users\msi\.codex\skills\.system\plugin-creator
+ivx_name=ivx-plugin-creator
+imported=2026-07-22T23:46:59.7768918+05:30

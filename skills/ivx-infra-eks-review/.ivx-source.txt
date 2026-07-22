@@ -1,0 +1,4 @@
+source=office:intelli-verse-kube-infra/.agents/skills
+path=C:\Office\intelli-verse-kube-infra\.agents\skills\eks-review
+ivx_name=ivx-infra-eks-review
+imported=2026-07-22T23:46:56.8687512+05:30

@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\systematic-debugging
+ivx_name=ivx-cf-systematic-debugging
+imported=2026-07-22T23:46:53.3345134+05:30

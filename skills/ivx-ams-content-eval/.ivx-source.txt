@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-content-eval
+ivx_name=ivx-ams-content-eval
+imported=2026-07-22T23:46:57.7274500+05:30

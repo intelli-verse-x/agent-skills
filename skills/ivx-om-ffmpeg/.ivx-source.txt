@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\ffmpeg
+ivx_name=ivx-om-ffmpeg
+imported=2026-07-22T23:46:53.9424023+05:30

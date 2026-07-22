@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\dashscope
+ivx_name=ivx-om-dashscope
+imported=2026-07-22T23:46:53.8498298+05:30

@@ -1,0 +1,4 @@
+source=global:.agents/skills
+path=C:\Users\msi\.agents\skills\remotion-best-practices
+ivx_name=ivx-remotion-best-practices
+imported=2026-07-22T23:46:59.3873336+05:30

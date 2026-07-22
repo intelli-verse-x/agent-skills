@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\framer-motion
+ivx_name=ivx-om-framer-motion
+imported=2026-07-22T23:46:53.9939473+05:30

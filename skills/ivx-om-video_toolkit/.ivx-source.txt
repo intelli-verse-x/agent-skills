@@ -1,0 +1,4 @@
+source=office:OpenMontage/.claude/skills
+path=C:\Office\OpenMontage\.claude\skills\video_toolkit
+ivx_name=ivx-om-video_toolkit
+imported=2026-07-22T23:46:56.8137752+05:30

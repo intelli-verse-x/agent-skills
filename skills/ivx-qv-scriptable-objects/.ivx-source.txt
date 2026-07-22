@@ -1,0 +1,4 @@
+source=office:Unity/.../quiz-verse/.agents/skills
+path=C:\Office\Unity\intelliverse-x-games-platform-2\games\quiz-verse\.agents\skills\scriptable-objects
+ivx_name=ivx-qv-scriptable-objects
+imported=2026-07-22T23:46:57.4194893+05:30

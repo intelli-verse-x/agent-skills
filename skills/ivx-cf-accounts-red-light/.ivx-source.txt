@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\accounts-red-light
+ivx_name=ivx-cf-accounts-red-light
+imported=2026-07-22T23:46:52.0954500+05:30

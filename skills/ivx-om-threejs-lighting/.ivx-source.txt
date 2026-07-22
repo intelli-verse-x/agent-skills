@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\threejs-lighting
+ivx_name=ivx-om-threejs-lighting
+imported=2026-07-22T23:46:56.2373462+05:30

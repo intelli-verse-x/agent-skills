@@ -1,0 +1,23 @@
+{
+  "skill_name": "cf-llm-model-usage",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "In content-factory, which models does viral_shorts use for ideation, frames, shot video, and the vision judge? Tell me the files I'd edit if I wanted only the vision judge changed.",
+      "expected_output": "Qwen3-30B ideation; FLUX.2 Flex frames; Wan 2.2 shot video; Qwen3-VL-8B judge. Vision change via configs/llm_config.py create_vision_chat_model() and/or catalog — not inventing Gemini. Cite docs/LLM_MODEL_USAGE.md / configs.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Boss wants long_form_video ideation on DeepSeek and stills on FLUX.2 Flex. Which YAML do I touch so we don't accidentally change every other pipeline's chat model?",
+      "expected_output": "Edit configs/pipelines/long_form_video.yaml only for that pipeline; do not change fleet defaults in llm_models.yaml unless asked. Confirm DeepSeek V4 Pro + FLUX.2 Flex from cheat sheet.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Can we wire OpenRouter back for one comic panel call and use model id qwen3-30b-siliconflow in the pipeline YAML?",
+      "expected_output": "No — OpenRouter is dead unless ALLOW_DEAD_PROVIDERS; qwen3-30b-siliconflow is an invalid nickname. Point to model_catalog.yaml / LLM_PRIMARY and SiliconFlow live stack.",
+      "files": []
+    }
+  ]
+}

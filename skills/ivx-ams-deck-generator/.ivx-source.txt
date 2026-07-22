@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-deck-generator
+ivx_name=ivx-ams-deck-generator
+imported=2026-07-22T23:46:57.8208925+05:30

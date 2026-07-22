@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\cf-video-loop
+ivx_name=ivx-cf-video-loop
+imported=2026-07-22T23:46:52.4241884+05:30

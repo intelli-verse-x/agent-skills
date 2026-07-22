@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\testing
+ivx_name=ivx-cf-testing
+imported=2026-07-22T23:46:53.3634958+05:30

@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\azure-speech-to-text
+ivx_name=ivx-om-azure-speech-to-text
+imported=2026-07-22T23:46:53.6365337+05:30

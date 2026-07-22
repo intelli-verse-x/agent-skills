@@ -1,0 +1,4 @@
+source=global:.agents/skills
+path=C:\Users\msi\.agents\skills\story-init
+ivx_name=ivx-story-init
+imported=2026-07-22T23:46:59.4155984+05:30

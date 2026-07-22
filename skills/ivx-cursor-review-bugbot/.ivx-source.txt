@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\review-bugbot
+ivx_name=ivx-cursor-review-bugbot
+imported=2026-07-22T23:46:58.9226850+05:30

@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\gsap-frameworks
+ivx_name=ivx-om-gsap-frameworks
+imported=2026-07-22T23:46:54.0721121+05:30

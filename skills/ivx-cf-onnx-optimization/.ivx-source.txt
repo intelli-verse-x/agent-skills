@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\onnx-optimization
+ivx_name=ivx-cf-onnx-optimization
+imported=2026-07-22T23:46:52.9386646+05:30

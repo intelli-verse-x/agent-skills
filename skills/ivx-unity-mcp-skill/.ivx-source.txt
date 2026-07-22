@@ -1,0 +1,4 @@
+source=global:.claude/skills
+path=C:\Users\msi\.claude\skills\unity-mcp-skill
+ivx_name=ivx-unity-mcp-skill
+imported=2026-07-22T23:46:59.5942088+05:30

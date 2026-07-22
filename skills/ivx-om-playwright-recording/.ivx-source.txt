@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\playwright-recording
+ivx_name=ivx-om-playwright-recording
+imported=2026-07-22T23:46:55.6356907+05:30

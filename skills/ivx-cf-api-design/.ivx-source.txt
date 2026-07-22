@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\api-design
+ivx_name=ivx-cf-api-design
+imported=2026-07-22T23:46:52.1748790+05:30

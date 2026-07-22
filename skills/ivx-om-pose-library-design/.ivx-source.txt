@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\pose-library-design
+ivx_name=ivx-om-pose-library-design
+imported=2026-07-22T23:46:55.6466914+05:30

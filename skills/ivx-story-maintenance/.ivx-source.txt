@@ -1,0 +1,4 @@
+source=global:.agents/skills
+path=C:\Users\msi\.agents\skills\story-maintenance
+ivx_name=ivx-story-maintenance
+imported=2026-07-22T23:46:59.4336190+05:30

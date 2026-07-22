@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\ai-marketing-skills
+ivx_name=ivx-cf-ai-marketing-skills
+imported=2026-07-22T23:46:52.1626767+05:30

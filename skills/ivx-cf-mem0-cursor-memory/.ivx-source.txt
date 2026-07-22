@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\mem0-cursor-memory
+ivx_name=ivx-cf-mem0-cursor-memory
+imported=2026-07-22T23:46:52.8869211+05:30

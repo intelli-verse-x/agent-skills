@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\kling-official
+ivx_name=ivx-om-kling-official
+imported=2026-07-22T23:46:54.7655913+05:30

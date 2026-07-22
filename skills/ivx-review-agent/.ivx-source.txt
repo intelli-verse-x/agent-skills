@@ -1,0 +1,4 @@
+source=global:.codex/skills
+path=C:\Users\msi\.codex\skills\.system\review-agent
+ivx_name=ivx-review-agent
+imported=2026-07-22T23:46:59.7979289+05:30

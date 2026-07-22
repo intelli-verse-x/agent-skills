@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\ltx2
+ivx_name=ivx-om-ltx2
+imported=2026-07-22T23:46:54.7866603+05:30

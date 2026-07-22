@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\threejs-interaction
+ivx_name=ivx-om-threejs-interaction
+imported=2026-07-22T23:46:56.2063224+05:30

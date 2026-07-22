@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\mem0-cursor-memory
+ivx_name=ivx-mem0-cursor-memory
+imported=2026-07-22T23:46:58.4898173+05:30

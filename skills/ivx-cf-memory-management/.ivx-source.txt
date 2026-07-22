@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\memory-management
+ivx_name=ivx-cf-memory-management
+imported=2026-07-22T23:46:52.8989711+05:30

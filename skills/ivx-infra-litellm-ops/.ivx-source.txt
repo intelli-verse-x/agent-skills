@@ -1,0 +1,4 @@
+source=office:intelli-verse-kube-infra/.agents/skills
+path=C:\Office\intelli-verse-kube-infra\.agents\skills\litellm-ops
+ivx_name=ivx-infra-litellm-ops
+imported=2026-07-22T23:46:56.9384212+05:30

@@ -1,0 +1,4 @@
+source=global:.agents/skills
+path=C:\Users\msi\.agents\skills\better-writing
+ivx_name=ivx-better-writing
+imported=2026-07-22T23:46:59.1823983+05:30

@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\synthetic-screen-recording
+ivx_name=ivx-om-synthetic-screen-recording
+imported=2026-07-22T23:46:56.0001974+05:30

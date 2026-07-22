@@ -1,0 +1,4 @@
+source=global:.agents/skills
+path=C:\Users\msi\.agents\skills\plot-structure
+ivx_name=ivx-plot-structure
+imported=2026-07-22T23:46:59.3006781+05:30

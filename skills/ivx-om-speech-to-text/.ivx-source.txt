@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\speech-to-text
+ivx_name=ivx-om-speech-to-text
+imported=2026-07-22T23:46:55.9601915+05:30

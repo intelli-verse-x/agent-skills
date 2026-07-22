@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\bfl-api
+ivx_name=ivx-om-bfl-api
+imported=2026-07-22T23:46:53.6933551+05:30

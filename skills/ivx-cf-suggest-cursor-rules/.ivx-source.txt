@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\suggest-cursor-rules
+ivx_name=ivx-cf-suggest-cursor-rules
+imported=2026-07-22T23:46:53.3225139+05:30

@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\person-backend
+ivx_name=ivx-cf-person-backend
+imported=2026-07-22T23:46:52.9768770+05:30

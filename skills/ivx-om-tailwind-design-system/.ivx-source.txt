@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\tailwind-design-system
+ivx_name=ivx-om-tailwind-design-system
+imported=2026-07-22T23:46:56.0401919+05:30

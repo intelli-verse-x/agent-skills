@@ -1,0 +1,4 @@
+source=office:Unity/.../quiz-verse/.agents/skills
+path=C:\Office\Unity\intelliverse-x-games-platform-2\games\quiz-verse\.agents\skills\unity-mcp-orchestrator
+ivx_name=ivx-qv-unity-mcp-orchestrator
+imported=2026-07-22T23:46:57.6148685+05:30

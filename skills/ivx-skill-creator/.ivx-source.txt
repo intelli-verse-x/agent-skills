@@ -1,0 +1,4 @@
+source=global:.codex/skills
+path=C:\Users\msi\.codex\skills\.system\skill-creator
+ivx_name=ivx-skill-creator
+imported=2026-07-22T23:46:59.8709220+05:30

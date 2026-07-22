@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\loops-cli
+ivx_name=ivx-loops-cli
+imported=2026-07-22T23:46:58.3732690+05:30

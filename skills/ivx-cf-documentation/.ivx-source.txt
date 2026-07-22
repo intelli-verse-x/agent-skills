@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\documentation
+ivx_name=ivx-cf-documentation
+imported=2026-07-22T23:46:52.5897798+05:30

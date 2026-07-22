@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\create-rule
+ivx_name=ivx-cursor-create-rule
+imported=2026-07-22T23:46:58.7711286+05:30

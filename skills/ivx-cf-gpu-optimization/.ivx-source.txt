@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\gpu-optimization
+ivx_name=ivx-cf-gpu-optimization
+imported=2026-07-22T23:46:52.7375748+05:30

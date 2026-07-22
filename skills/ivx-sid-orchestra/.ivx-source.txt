@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\sid-orchestra
+ivx_name=ivx-sid-orchestra
+imported=2026-07-22T23:46:58.5722903+05:30

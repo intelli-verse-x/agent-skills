@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\update-cursor-settings
+ivx_name=ivx-cursor-update-cursor-settings
+imported=2026-07-22T23:46:59.0237157+05:30

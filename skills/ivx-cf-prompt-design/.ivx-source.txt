@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\prompt-design
+ivx_name=ivx-cf-prompt-design
+imported=2026-07-22T23:46:53.1892624+05:30

@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\canvas
+ivx_name=ivx-cursor-canvas
+imported=2026-07-22T23:46:58.7291267+05:30

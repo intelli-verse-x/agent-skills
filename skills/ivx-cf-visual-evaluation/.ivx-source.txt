@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\visual-evaluation
+ivx_name=ivx-cf-visual-evaluation
+imported=2026-07-22T23:46:53.4010625+05:30

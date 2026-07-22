@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\person-product
+ivx_name=ivx-cf-person-product
+imported=2026-07-22T23:46:53.1141314+05:30

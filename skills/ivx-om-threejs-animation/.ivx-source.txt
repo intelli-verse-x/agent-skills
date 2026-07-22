@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\threejs-animation
+ivx_name=ivx-om-threejs-animation
+imported=2026-07-22T23:46:56.1112348+05:30

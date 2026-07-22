@@ -1,0 +1,4 @@
+source=office:content-factory/skills/firecrawl
+path=C:\Office\content-factory\skills\firecrawl
+ivx_name=ivx-cf-firecrawl
+imported=2026-07-22T23:46:53.4491509+05:30

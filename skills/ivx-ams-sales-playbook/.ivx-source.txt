@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-sales-playbook
+ivx_name=ivx-ams-sales-playbook
+imported=2026-07-22T23:46:58.0171125+05:30

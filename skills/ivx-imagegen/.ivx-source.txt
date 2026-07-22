@@ -1,0 +1,4 @@
+source=global:.codex/skills
+path=C:\Users\msi\.codex\skills\.system\imagegen
+ivx_name=ivx-imagegen
+imported=2026-07-22T23:46:59.6694948+05:30

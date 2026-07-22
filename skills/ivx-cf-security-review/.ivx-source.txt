@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\security-review
+ivx_name=ivx-cf-security-review
+imported=2026-07-22T23:46:53.2314452+05:30

@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\character-animation-qa
+ivx_name=ivx-om-character-animation-qa
+imported=2026-07-22T23:46:53.7211591+05:30

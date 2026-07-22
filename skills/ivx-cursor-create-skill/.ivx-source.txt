@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\create-skill
+ivx_name=ivx-cursor-create-skill
+imported=2026-07-22T23:46:58.7952038+05:30

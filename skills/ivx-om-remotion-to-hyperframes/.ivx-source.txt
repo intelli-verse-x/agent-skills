@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\remotion-to-hyperframes
+ivx_name=ivx-om-remotion-to-hyperframes
+imported=2026-07-22T23:46:55.8507389+05:30

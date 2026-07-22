@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\video-skills
+ivx_name=ivx-cf-video-skills
+imported=2026-07-22T23:46:53.3890575+05:30
