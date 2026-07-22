@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-clone-site
+ivx_name=ivx-ams-clone-site
+imported=2026-07-22T23:46:57.6948853+05:30

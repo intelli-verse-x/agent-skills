@@ -1,0 +1,4 @@
+source=global:.agents/skills
+path=C:\Users\msi\.agents\skills\chapter-writing
+ivx_name=ivx-chapter-writing
+imported=2026-07-22T23:46:59.2063022+05:30

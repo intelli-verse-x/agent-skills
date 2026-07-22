@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\cf-creative-marketing
+ivx_name=ivx-cf-creative-marketing
+imported=2026-07-22T23:46:52.2524085+05:30

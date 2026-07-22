@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\contentx-firecrawl-validation
+ivx_name=ivx-cf-contentx-firecrawl-validation
+imported=2026-07-22T23:46:52.4761986+05:30

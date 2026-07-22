@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\statusline
+ivx_name=ivx-cursor-statusline
+imported=2026-07-22T23:46:58.9962174+05:30

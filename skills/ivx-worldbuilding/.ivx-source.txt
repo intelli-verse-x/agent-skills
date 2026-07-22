@@ -1,0 +1,4 @@
+source=global:.agents/skills
+path=C:\Users\msi\.agents\skills\worldbuilding
+ivx_name=ivx-worldbuilding
+imported=2026-07-22T23:46:59.4936748+05:30

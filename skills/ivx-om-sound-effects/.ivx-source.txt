@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\sound-effects
+ivx_name=ivx-om-sound-effects
+imported=2026-07-22T23:46:55.9178241+05:30

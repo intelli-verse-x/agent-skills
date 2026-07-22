@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\diffusion-pipeline-design
+ivx_name=ivx-cf-diffusion-pipeline-design
+imported=2026-07-22T23:46:52.5622622+05:30

@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\experiment-tracking
+ivx_name=ivx-cf-experiment-tracking
+imported=2026-07-22T23:46:52.6327787+05:30

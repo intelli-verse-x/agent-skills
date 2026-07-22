@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\migrate-to-skills
+ivx_name=ivx-cursor-migrate-to-skills
+imported=2026-07-22T23:46:58.8601282+05:30

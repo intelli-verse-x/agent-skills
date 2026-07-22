@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\code-review
+ivx_name=ivx-cf-code-review
+imported=2026-07-22T23:46:52.4622095+05:30

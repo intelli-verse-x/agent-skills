@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\create-hook
+ivx_name=ivx-cursor-create-hook
+imported=2026-07-22T23:46:58.7591298+05:30

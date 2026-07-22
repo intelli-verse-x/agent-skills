@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-team-ops
+ivx_name=ivx-ams-team-ops
+imported=2026-07-22T23:46:58.0908869+05:30

@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\sid-evals
+ivx_name=ivx-sid-evals
+imported=2026-07-22T23:46:58.5421385+05:30

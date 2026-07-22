@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\cf-skill-router
+ivx_name=ivx-cf-skill-router
+imported=2026-07-22T23:46:52.4116592+05:30

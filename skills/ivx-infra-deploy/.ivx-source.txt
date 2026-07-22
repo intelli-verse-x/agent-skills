@@ -1,0 +1,4 @@
+source=office:intelli-verse-kube-infra/.agents/skills
+path=C:\Office\intelli-verse-kube-infra\.agents\skills\deploy
+ivx_name=ivx-infra-deploy
+imported=2026-07-22T23:46:56.8427633+05:30

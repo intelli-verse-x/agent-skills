@@ -1,0 +1,4 @@
+source=global:.agents/skills
+path=C:\Users\msi\.agents\skills\character-management
+ivx_name=ivx-character-management
+imported=2026-07-22T23:46:59.2266788+05:30

@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-x-longform-post
+ivx_name=ivx-ams-x-longform-post
+imported=2026-07-22T23:46:58.1608859+05:30

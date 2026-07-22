@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\character-rigging
+ivx_name=ivx-om-character-rigging
+imported=2026-07-22T23:46:53.7345977+05:30

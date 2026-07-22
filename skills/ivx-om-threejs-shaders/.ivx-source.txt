@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\threejs-shaders
+ivx_name=ivx-om-threejs-shaders
+imported=2026-07-22T23:46:56.3597995+05:30

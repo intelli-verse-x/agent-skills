@@ -1,0 +1,4 @@
+source=global:.cursor/skills-cursor
+path=C:\Users\msi\.cursor\skills-cursor\create-subagent
+ivx_name=ivx-cursor-create-subagent
+imported=2026-07-22T23:46:58.8061347+05:30

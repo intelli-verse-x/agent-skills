@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\gsap-performance
+ivx_name=ivx-om-gsap-performance
+imported=2026-07-22T23:46:54.0810926+05:30

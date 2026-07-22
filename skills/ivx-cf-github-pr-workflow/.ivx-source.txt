@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\github-pr-workflow
+ivx_name=ivx-cf-github-pr-workflow
+imported=2026-07-22T23:46:52.7215766+05:30

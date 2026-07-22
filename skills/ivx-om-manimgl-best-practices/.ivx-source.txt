@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\manimgl-best-practices
+ivx_name=ivx-om-manimgl-best-practices
+imported=2026-07-22T23:46:55.0482434+05:30

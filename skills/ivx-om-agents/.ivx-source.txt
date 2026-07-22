@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\agents
+ivx_name=ivx-om-agents
+imported=2026-07-22T23:46:53.5222418+05:30

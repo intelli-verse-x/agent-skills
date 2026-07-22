@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\seedance-2-0
+ivx_name=ivx-om-seedance-2-0
+imported=2026-07-22T23:46:55.8802733+05:30

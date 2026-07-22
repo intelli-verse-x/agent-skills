@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\vercel-react-best-practices
+ivx_name=ivx-om-vercel-react-best-practices
+imported=2026-07-22T23:46:56.5162401+05:30

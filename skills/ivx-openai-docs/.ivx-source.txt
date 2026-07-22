@@ -1,0 +1,4 @@
+source=global:.codex/skills
+path=C:\Users\msi\.codex\skills\.system\openai-docs
+ivx_name=ivx-openai-docs
+imported=2026-07-22T23:46:59.7228953+05:30

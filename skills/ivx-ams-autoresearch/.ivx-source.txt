@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-autoresearch
+ivx_name=ivx-ams-autoresearch
+imported=2026-07-22T23:46:57.6804341+05:30

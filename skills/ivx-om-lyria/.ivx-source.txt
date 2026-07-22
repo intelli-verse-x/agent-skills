@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\lyria
+ivx_name=ivx-om-lyria
+imported=2026-07-22T23:46:54.8005913+05:30

@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-yt-competitive-analysis
+ivx_name=ivx-ams-yt-competitive-analysis
+imported=2026-07-22T23:46:58.1749185+05:30

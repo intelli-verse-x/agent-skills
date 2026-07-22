@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\gsap-react
+ivx_name=ivx-om-gsap-react
+imported=2026-07-22T23:46:54.1201901+05:30

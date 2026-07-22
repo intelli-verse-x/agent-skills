@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-growth-engine
+ivx_name=ivx-ams-growth-engine
+imported=2026-07-22T23:46:57.8729009+05:30

@@ -1,0 +1,4 @@
+source=global:.claude/skills
+path=C:\Users\msi\.claude\skills\kimi-webbridge
+ivx_name=ivx-kimi-webbridge
+imported=2026-07-22T23:46:59.5582117+05:30

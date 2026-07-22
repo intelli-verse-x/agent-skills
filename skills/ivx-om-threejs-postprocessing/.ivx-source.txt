@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\threejs-postprocessing
+ivx_name=ivx-om-threejs-postprocessing
+imported=2026-07-22T23:46:56.3338218+05:30

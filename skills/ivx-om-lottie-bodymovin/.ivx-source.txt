@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\lottie-bodymovin
+ivx_name=ivx-om-lottie-bodymovin
+imported=2026-07-22T23:46:54.7765914+05:30

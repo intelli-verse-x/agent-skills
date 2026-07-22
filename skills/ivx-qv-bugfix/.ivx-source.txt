@@ -1,0 +1,4 @@
+source=office:Unity/.../quiz-verse/.agents/skills
+path=C:\Office\Unity\intelliverse-x-games-platform-2\games\quiz-verse\.agents\skills\bugfix
+ivx_name=ivx-qv-bugfix
+imported=2026-07-22T23:46:57.1949281+05:30

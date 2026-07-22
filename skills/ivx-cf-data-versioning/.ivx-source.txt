@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\data-versioning
+ivx_name=ivx-cf-data-versioning
+imported=2026-07-22T23:46:52.5322504+05:30

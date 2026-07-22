@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-closed-loop-analytics-upgrade
+ivx_name=ivx-ams-closed-loop-analytics-upgrade
+imported=2026-07-22T23:46:57.7068846+05:30

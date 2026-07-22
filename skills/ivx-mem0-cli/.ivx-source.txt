@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\mem0-cli
+ivx_name=ivx-mem0-cli
+imported=2026-07-22T23:46:58.4787968+05:30

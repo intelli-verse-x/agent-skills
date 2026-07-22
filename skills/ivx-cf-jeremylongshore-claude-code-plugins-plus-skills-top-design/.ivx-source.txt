@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\jeremylongshore-claude-code-plugins-plus-skills-top-design
+ivx_name=ivx-cf-jeremylongshore-claude-code-plugins-plus-skills-top-design
+imported=2026-07-22T23:46:52.8353449+05:30

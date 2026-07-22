@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\setup-api-key
+ivx_name=ivx-om-setup-api-key
+imported=2026-07-22T23:46:55.9042987+05:30

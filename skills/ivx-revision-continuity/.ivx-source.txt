@@ -1,0 +1,4 @@
+source=global:.agents/skills
+path=C:\Users\msi\.agents\skills\revision-continuity
+ivx_name=ivx-revision-continuity
+imported=2026-07-22T23:46:59.4013341+05:30

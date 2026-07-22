@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-video-clip-pipeline
+ivx_name=ivx-ams-video-clip-pipeline
+imported=2026-07-22T23:46:58.1433455+05:30

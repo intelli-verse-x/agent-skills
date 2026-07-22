@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\fault-tolerance
+ivx_name=ivx-cf-fault-tolerance
+imported=2026-07-22T23:46:52.6671204+05:30

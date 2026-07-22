@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\cf-persona-router
+ivx_name=ivx-cf-persona-router
+imported=2026-07-22T23:46:52.3876126+05:30

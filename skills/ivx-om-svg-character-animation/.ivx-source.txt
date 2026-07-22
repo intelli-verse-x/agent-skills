@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\svg-character-animation
+ivx_name=ivx-om-svg-character-animation
+imported=2026-07-22T23:46:55.9731917+05:30

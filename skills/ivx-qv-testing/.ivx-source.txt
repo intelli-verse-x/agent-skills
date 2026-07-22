@@ -1,0 +1,4 @@
+source=office:Unity/.../quiz-verse/.agents/skills
+path=C:\Office\Unity\intelliverse-x-games-platform-2\games\quiz-verse\.agents\skills\testing
+ivx_name=ivx-qv-testing
+imported=2026-07-22T23:46:57.5044994+05:30

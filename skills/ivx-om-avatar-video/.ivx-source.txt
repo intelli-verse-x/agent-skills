@@ -1,0 +1,4 @@
+source=office:OpenMontage/.agents/skills
+path=C:\Office\OpenMontage\.agents\skills\avatar-video
+ivx_name=ivx-om-avatar-video
+imported=2026-07-22T23:46:53.6245336+05:30

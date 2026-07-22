@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-content-ops
+ivx_name=ivx-ams-content-ops
+imported=2026-07-22T23:46:57.7756064+05:30

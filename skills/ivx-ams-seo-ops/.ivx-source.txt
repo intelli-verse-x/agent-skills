@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ams-seo-ops
+ivx_name=ivx-ams-seo-ops
+imported=2026-07-22T23:46:58.0360887+05:30

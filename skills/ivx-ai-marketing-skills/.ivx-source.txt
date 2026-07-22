@@ -1,0 +1,4 @@
+source=global:.cursor/skills
+path=C:\Users\msi\.cursor\skills\ai-marketing-skills
+ivx_name=ivx-ai-marketing-skills
+imported=2026-07-22T23:46:57.6654359+05:30

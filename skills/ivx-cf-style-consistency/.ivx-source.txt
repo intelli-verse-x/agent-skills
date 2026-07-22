@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\style-consistency
+ivx_name=ivx-cf-style-consistency
+imported=2026-07-22T23:46:53.2939476+05:30

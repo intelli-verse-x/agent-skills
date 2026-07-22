@@ -1,0 +1,4 @@
+source=office:content-factory/.cursor/skills
+path=C:\Office\content-factory\.cursor\skills\chaos-engineering
+ivx_name=ivx-cf-chaos-engineering
+imported=2026-07-22T23:46:52.4491864+05:30
