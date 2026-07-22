@@ -1,109 +1,125 @@
 ---
 name: ivx-content-factory
-description: How to use the Content Factory MCP servers from Hermes — when to pick a "pipeline" vs a "media primitive", how to poll for task status, how to find the right pipeline name from 50+ options, and how to surface produced artifacts back to the user. Use whenever the user asks to "generate"/"produce"/"create"/"render" any video, image set, podcast, ad, screenshot batch, song, dub, or other media via Content Factory.
-version: 1.0.0
+description: How to use ContentX MCP (content-factory) from Hermes — plan → approve → trigger → poll → harvest. Prefer MCP over curl. Use whenever generating / hardening / proving any Content Factory pipeline.
+version: 2.0.0
 metadata:
   hermes:
-    tags: [content-factory, video, image, audio, mcp, generation]
-    related_skills: [ivx-content-factory-pipeline, ivx-stack-tour]
+    tags: [content-factory, video, image, audio, mcp, generation, main]
+    related_skills: [ivx-content-factory-pipeline, ivx-cf-pipeline-operator, ivx-stack-tour]
 ---
 
-# Content Factory — the playbook from Hermes
+# Content Factory — Hermes playbook (UPDATED 2026-07-23)
 
-## When to use this skill
+## Standing rules (read first)
 
-- User asks for media generation by category ("make a trailer for X",
-  "generate ad banners for Y", "narrate this blog as a podcast").
-- User asks "what pipelines are available?".
-- Status checks on a running task.
-- Listing produced artifacts.
+1. **ContentX MCP is required** for live pipeline work. Server id: `content-factory`
+   (already in `~/.hermes/config.yaml` as `mcp_servers.content-factory`).
+2. **Prefer MCP tools over curl.** Use CF API only for health or when an MCP tool is missing.
+3. **Runtime ships from `main` only.** Never target Sid_CF for deploy / MCP image / live proof.
+4. **Pipeline generation = SiliconFlow only** (SF chat + FLUX / Wan nicknames). Do not route
+   pipeline models through Gemini/OpenAI/etc. Hermes *brain* stays on LiteLLM Claude — that is fine.
+5. **Always end with `kanban_complete` or `kanban_block`.** Silent exit = protocol violation.
+6. **Cost cap** on rock-solid cards: USD 5 unless the card says otherwise.
 
-## The two MCP servers
-
-Both are pre-wired in your `~/.hermes/config.yaml`:
+## MCP server (one primary)
 
 | MCP server | When to use |
 |---|---|
-| `content-factory` | Run a *named pipeline*. Each pipeline knows the right sequence of writer → director → producer → editor steps to produce a finished artifact (a learning series episode, an ad video, a screenshot batch, a podcast). |
-| `content-factory-media` | Run a *single primitive*: `generate_image`, `generate_video`, `generate_tts`, `generate_music`, `generate_motion`. Use when you want one asset and don't need a full pipeline. |
+| `content-factory` | **All** pipeline plan / trigger / status / harvest. Same path end users use. |
+| `admin-mcp` | Org tools (documenso, ga4, …) — **not** for CF pipelines. |
 
-If in doubt: ask which one's right by reading the pipeline list.
+There is **no** `content-factory-media` server on Hermes. Do not invent it.
 
-## The 50+ pipelines
+Env already wired:
 
-You don't need to memorize them — call `mcp_content_factory_list_pipelines`
-on the first use of this skill in a session and cache the answer. Common
-names:
+- `CF_MCP_URL=http://content-factory-mcp.aicart.svc.cluster.local:8005/mcp`
+- `CF_API_URL=http://content-factory-api.aicart.svc.cluster.local:8001`
+- `CF_API_KEY` (= automation key) for MCP `X-API-Key` header
 
-- **Long form video**: `learning_series`, `movie`, `kids_movie`,
-  `short_movie`, `documentary`, `event_recap`.
-- **Short form video**: `short_video`, `video_shorts`, `quiz_shorts`,
-  `game_trailer`, `app_ad_campaigns`, `event_promo`.
-- **Audio-first**: `podcast_series`, `podcast2video`, `song`, `dubbing`.
-- **Visual assets**: `ad_banners`, `app_store_deployer`, `marketing_kit`,
-  `world_scene`.
-- **Strategy artifacts**: `gtm_master_plan`, `revenue_strategy`,
-  `game_marketing_audit`.
+In-cluster URLs beat public ingress while you run inside the worker pod.
 
-## The workflow
-
-1. **Pick the pipeline.** If the user named one, use it. Otherwise pick the
-   closest match and confirm in one line.
-2. **File the bead first.** Every Content Factory run should be a bead so
-   the artifacts are auditable.
-   ```
-   bd create "CF: <pipeline_name> for <subject>" --type=task
-   bd update <id> --metadata '{"pipeline":"<name>","requested_by":"<user>"}'
-   ```
-3. **Kick off the pipeline.** Call
-   `mcp_content_factory_run_pipeline(pipeline=<name>, params={...})`.
-   This returns a `task_id` immediately — pipelines are async.
-4. **Poll.** `mcp_content_factory_get_task_status(task_id=<id>)`. Long
-   pipelines (movies, learning_series) can take 20+ minutes. Surface a
-   progress estimate to the user.
-5. **Surface artifacts.** When `status == "completed"`, the response
-   includes S3 URLs, captions, thumbnails. Post them back to the user
-   *and* close the bead with `pr_url` / `playbook_path` pointing at the
-   artifact manifest.
-
-## When to escalate
-
-If a pipeline fails twice in a row, **don't run it a third time.** That's a
-classic agent failure mode (wasted compute, stuck loop). Instead:
+## Required generate job order
 
 ```
-POST https://n8n.intelli-verse-x.ai/webhook/gt-escalate
-{
-  "bead":     "<id>",
-  "role":     "hermes",
-  "severity": "p1",
-  "reason":   "content-factory pipeline <name> failed twice",
-  "detail":   "<stack trace + last status payload>",
-  "links":    {"bead": "<URL>", "task_id": "<id>"}
-}
+1) research_topic (optional)
+2) plan_generation(pipeline=..., params=...)
+   → SHOW plan_id + approval_token in a kanban comment
+3) trigger_pipeline(
+     plan_id=...,
+     approval_token=<from that plan>,
+     user_approved=True   # only for YOUR plan from this session (Hermes operator proof)
+   )
+4) get_task_status(task_id) every 60–90s
+5) harvest_task(task_id) when completed
+6) kanban_complete with task_id + harvest URLs
 ```
 
-A human will pick it up in Discord.
+**Never** call `trigger_pipeline` without a fresh `plan_id` from `plan_generation`.
+**Never** set `user_approved=True` for someone else's plan.
 
-## Cost-aware defaults
+Useful tools (names may be prefixed by Hermes MCP bridge):
 
-Some pipelines (movies, learning_series, big documentaries) cost real GPU
-time. Default to **the cheapest equivalent** unless the user explicitly
-asks for high-quality:
+- `list_available_pipelines`
+- `plan_generation`
+- `trigger_pipeline`
+- `get_task_status` / `wait_for_task`
+- `harvest_task`
+- `estimate_cost`
+- `get_pipeline_log` on failure
 
-- `short_video` over `short_movie`
-- `quiz_shorts` over `video_shorts` for quiz content
-- `podcast2video` (single voice) over `podcast_series` for one-off audio
+## Common rock-solid pipelines
 
-The user can always ask for the bigger one. Defaulting cheap saves them
-money on speculative generation.
+| Pipeline | Notes |
+|---|---|
+| `app_catalog_enricher` / `app_catalog_enrich` | Catalog enrich; SF only |
+| `app_growth_council` | Growth council; SF only |
+| `ad_banners` | Banner pack; SF only |
+| `script2image` | Script → stills; needs `script` |
+| `social_carousel` | Carousel slides; gates on hook/cta + 1080² PNGs |
+
+## Fallback curl (health / missing MCP only)
+
+```bash
+curl -fsS -H "X-API-Key: $CF_API_KEY" "$CF_API_URL/health"
+curl -fsS -H "X-API-Key: $CF_API_KEY" \
+  "$CF_API_URL/api/pipelines/tasks/$TASK_ID"
+```
+
+Public ingress (`https://content-factory.intelli-verse-x.ai`) is optional backup only.
+
+## Fail discipline
+
+- Pipeline fails twice with same signature → `kanban_block` with evidence, do not loop burn.
+- Protocol: every worker exit must call `kanban_complete` or `kanban_block`.
+- Watch budget: after ~6 status polls still running → `kanban_block` with `watch-respawn:` so dispatcher can respawn (do not silent-exit).
 
 ## What NOT to do
 
-- Don't re-run a pipeline on top of an in-progress one for the same input.
-  Check status first.
-- Don't fetch the resulting S3 URLs into your context — link to them.
-  Hermes context windows are small; CF artifacts are gigabytes.
-- Don't run media primitives in a tight loop to "build" a pipeline by
-  hand. If you need a fixed sequence, file a bead asking for a new named
-  pipeline in `content-factory/configs/pipelines/`.
+- Do not use Sid_CF branch / `:sid-cf` image as the live channel.
+- Do not hardcode provider SDKs; CF routes via LiteLLM / SF config already on main.
+- Do not pull S3 media into context — link URLs only.
+- Do not edit `Dockerfile*`, `.github/workflows/`, `api/auth/`, `infra/`, or kube-infra.
+
+## If ContentX MCP HTTP fails (Hermes image)
+
+If `hermes mcp test content-factory` says `streamable_http is not available`,
+**do not block forever**. Fall back to in-cluster CF API (same kitchen):
+
+```bash
+# health
+curl -fsS -H "X-API-Key: $CF_API_KEY" "$CF_API_URL/health"
+
+# trigger pipeline directly (no plan gate when MCP unavailable)
+curl -fsS -X POST -H "X-API-Key: $CF_API_KEY" -H "Content-Type: application/json" \
+  -d '{"script":"A red apple on a white table. Hook text APPLE. CTA Try QuizVerse.","num_images":1}' \
+  "$CF_API_URL/api/pipelines/script2image"
+
+# poll
+curl -fsS -H "X-API-Key: $CF_API_KEY" "$CF_API_URL/api/pipelines/tasks/$TASK_ID"
+
+# harvest (when completed)
+curl -fsS -H "X-API-Key: $CF_API_KEY" "$CF_API_URL/api/pipelines/tasks/$TASK_ID/harvest"
+```
+
+Comment on the card: `MCP_HTTP_UNAVAILABLE � used CF API fallback`.
+Still prove live on **main**. Prefer MCP again once hermes-worker image upgrades `mcp` package.
