@@ -43,6 +43,18 @@ Treat 2xx/3xx as OK. If `/health` under API 404s, try `$QUESTX_ORIGIN/api/health
 **PASS** if origin health + marketing + join are OK (API soft-warn if only API fails).
 **FAIL** if origin health or marketing or join is non-OK.
 
+## On FAIL → chain overnight coding (Mac asleep)
+
+If **FAIL** (origin/marketing/join) and `CARD_INTAKE_TOKEN` is set:
+
+```bash
+curl -sS -X POST "${CARD_INTAKE_URL:-http://127.0.0.1:8090/cards}" \
+  -H "Authorization: Bearer $CARD_INTAKE_TOKEN" -H "Content-Type: application/json" \
+  -d "{\"title\":\"[overnight-code] from smoke FAIL\",\"body\":\"Load skill ivx/questx-overnight-coder.\\ntarget: <failing check>\\nFix minimally, EVALS gate, one PR, kanban_complete.\",\"assignee\":\"default\",\"priority\":1,\"idempotencyKey\":\"questx-code-from-smoke-$(date -u +%Y%m%d%H)\",\"skills\":[\"ivx/questx-overnight-coder\"]}"
+```
+
+API-only 404 is soft-warn — still may file a coding card with `target: API /health 404` once per UTC hour.
+
 ## Finish (mandatory)
 
 1. Optionally `kanban_comment` with the verdict + HTTP codes.
