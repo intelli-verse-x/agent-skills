@@ -88,8 +88,12 @@ Image may have **no node/npm** — use curl + python3 for HTTP/HTML probes.
 
 ### 3. Implement
 
-Minimal diff only. Match existing patterns. No drive-by refactors.
-UI work: Freecash-class layout (`max-w-7xl`), i18n (no hardcoded UI strings), live API data.
+**BULK by default** when card title contains `[overnight-BULK]` or says ≥200 files:
+sweep all listed surfaces / locales in ONE ship. Locale JSON dumps alone often
+hit 200+ files — do not stop at one-page polish.
+Otherwise still prefer meaningful multi-file fixes over single aria-label commits.
+Match existing patterns. No unrelated drive-by refactors outside the wave.
+UI: Freecash-class layout (`max-w-7xl`), i18n (no hardcoded UI strings), live API data.
 
 ### 4. EVALS gate (required)
 
@@ -107,6 +111,15 @@ Else HTTP gate — record status codes for `/` and touched routes.
 - Your targeted check flipped FAIL→PASS and no new critical FAIL on origin/marketing/join
 
 If gate fails → `kanban_block` with evidence. **Do not push main.**
+
+### 4b. Volume gate (BULK cards)
+
+Before shipping a `[overnight-BULK]` card:
+```bash
+cd "$WD" && git add -A && git diff --cached --stat | tail -5
+# FAIL the card (keep working) if files changed < 50 on a BULK mandate.
+# Aim ≥200 files (all locale JSONs + pages + shared components).
+```
 
 ### 5. Ship to main — REQUIRED (not PR-only)
 
