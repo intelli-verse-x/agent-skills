@@ -1,0 +1,39 @@
+# Drop-in workflow for individual product repos.
+# Copy to: .github/workflows/graphify.yml
+# Triggers a central extract in intelli-verse-kube-infra (keeps credentials +
+# S3/EKS logic in one place). Requires GH_PAT with workflow dispatch on kube-infra.
+
+name: Graphify code memory
+
+on:
+  push:
+    branches: [main, master]
+    paths-ignore:
+      - 'graphify-out/**'
+      - '**.md'
+      - '.github/workflows/graphify.yml'
+  workflow_dispatch:
+
+jobs:
+  trigger-central-extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch graphify-extract on kube-infra
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_PAT }}
+          script: |
+            const repo = context.repo.repo;
+            await github.rest.actions.createWorkflowDispatch({
+              owner: 'intelli-verse-x',
+              repo: 'intelli-verse-kube-infra',
+              workflow_id: 'graphify-extract.yml',
+              ref: 'main',
+              inputs: {
+                tier: 'all',
+                repo: repo,
+                commit_graphs: 'true',
+                deploy_mcp: 'true',
+              },
+            });
+            core.info(`Dispatched graphify-extract for ${repo}`);
