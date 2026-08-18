@@ -1,15 +1,15 @@
-# Graph Report - src  (2026-08-15)
+# Graph Report - src  (2026-08-18)
 
 ## Corpus Check
 - cluster-only mode — file stats not available
 
 ## Summary
-- 16667 nodes · 18390 edges · 1366 communities (1203 shown, 163 thin omitted)
+- 16667 nodes · 18390 edges · 1365 communities (1202 shown, 163 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 65 edges (avg confidence: 0.58)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `beaee491`
+- Built from commit: `f7820a4f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -82,7 +82,7 @@
 - Community 65
 - Community 66
 - Community 67
-- Community 68
+- Community 69
 - Community 70
 - Community 71
 - Community 72
@@ -559,7 +559,7 @@
 - Community 543
 - Community 544
 - Community 545
-- Community 547
+- Community 546
 - Community 548
 - Community 549
 - Community 550
@@ -589,7 +589,7 @@
 - Community 574
 - Community 575
 - Community 576
-- Community 578
+- Community 577
 - Community 579
 - Community 580
 - Community 581
@@ -766,7 +766,7 @@
 - Community 752
 - Community 753
 - Community 754
-- Community 756
+- Community 755
 - Community 757
 - Community 758
 - Community 759
@@ -1143,7 +1143,7 @@
 - Community 1132
 - Community 1133
 - Community 1134
-- Community 1135
+- Community 1136
 - Community 1137
 - Community 1138
 - Community 1139
@@ -1197,12 +1197,12 @@
 - Community 1187
 - Community 1188
 - Community 1189
-- Community 1190
+- Community 1192
 - Community 1193
 - Community 1194
 - Community 1195
 - Community 1196
-- Community 1197
+- Community 1198
 - Community 1199
 - Community 1200
 - Community 1201
@@ -1256,7 +1256,7 @@
 - Community 1249
 - Community 1250
 - Community 1251
-- Community 1252
+- Community 1255
 - Community 1256
 - Community 1257
 - Community 1258
@@ -1329,7 +1329,7 @@
 - Community 1325
 - Community 1326
 - Community 1327
-- Community 1328
+- Community 1329
 - Community 1330
 - Community 1331
 - Community 1332
@@ -1337,7 +1337,6 @@
 - Community 1334
 - Community 1335
 - Community 1336
-- Community 1337
 
 ## God Nodes (most connected - your core abstractions)
 1. `VideoClipper` - 37 edges
@@ -1366,7 +1365,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (1366 total, 163 thin omitted)
+## Communities (1365 total, 163 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.06
@@ -1638,95 +1637,95 @@ Nodes (31): call_llm(), compute_composite_score(), compute_independence(), compu
 
 ### Community 67 - "Community 67"
 Cohesion: 0.06
-Nodes (32): 1. Locomotive (Montreal), 2. Studio Freight (New York), 3. AREA 17 (Paris/NYC), 4. Hello Monday (Copenhagen/NYC), 5. Dogstudio (Belgium/Chicago), 6. Tonik (Poland), 7. Instrument (Portland), 8. Active Theory (LA) (+24 more)
-
-### Community 68 - "Community 68"
-Cohesion: 0.06
 Nodes (31): 1. Core Rules, 2. Top-Level Structure, 3. Content Types And Nesting, 4. Shared Attributes, 5.10 `<Columns>` and `<ColumnItem>`, 5.11 `<Component>`, 5.12 `<Section>`, 5.13 `<Icons>` and `<Icon />` (+23 more)
 
-### Community 70 - "Community 70"
+### Community 69 - "Community 69"
 Cohesion: 0.06
 Nodes (31): 2D Camera Movement, 360-degree showcase, 3D Camera Orientation, Accessing and Moving Light, Accessing the Camera Frame, Advanced Camera Patterns, Animating Camera, Basic Movement (+23 more)
 
-### Community 71 - "Community 71"
+### Community 70 - "Community 70"
 Cohesion: 0.11
 Nodes (21): add_exclusion(), _categorize_loss_reason(), compute_time_decay_score(), draft_champion_email(), draft_replacement_email(), draft_revival_email(), HubSpotClient, load_exclusions() (+13 more)
 
-### Community 72 - "Community 72"
+### Community 71 - "Community 71"
 Cohesion: 0.06
 Nodes (30): Appendix — Trigger selection tables, Create Automation (Interactive), Discover before ask, Execution spine (every run), Fast-path, GitHub / GitLab repo scope, Glass finish path (compliance), House rules (+22 more)
 
-### Community 73 - "Community 73"
+### Community 72 - "Community 72"
 Cohesion: 0.06
 Nodes (30): Comparison with Alternatives, Conversation memory, Core Concept, Creation, Critical: cross-entity queries, Deletion, Extraction modes, How layering works in practice (+22 more)
 
-### Community 74 - "Community 74"
+### Community 73 - "Community 73"
 Cohesion: 0.06
 Nodes (30): 1. Clear Image Roles, 2. Quality References, 3. Consistent Lighting, 4. Resolution Awareness, 5. Explicit Relationships, Attribute Mixing, Background Replacement, Best Practices (+22 more)
 
-### Community 75 - "Community 75"
+### Community 74 - "Community 74"
 Cohesion: 0.09
 Nodes (17): InteractiveScene, Complex S-Plane Visualization Interactive visualization of exponential…, Moving dot showing e^{st} value., Traced path of e^{st} as t increases., Axes for plotting Re[e^{st}] over time., Graph that updates based on current s value., Comprehensive s-plane visualization with: - Complex s parameter with dot and…, Vertical line indicator on the graph. (+9 more)
 
-### Community 76 - "Community 76"
+### Community 75 - "Community 75"
 Cohesion: 0.08
 Nodes (20): ClassicNeuronDiagram, NeuronActivationStates, InteractiveScene, Neuron Activation Visualization Shows neurons firing based on input patterns,…, Visualizes neurons as dots with varying activation levels. Active neurons glow,…, Shows the classic neural network diagram with connected nodes. Inputs feed into…, MLPExpansion3D, MLPNeuronsFlow (+12 more)
 
-### Community 77 - "Community 77"
+### Community 76 - "Community 76"
 Cohesion: 0.12
 Nodes (30): analyze(), annotate_section_feel(), band_energy_curves(), beat_grid(), classify_drum(), classify_metric(), count_in(), derive_phase_budgets() (+22 more)
 
-### Community 78 - "Community 78"
+### Community 77 - "Community 77"
 Cohesion: 0.06
 Nodes (30): About Skills, Agents metadata (recommended), Anatomy of a Skill, Assets (`assets/`), Body, Bundled Resources (optional), Concise is Key, Core Principles (+22 more)
 
-### Community 79 - "Community 79"
+### Community 78 - "Community 78"
 Cohesion: 0.14
 Nodes (29): BeautifulSoup, audit_url(), build_report(), compute_letter_grade(), CROReport, DimensionScore, fetch_page(), format_report_text() (+21 more)
 
-### Community 80 - "Community 80"
+### Community 79 - "Community 79"
 Cohesion: 0.07
 Nodes (29): 1. Completeness Beats Speed, 2. Small Tasks, Perfect Results, 3. Real Content, Real Assets, 4. Foundation First, 5. Extract How It Looks AND How It Behaves, 6. Identify the Interaction Model Before Building, 7. Extract Every State, Not Just the Default, 8. Spec Files Are the Source of Truth (+21 more)
 
-### Community 81 - "Community 81"
+### Community 80 - "Community 80"
 Cohesion: 0.07
 Nodes (29): Account type, Canvas and grid, Carousel structure (6 slides), Characters and assets, Color palette, Color palette, Color palette, Content DO / DON'T (+21 more)
 
-### Community 82 - "Community 82"
+### Community 81 - "Community 81"
 Cohesion: 0.07
 Nodes (29): Basic Syntax, Centered Composition, Display/Decorative, Embossed/Debossed, Font Style Categories, Gradient Text, Guidance Parameter, Handwritten (+21 more)
 
-### Community 83 - "Community 83"
+### Community 82 - "Community 82"
 Cohesion: 0.10
 Nodes (21): AttentionPattern, get_paragraph(), NeuralNetwork, Animation, LaggedStart, ndarray, VGroup, random_bright_color() (+13 more)
 
-### Community 84 - "Community 84"
+### Community 83 - "Community 83"
 Cohesion: 0.09
 Nodes (20): AnimatedGraph, AreaUnderCurve, CoordinateLabeling, FunctionPlotting, ImplicitFunction, MultipleFunctions, PolarPlot, Scene (+12 more)
 
-### Community 85 - "Community 85"
+### Community 84 - "Community 84"
 Cohesion: 0.09
 Nodes (20): ColorCodedEquation, DerivativeChainRule, EquationDerivation, FunctionNotation, IntegralVisualization, LimitNotation, MatrixTransformation, Scene (+12 more)
 
-### Community 86 - "Community 86"
+### Community 85 - "Community 85"
 Cohesion: 0.07
 Nodes (30): apply_complex_function, apply_function, ApplyMethod, Basic Transform, Best Practices, Common Patterns, Complex Transformations, Derivation Transformation (+22 more)
 
-### Community 87 - "Community 87"
+### Community 86 - "Community 86"
 Cohesion: 0.07
 Nodes (29): Basic Raycasting, Box Selection, Camera Controls, Click to Select, DragControls, Efficient Raycasting, Event Handling Best Practices, FirstPersonControls (+21 more)
 
-### Community 88 - "Community 88"
+### Community 87 - "Community 87"
 Cohesion: 0.07
 Nodes (29): Anti-Pattern: No Feedback Delay Between Questions, Anti-Pattern: The Intrusive Celebration, Anti-Pattern: The Non-Interactable Button, Anti-Pattern: The Permanent Celebration, Anti-Pattern: Uniform Feedback, Definition, DOTween Implementation Snippets, Job 1: Show System Status (+21 more)
 
-### Community 89 - "Community 89"
+### Community 88 - "Community 88"
 Cohesion: 0.16
 Nodes (30): arcFile(), artifactFile(), buildEntity(), chapterFile(), chapterIndex(), characterFile(), characterIndex(), continuityState() (+22 more)
 
-### Community 90 - "Community 90"
+### Community 89 - "Community 89"
 Cohesion: 0.13
 Nodes (28): compute_kpis(), compute_variance(), detect_file_type(), detect_period(), fmt_k(), fmt_pct(), format_briefing(), load_prior_period() (+20 more)
+
+### Community 90 - "Community 90"
+Cohesion: 0.07
+Nodes (29): 1. Core Technologies, 2. Animation Libraries, 3. Smooth Scrolling Solutions, 4. 3D & WebGL, 5. Build Tools & Frameworks, 6. Performance Optimization, 7. Deployment & Hosting, Anime.js (+21 more)
 
 ### Community 91 - "Community 91"
 Cohesion: 0.07
@@ -1758,159 +1757,159 @@ Nodes (28): load_companion_json_object(), load_json_object(), main(), normalize_
 
 ### Community 98 - "Community 98"
 Cohesion: 0.07
-Nodes (27): ButtonProps, CalloutProps, CalloutTone, CardBodyProps, CardHeaderProps, CardProps, CardSize, CardVariant (+19 more)
+Nodes (28): 1. Locomotive (Montreal), 2. Studio Freight (New York), 3. AREA 17 (Paris/NYC), 5. Dogstudio (Belgium/Chicago), 6. Tonik (Poland), 7. Instrument (Portland), 8. Active Theory (LA), 9. Common Patterns Across Elite Agencies (+20 more)
 
 ### Community 99 - "Community 99"
 Cohesion: 0.07
-Nodes (28): Adding Pauses to Scripts, Avatar, Basic Video Generation, Best Practices, Complete Workflow Example, curl, Custom Audio, Error Handling (+20 more)
+Nodes (27): ButtonProps, CalloutProps, CalloutTone, CardBodyProps, CardHeaderProps, CardProps, CardSize, CardVariant (+19 more)
 
 ### Community 100 - "Community 100"
 Cohesion: 0.07
-Nodes (27): AmbientLight, Common Lighting Setups, Contact Shadows (Fake, Fast), Cube Texture Environment, DirectionalLight, DirectionalLight Shadows, Enable Shadows, Environment Lighting (IBL) (+19 more)
+Nodes (28): Adding Pauses to Scripts, Avatar, Basic Video Generation, Best Practices, Complete Workflow Example, curl, Custom Audio, Error Handling (+20 more)
 
 ### Community 101 - "Community 101"
 Cohesion: 0.07
-Nodes (26): 1.1 Avoid Boolean Prop Proliferation, 1.2 Use Compound Components, 1. Component Architecture, 2.1 Decouple State Management from UI, 2.2 Define Generic Context Interfaces for Dependency Injection, 2.3 Lift State into Provider Components, 2. State Management, 3.1 Create Explicit Component Variants (+18 more)
+Nodes (27): AmbientLight, Common Lighting Setups, Contact Shadows (Fake, Fast), Cube Texture Environment, DirectionalLight, DirectionalLight Shadows, Enable Shadows, Environment Lighting (IBL) (+19 more)
 
 ### Community 102 - "Community 102"
 Cohesion: 0.07
-Nodes (27): Accessibility: Reduce Motion, Animation Anti-Patterns (NNGroup research-backed), Anti-Pattern 1: Competing Simultaneous Animations, Anti-Pattern 2: Time-Filling Animation, Anti-Pattern 3: Peripheral Looping Motion, Anti-Pattern 4: Inconsistent Directional Metaphors, Apple HIG: Core Motion Philosophy, By Animation Category (+19 more)
+Nodes (26): 1.1 Avoid Boolean Prop Proliferation, 1.2 Use Compound Components, 1. Component Architecture, 2.1 Decouple State Management from UI, 2.2 Define Generic Context Interfaces for Dependency Injection, 2.3 Lift State into Provider Components, 2. State Management, 3.1 Create Explicit Component Variants (+18 more)
 
 ### Community 103 - "Community 103"
 Cohesion: 0.07
-Nodes (28): Add Method to Existing Class, Adding a Full-Screen Effect via Renderer Features (URP), Before Any Operation, Check Scene State, Compilation Block Recovery, Configuring Light Baking, Create New Script and Attach, Debugging Workflows (+20 more)
+Nodes (27): Accessibility: Reduce Motion, Animation Anti-Patterns (NNGroup research-backed), Anti-Pattern 1: Competing Simultaneous Animations, Anti-Pattern 2: Time-Filling Animation, Anti-Pattern 3: Peripheral Looping Motion, Anti-Pattern 4: Inconsistent Directional Metaphors, Apple HIG: Core Motion Philosophy, By Animation Category (+19 more)
 
 ### Community 104 - "Community 104"
 Cohesion: 0.07
-Nodes (27): 1. Easing Functions, 2. Page Load Sequences, 3. Scroll-Triggered Animations, 4. Micro-Interactions, 5. Page Transitions, 6. Text Animations, 7. Performance Optimization, Animation Patterns Reference (+19 more)
+Nodes (28): Add Method to Existing Class, Adding a Full-Screen Effect via Renderer Features (URP), Before Any Operation, Check Scene State, Compilation Block Recovery, Configuring Light Baking, Create New Script and Attach, Debugging Workflows (+20 more)
 
 ### Community 105 - "Community 105"
 Cohesion: 0.07
-Nodes (26): 1. Instrumental background track (simplest), 2. Song with vocals and lyrics, 3. Using a preset for video background, ACE-Step 1.5 Music Generation, Brand Consistency, Caption Writing — Layer Dimensions, Combining with Voiceover, complete (future, requires base model) (+18 more)
+Nodes (27): 1. Easing Functions, 2. Page Load Sequences, 3. Scroll-Triggered Animations, 4. Micro-Interactions, 5. Page Transitions, 6. Text Animations, 7. Performance Optimization, Animation Patterns Reference (+19 more)
 
 ### Community 106 - "Community 106"
 Cohesion: 0.07
-Nodes (26): Activations, Arrow Types, Attributes, Cardinality, Class Diagram, Composite States, CSS Classes, Direction (+18 more)
+Nodes (26): 1. Instrumental background track (simplest), 2. Song with vocals and lyrics, 3. Using a preset for video background, ACE-Step 1.5 Music Generation, Brand Consistency, Caption Writing — Layer Dimensions, Combining with Voiceover, complete (future, requires base model) (+18 more)
 
 ### Community 107 - "Community 107"
 Cohesion: 0.07
-Nodes (26): Basic Edits, Characteristics, Characteristics, Characteristics, Characteristics, Complex Transformations, Controlled Edits, Example Prompt (+18 more)
+Nodes (26): Activations, Arrow Types, Attributes, Cardinality, Class Diagram, Composite States, CSS Classes, Direction (+18 more)
 
 ### Community 108 - "Community 108"
 Cohesion: 0.07
-Nodes (26): 1. Always Pair with Description, 2. Associate with Specific Objects, 3. Limit Color Palette, Analogous (Adjacent colors), Best Practices, Brand Colors, Color Bleeding, Color Harmony Patterns (+18 more)
+Nodes (26): Basic Edits, Characteristics, Characteristics, Characteristics, Characteristics, Complex Transformations, Controlled Edits, Example Prompt (+18 more)
 
 ### Community 109 - "Community 109"
 Cohesion: 0.07
-Nodes (26): Arrays and Collections, Best practices, clamp(min, max, value?), Clamping and Ranges, distribute(config), Do Not, getUnit(value), gsap.utils (+18 more)
+Nodes (26): 1. Always Pair with Description, 2. Associate with Specific Objects, 3. Limit Color Palette, Analogous (Adjacent colors), Best Practices, Brand Colors, Color Bleeding, Color Harmony Patterns (+18 more)
 
 ### Community 110 - "Community 110"
 Cohesion: 0.07
-Nodes (26): Additive Blending, Animating Morph Targets, Animation Blending, Animation System Overview, Animation Utilities, AnimationAction, AnimationClip, AnimationMixer (+18 more)
+Nodes (26): Arrays and Collections, Best practices, clamp(min, max, value?), Clamping and Ranges, distribute(config), Do Not, getUnit(value), gsap.utils (+18 more)
 
 ### Community 111 - "Community 111"
 Cohesion: 0.07
-Nodes (26): Advanced Shapes, Basic Shapes, BufferAttribute Types, BufferGeometry, Built-in Geometries, Center Geometry, Clone and Transform, Common Patterns (+18 more)
+Nodes (26): Additive Blending, Animating Morph Targets, Animation Blending, Animation System Overview, Animation Utilities, AnimationAction, AnimationClip, AnimationMixer (+18 more)
 
 ### Community 112 - "Community 112"
 Cohesion: 0.07
-Nodes (26): Advanced Options (v4 API), Audio-Only Translation (faster, no lip-sync), Authentication, Basic Translation (with lip-sync), Batch Translation, Best Practices, Checking Translation Status, Complete Workflow (+18 more)
+Nodes (26): Advanced Shapes, Basic Shapes, BufferAttribute Types, BufferGeometry, Built-in Geometries, Center Geometry, Clone and Transform, Common Patterns (+18 more)
 
 ### Community 113 - "Community 113"
 Cohesion: 0.07
-Nodes (26): 1 · Doherty Threshold — "Under 400ms or users disengage", 2 · Peak-End Rule — "Only the peak and ending are remembered", 3 · Zeigarnik Effect — "Uncompleted tasks stay top-of-mind", 4 · Goal-Gradient Effect — "Effort accelerates near the finish line", 5 · Aesthetic-Usability Effect — "Beautiful = perceived as easier", 6 · Von Restorff Effect — "The different thing is remembered", 7 · Miller's Law — "7 ± 2 items in working memory", 8 · Hick's Law — "More choices = longer decisions" (+18 more)
+Nodes (26): Advanced Options (v4 API), Audio-Only Translation (faster, no lip-sync), Authentication, Basic Translation (with lip-sync), Batch Translation, Best Practices, Checking Translation Status, Complete Workflow (+18 more)
 
 ### Community 114 - "Community 114"
-Cohesion: 0.08
-Nodes (25): 1. Install dependencies, 2. Set environment variables, 3. Run your first experiment, autogrowth-weekly-scorecard.py, Commands, Configurable Thresholds, Configuration, Core Settings (+17 more)
+Cohesion: 0.07
+Nodes (26): 1 · Doherty Threshold — "Under 400ms or users disengage", 2 · Peak-End Rule — "Only the peak and ending are remembered", 3 · Zeigarnik Effect — "Uncompleted tasks stay top-of-mind", 4 · Goal-Gradient Effect — "Effort accelerates near the finish line", 5 · Aesthetic-Usability Effect — "Beautiful = perceived as easier", 6 · Von Restorff Effect — "The different thing is remembered", 7 · Miller's Law — "7 ± 2 items in working memory", 8 · Hick's Law — "More choices = longer decisions" (+18 more)
 
 ### Community 115 - "Community 115"
 Cohesion: 0.08
-Nodes (25): 1. 🎬 End-to-End Pipeline (`longform_pipeline.py`), 1. Install dependencies, 2. 🔍 Clip Segmenter (`clip_segmenter.py`), 2. Set API keys, 3. ✂️ Clip Cutter (`clip_cutter.py`), 3. Run on a video, 4. 🤖 Scored Pipeline (`scored_pipeline.py`), Architecture (+17 more)
+Nodes (25): 1. Install dependencies, 2. Set environment variables, 3. Run your first experiment, autogrowth-weekly-scorecard.py, Commands, Configurable Thresholds, Configuration, Core Settings (+17 more)
 
 ### Community 116 - "Community 116"
+Cohesion: 0.08
+Nodes (25): 1. 🎬 End-to-End Pipeline (`longform_pipeline.py`), 1. Install dependencies, 2. 🔍 Clip Segmenter (`clip_segmenter.py`), 2. Set API keys, 3. ✂️ Clip Cutter (`clip_cutter.py`), 3. Run on a video, 4. 🤖 Scored Pipeline (`scored_pipeline.py`), Architecture (+17 more)
+
+### Community 117 - "Community 117"
 Cohesion: 0.18
 Nodes (25): _alpha_counts(), _apply_alpha_to_image(), _apply_edge_feather(), _build_parser(), _channel_distance(), _clamp_channel(), _cleanup_spill(), _contract_alpha() (+17 more)
 
-### Community 117 - "Community 117"
-Cohesion: 0.08
-Nodes (26): Alternative: Using Webhooks, Basic Polling, Best Practices, Check Status Later, Checking Video Status (Direct API), CLI-Friendly Pattern, Complete Workflow Example, Completed Video (+18 more)
-
 ### Community 118 - "Community 118"
 Cohesion: 0.08
-Nodes (26): Avatar Description Guide, CRITICAL ON-SCREEN TEXT, Duration by Approach, FORMAT, High Energy, Low Energy, Medium Energy, Motion Vocabulary (+18 more)
+Nodes (26): Alternative: Using Webhooks, Basic Polling, Best Practices, Check Status Later, Checking Video Status (Direct API), CLI-Friendly Pattern, Complete Workflow Example, Completed Video (+18 more)
 
 ### Community 119 - "Community 119"
 Cohesion: 0.08
-Nodes (26): Alternative: Using Webhooks, Basic Polling, Best Practices, Check Status Later, Checking Video Status (Direct API), CLI-Friendly Pattern, Complete Workflow Example, Completed Video (+18 more)
+Nodes (26): Avatar Description Guide, CRITICAL ON-SCREEN TEXT, Duration by Approach, FORMAT, High Energy, Low Energy, Medium Energy, Motion Vocabulary (+18 more)
 
 ### Community 120 - "Community 120"
+Cohesion: 0.08
+Nodes (26): Alternative: Using Webhooks, Basic Polling, Best Practices, Check Status Later, Checking Video Status (Direct API), CLI-Friendly Pattern, Complete Workflow Example, Completed Video (+18 more)
+
+### Community 121 - "Community 121"
 Cohesion: 0.12
 Nodes (10): Full Example: Brief to Production Prompt, Input Brief, Output Prompt, Premium Report, Product Comparison, Ready-to-Use Templates, Social Ad (30 seconds), Strategy Presentation (+2 more)
 
-### Community 121 - "Community 121"
+### Community 122 - "Community 122"
 Cohesion: 0.08
 Nodes (26): Avatar Description Guide, CRITICAL ON-SCREEN TEXT, Duration by Approach, FORMAT, High Energy, Low Energy, Medium Energy, Motion Vocabulary (+18 more)
 
-### Community 122 - "Community 122"
+### Community 123 - "Community 123"
 Cohesion: 0.08
 Nodes (26): Alternative: Using Webhooks, Basic Polling, Best Practices, Check Status Later, Checking Video Status (Direct API), CLI-Friendly Pattern, Complete Workflow Example, Completed Video (+18 more)
 
-### Community 123 - "Community 123"
+### Community 124 - "Community 124"
 Cohesion: 0.08
 Nodes (24): Failure Triage, Image-To-Music, Interactions API Shape, Limitations And Safety, Lyria 3 API and Prompting Reference, Lyria 3 Clip, Lyria 3 Pro, Lyria RealTime (+16 more)
 
-### Community 124 - "Community 124"
+### Community 125 - "Community 125"
 Cohesion: 0.08
 Nodes (25): Advanced t2c Patterns, Animating color changes, Basic t2c Usage, Best Practices, Coloring LaTeX Operators, Coloring Math Symbols, Coloring Multiple Instances, Coloring Substrings (+17 more)
 
-### Community 125 - "Community 125"
+### Community 126 - "Community 126"
 Cohesion: 0.10
 Nodes (17): AnimatedNumber(), Props, Props, StatCard(), Props, UnderlinedText(), defaultProps, RemotionRoot() (+9 more)
 
-### Community 126 - "Community 126"
+### Community 127 - "Community 127"
 Cohesion: 0.08
 Nodes (25): 1. Design Token Hierarchy, 2. Component Architecture, Advanced v4 Patterns, Best Practices, Container Queries, Core Concepts, Custom Utilities with `@utility`, Do's (+17 more)
 
-### Community 127 - "Community 127"
+### Community 128 - "Community 128"
 Cohesion: 0.08
 Nodes (25): Authentication, Basic TTS, Best Practices, curl, curl, Default Workflow, ElevenLabs Settings (optional), Endpoint (+17 more)
 
-### Community 128 - "Community 128"
+### Community 129 - "Community 129"
 Cohesion: 0.12
 Nodes (26): addFrontmatterListValue(), applyEntityBacklinks(), asArray(), computeWordCounts(), crc32(), createEntity(), entityConfig(), entityResult() (+18 more)
 
-### Community 129 - "Community 129"
+### Community 130 - "Community 130"
 Cohesion: 0.08
 Nodes (23): 1. After Writing/Editing Scripts: Wait for Compilation and Check Console, 2. Use `batch_execute` for Multiple Operations, 3. Use Screenshots to Verify Visual Results, 4. Check Console After Major Changes, 5. Always Check `editor_state` Before Complex Operations, Booleans, Colors, Common Workflows (+15 more)
 
-### Community 130 - "Community 130"
+### Community 131 - "Community 131"
 Cohesion: 0.08
 Nodes (22): Auto-dispatch of kanban cards: who does it?, EKS production deployment (no laptop dep), Hermes Kanban — multi-board bring-up + proof run, When you need a STANDALONE dispatch daemon (rare), Bring-up, Eval checklist, kagent — evaluation kit for the Content Factory namespace, Prereqs (+14 more)
 
-### Community 131 - "Community 131"
+### Community 132 - "Community 132"
 Cohesion: 0.11
 Nodes (20): build_brief(), collect_builtwith(), collect_hiring(), collect_news(), collect_website(), fetch_url(), is_cached(), load_cache() (+12 more)
 
-### Community 132 - "Community 132"
+### Community 133 - "Community 133"
 Cohesion: 0.13
 Nodes (24): build_report(), detect_anomalies(), fetch_ahrefs_seo(), fetch_ga4_traffic(), fetch_gong_call_quality(), fetch_hubspot_pipeline(), format_markdown(), generate_executive_summary() (+16 more)
 
-### Community 133 - "Community 133"
+### Community 134 - "Community 134"
 Cohesion: 0.08
 Nodes (24): AI Segmentation, Architecture, Caption System, Cost Breakdown, Crop Parameters, Customization, Directory Structure, Features (+16 more)
 
-### Community 134 - "Community 134"
+### Community 135 - "Community 135"
 Cohesion: 0.08
 Nodes (24): Account type, Brand identity, Brand logo (canonical), Brand motif, Campaign architecture, Content DO / DON'T, Cultural markers (must appear), End card (all content) (+16 more)
 
-### Community 135 - "Community 135"
-Cohesion: 0.08
-Nodes (24): 1. Core Technologies, 2. Animation Libraries, 3. Smooth Scrolling Solutions, 4. 3D & WebGL, 6. Performance Optimization, 7. Deployment & Hosting, Anime.js, Code Splitting (+16 more)
-
 ### Community 136 - "Community 136"
 Cohesion: 0.08
-Nodes (25): Best Practices, Event Payload Structure, Express.js Example, Handle in Webhook, Handling Webhook Failures, Include Callback ID in Video Generation, Local Development with ngrok, Overview (+17 more)
+Nodes (24): 1. Grid Frameworks, 2. Breakpoint Strategy, 3. Compositional Techniques, 4. Responsive Patterns, 5. Scroll-Based Layouts, Asymmetric Balance, Base Grid System, Bleeding Elements (+16 more)
 
 ### Community 137 - "Community 137"
 Cohesion: 0.08
@@ -1918,99 +1917,99 @@ Nodes (25): Best Practices, Event Payload Structure, Express.js Example, Handle 
 
 ### Community 138 - "Community 138"
 Cohesion: 0.08
-Nodes (24): Audio Codecs (-c:a), Codec Options, Common Audio Filters (-af), Common Video Filters, Container Formats, Create GIF from Video, Create Thumbnail, CRF (Constant Rate Factor) for x264/x265 (+16 more)
+Nodes (25): Best Practices, Event Payload Structure, Express.js Example, Handle in Webhook, Handling Webhook Failures, Include Callback ID in Video Generation, Local Development with ngrok, Overview (+17 more)
 
 ### Community 139 - "Community 139"
 Cohesion: 0.08
-Nodes (20): Accessories, Colors, Common Replacements, Complex Replacement Examples, Composition, Negative Prompt Alternatives, Objects, Original Negative-Heavy Prompt (+12 more)
+Nodes (24): Audio Codecs (-c:a), Codec Options, Common Audio Filters (-af), Common Video Filters, Container Formats, Create GIF from Video, Create Thumbnail, CRF (Constant Rate Factor) for x264/x265 (+16 more)
 
 ### Community 140 - "Community 140"
 Cohesion: 0.08
-Nodes (25): Best Practices, Event Payload Structure, Express.js Example, Handle in Webhook, Handling Webhook Failures, Include Callback ID in Video Generation, Local Development with ngrok, Overview (+17 more)
+Nodes (20): Accessories, Colors, Common Replacements, Complex Replacement Examples, Composition, Negative Prompt Alternatives, Objects, Original Negative-Heavy Prompt (+12 more)
 
 ### Community 141 - "Community 141"
 Cohesion: 0.08
-Nodes (17): Consuming it, Design Spec — `frame.md` / `design.md`, Resolving which spec to read, Starting from a preset (optional), What `frame.md` is, Color Presence, Density, Frame Composition (+9 more)
+Nodes (25): Best Practices, Event Payload Structure, Express.js Example, Handle in Webhook, Handling Webhook Failures, Include Callback ID in Video Generation, Local Development with ngrok, Overview (+17 more)
 
 ### Community 142 - "Community 142"
 Cohesion: 0.08
-Nodes (24): 1 · Cover (identity · move: decorations puncture · left), 2 · Feature Cards (catalog · move: 3-up bordered grid · blue ground), 3 · Stat Grid (data · move: tilted stat cards · green ground), 4 · Closing Plate (closer · move: inverted black · centered), 5 · Quote (quote · move: bordered quote frame · pink ground), 6 · Timeline (process · move: stepped bordered cards · offwhite), Approved Entities, Aspect-Ratio Behavior (+16 more)
+Nodes (17): Consuming it, Design Spec — `frame.md` / `design.md`, Resolving which spec to read, Starting from a preset (optional), What `frame.md` is, Color Presence, Density, Frame Composition (+9 more)
 
 ### Community 143 - "Community 143"
 Cohesion: 0.08
-Nodes (24): 1 · Cover (identity · move: massive type · ORANGE register · left), 2 · Statement (declarative · move: type IS composition · DARK register · left), 3 · Stat Grid (data · move: top-border cards · DARK · the dense frame), 4 · Fadelist (narrative · move: opacity stack · DARK), 5 · Pull Quote (quote · move: oversized mark · DARK · left), 6 · Compare (argument · move: split + orange payoff · DARK→ORANGE), Approved Entities, Aspect-Ratio Behavior (+16 more)
+Nodes (24): 1 · Cover (identity · move: decorations puncture · left), 2 · Feature Cards (catalog · move: 3-up bordered grid · blue ground), 3 · Stat Grid (data · move: tilted stat cards · green ground), 4 · Closing Plate (closer · move: inverted black · centered), 5 · Quote (quote · move: bordered quote frame · pink ground), 6 · Timeline (process · move: stepped bordered cards · offwhite), Approved Entities, Aspect-Ratio Behavior (+16 more)
 
 ### Community 144 - "Community 144"
 Cohesion: 0.08
-Nodes (24): 1 · Cover (identity · move: oversized EB Garamond · cream), 2 · Statement (statement · move: single EB Garamond line · cream or navy), 3 · Code Surface (code · move: warm-navy code window · the PR-critical frame), 4 · Number / Impact (data · move: oversized figure · cream), 5 · Pull-quote (quote · move: EB Garamond italic · cream), 6 · Closing / CTA (closer · move: coral voltage · cream or navy), Approved Real Entities, Aspect-Ratio Behavior (+16 more)
+Nodes (24): 1 · Cover (identity · move: massive type · ORANGE register · left), 2 · Statement (declarative · move: type IS composition · DARK register · left), 3 · Stat Grid (data · move: top-border cards · DARK · the dense frame), 4 · Fadelist (narrative · move: opacity stack · DARK), 5 · Pull Quote (quote · move: oversized mark · DARK · left), 6 · Compare (argument · move: split + orange payoff · DARK→ORANGE), Approved Entities, Aspect-Ratio Behavior (+16 more)
 
 ### Community 145 - "Community 145"
 Cohesion: 0.08
-Nodes (24): 1 · Hero Cover (identity · move: serif + glitch · left), 2 · Index Ledger (catalog · move: dense matrix · left — the dense frame), 3 · Chapter Opener (section · move: scale · sparse · left), 4 · Data Frame (chart · move: pixel-stack · left), 5 · Manifesto / Quote (quote · move: centered statement · sparse), 6 · Colophon (closer · move: right-aligned close · sparse), Approved Entities, Aspect-Ratio Behavior (+16 more)
+Nodes (24): 1 · Cover (identity · move: serif + compass ring · left), 2 · Agenda / Index (index · move: hairline list · left), 3 · Pull Quote (quote · move: centered statement · compass ring), 4 · Closing Plate (closer · move: centered ring · centered), 5 · Two-Column Editorial (content · move: asymmetric split · left), 6 · Stats / Timeline (data · move: hairline rail · left), Approved Entities, Aspect-Ratio Behavior (+16 more)
 
 ### Community 146 - "Community 146"
 Cohesion: 0.08
-Nodes (24): 1 · Region-Split Cover (identity · move: hard region edge · left), 2 · Feature Stat (anchor · move: scale · coral environment · left), 3 · Quote Layout (quote · move: panel split · giant mark), 4 · Closing Plate (closer · move: cream field + coral band · centered), 5 · Three-Column Catalog (catalog · move: density — the dense frame · centered head), 6 · Timeline (process · move: horizontal rail · left), Approved Entities, Aspect-Ratio Behavior (+16 more)
+Nodes (24): 1 · Cover (identity · move: oversized EB Garamond · cream), 2 · Statement (statement · move: single EB Garamond line · cream or navy), 3 · Code Surface (code · move: warm-navy code window · the PR-critical frame), 4 · Number / Impact (data · move: oversized figure · cream), 5 · Pull-quote (quote · move: EB Garamond italic · cream), 6 · Closing / CTA (closer · move: coral voltage · cream or navy), Approved Real Entities, Aspect-Ratio Behavior (+16 more)
 
 ### Community 147 - "Community 147"
 Cohesion: 0.08
-Nodes (24): 1 · Wordmark Cover (identity · move: full-frame lockup · centered), 2 · Big Claim (oversized statement · move: scale · left), 3 · Stat Grid (catalog · move: density — the one dense frame · centered), 4 · Closing Plate (closer · move: ground-swap · centered), 5 · Featured Marker (callout · move: hard-shadow focal · left/asymmetric), 6 · Comparison Ledger (data · move: matrix · left), Approved Entities, Aspect-Ratio Behavior (+16 more)
+Nodes (24): 1 · Hero Cover (identity · move: serif + glitch · left), 2 · Index Ledger (catalog · move: dense matrix · left — the dense frame), 3 · Chapter Opener (section · move: scale · sparse · left), 4 · Data Frame (chart · move: pixel-stack · left), 5 · Manifesto / Quote (quote · move: centered statement · sparse), 6 · Colophon (closer · move: right-aligned close · sparse), Approved Entities, Aspect-Ratio Behavior (+16 more)
 
 ### Community 148 - "Community 148"
 Cohesion: 0.08
-Nodes (24): 1 · Cover (identity · move: ornament wreath · saturated · centered), 2 · Info Cards (catalog · move: 3-up white cards · cream · the dense frame), 3 · Process Steps (sequence · move: rotating circle markers · peach · centered), 4 · Quote (quote · move: quote-mark anchor · soft-pink · centered), 5 · Framed Section (feature · move: cap+body card · cream), 6 · Closing (closer · move: ornament wreath · saturated · centered), Approved Real Entities, Aspect-Ratio Behavior (+16 more)
+Nodes (24): 1 · Region-Split Cover (identity · move: hard region edge · left), 2 · Feature Stat (anchor · move: scale · coral environment · left), 3 · Quote Layout (quote · move: panel split · giant mark), 4 · Closing Plate (closer · move: cream field + coral band · centered), 5 · Three-Column Catalog (catalog · move: density — the dense frame · centered head), 6 · Timeline (process · move: horizontal rail · left), Approved Entities, Aspect-Ratio Behavior (+16 more)
 
 ### Community 149 - "Community 149"
 Cohesion: 0.08
-Nodes (24): 1 · Cover (identity · move: oversized serif · green · left), 2 · Topic Tiles (catalog · move: rotating-fill grid · cream · the dense frame), 3 · KPI Stat (data · move: oversized figure · green), 4 · Statement (quote · move: display serif · cream · left), 5 · Step Framework (process · move: 8px step tiles · cream/green), 6 · Chart (data · move: bars + meta · green), Approved Real Entities, Aspect-Ratio Behavior (+16 more)
+Nodes (24): 1 · Wordmark Cover (identity · move: full-frame lockup · centered), 2 · Big Claim (oversized statement · move: scale · left), 3 · Stat Grid (catalog · move: density — the one dense frame · centered), 4 · Closing Plate (closer · move: ground-swap · centered), 5 · Featured Marker (callout · move: hard-shadow focal · left/asymmetric), 6 · Comparison Ledger (data · move: matrix · left), Approved Entities, Aspect-Ratio Behavior (+16 more)
 
 ### Community 150 - "Community 150"
+Cohesion: 0.08
+Nodes (24): 1 · Cover (identity · move: oversized serif · green · left), 2 · Topic Tiles (catalog · move: rotating-fill grid · cream · the dense frame), 3 · KPI Stat (data · move: oversized figure · green), 4 · Statement (quote · move: display serif · cream · left), 5 · Step Framework (process · move: 8px step tiles · cream/green), 6 · Chart (data · move: bars + meta · green), Approved Real Entities, Aspect-Ratio Behavior (+16 more)
+
+### Community 151 - "Community 151"
 Cohesion: 0.13
 Nodes (10): ElasticCollisionVectors, MomentumConservation, Scene, ValueTracker, Elastic collision visualization with velocity vectors and conservation…, Tracks the state of the block collision process., Create a velocity vector that follows a block., Focuses on momentum conservation visualization. (+2 more)
 
-### Community 151 - "Community 151"
+### Community 152 - "Community 152"
 Cohesion: 0.08
 Nodes (24): Basic Recording Script, Click Ripple Effect, Convert WebM to MP4, Cookie Banner Dismissal, CSS Cursor Highlight, Cursor Highlighting, Feedback & Contributions, Form Submission Demo (+16 more)
 
-### Community 152 - "Community 152"
+### Community 153 - "Community 153"
 Cohesion: 0.08
 Nodes (24): Cameras, Clock for Animation, Color, Common Patterns, Coordinate System, Core Classes, Euler, Group (+16 more)
 
-### Community 153 - "Community 153"
+### Community 154 - "Community 154"
 Cohesion: 0.08
 Nodes (24): Built-in Uniforms (auto-provided), Car Paint Example, Common Material Properties, Environment Maps, Glass Material Example, LineBasicMaterial & LineDashedMaterial, Material Cloning and Modification, Material Types Overview (+16 more)
 
-### Community 154 - "Community 154"
+### Community 155 - "Community 155"
 Cohesion: 0.08
 Nodes (25): [1. Safety](rules/1-safety.md), [2. Performance](rules/2-performance.md), [3. Business](rules/3-business.md), [4. Design](rules/4-design.md), [5. Legal](rules/5-legal.md), App Store Review Guidelines Skill, Claude Code Plugin Marketplace, Codex (+17 more)
 
-### Community 155 - "Community 155"
+### Community 156 - "Community 156"
 Cohesion: 0.08
 Nodes (25): 1.1.1 Defamatory, Discriminatory, or Mean-Spirited Content, 1.1.2 Realistic Portrayals of Violence, 1.1.3 Weapons and Dangerous Objects, 1.1.4 Overtly Sexual or Pornographic Material, 1.1.5 Inflammatory Religious Commentary, 1.1.6 False Information and Features, 1.1.7 Harmful Concepts Exploiting Current Events, 1.1 Objectionable Content (+17 more)
 
-### Community 156 - "Community 156"
+### Community 157 - "Community 157"
 Cohesion: 0.13
 Nodes (23): analyze_transcript(), _assemble_transcript(), _dedupe_by_line(), fetch_calls_from_gong(), generate_content_topics(), generate_follow_ups(), _gong_headers(), load_transcript_dir() (+15 more)
 
-### Community 157 - "Community 157"
+### Community 158 - "Community 158"
 Cohesion: 0.08
 Nodes (23): 1. Clone and install, 1. 🌐 RB2B Webhook Ingest (`rb2b_webhook_ingest.py`), 2. Configure environment, 2. 🛡️ Suppression Pipeline (`rb2b_suppression_pipeline.py`), 3. 🔀 Instantly Router (`rb2b_instantly_router.py`), 3. Set up campaign config (for RB2B Router), 4. 🔥 Deal Resurrector (`deal_resurrector.py`), 4. Test with dry runs (+15 more)
 
-### Community 158 - "Community 158"
+### Community 159 - "Community 159"
 Cohesion: 0.12
 Nodes (23): brave_search(), estimate_company_size(), estimate_industry(), extract_company_name(), freshness_for_days(), generate_email_draft(), generate_outreach_hook(), get_brave_api_key() (+15 more)
 
-### Community 159 - "Community 159"
+### Community 160 - "Community 160"
 Cohesion: 0.20
 Nodes (23): call_claude_segmentation(), cut_clip_landscape(), download_video(), get_anthropic_client(), get_transcript_window(), get_video_duration(), load_processed(), log() (+15 more)
 
-### Community 160 - "Community 160"
-Cohesion: 0.08
-Nodes (23): Batch Processing, Claude Segmentation Tuning, Configuration, Cost, Cursor install notes, Data Flow, Dependencies, End-to-End Pipeline (+15 more)
-
 ### Community 161 - "Community 161"
 Cohesion: 0.08
-Nodes (24): 1. Grid Frameworks, 2. Breakpoint Strategy, 3. Compositional Techniques, 4. Responsive Patterns, 5. Scroll-Based Layouts, Asymmetric Balance, Base Grid System, Bleeding Elements (+16 more)
+Nodes (23): Batch Processing, Claude Segmentation Tuning, Configuration, Cost, Cursor install notes, Data Flow, Dependencies, End-to-End Pipeline (+15 more)
 
 ### Community 162 - "Community 162"
 Cohesion: 0.08
@@ -2062,7 +2061,7 @@ Nodes (24): 1 · Cover (identity · move: title pill + display · centered), 2 �
 
 ### Community 174 - "Community 174"
 Cohesion: 0.08
-Nodes (24): 1 · Cover (identity · move: serif + compass ring · left), 2 · Agenda / Index (index · move: hairline list · left), 3 · Pull Quote (quote · move: centered statement · compass ring), 4 · Closing Plate (closer · move: centered ring · centered), 5 · Two-Column Editorial (content · move: asymmetric split · left), 6 · Stats / Timeline (data · move: hairline rail · left), Approved Entities, Aspect-Ratio Behavior (+16 more)
+Nodes (24): 1 · Cover (identity · move: ornament wreath · saturated · centered), 2 · Info Cards (catalog · move: 3-up white cards · cream · the dense frame), 3 · Process Steps (sequence · move: rotating circle markers · peach · centered), 4 · Quote (quote · move: quote-mark anchor · soft-pink · centered), 5 · Framed Section (feature · move: cap+body card · cream), 6 · Closing (closer · move: ornament wreath · saturated · centered), Approved Real Entities, Aspect-Ratio Behavior (+16 more)
 
 ### Community 175 - "Community 175"
 Cohesion: 0.11
@@ -2377,228 +2376,228 @@ Cohesion: 0.10
 Nodes (16): anomalies, argv, audio, audiomapPath, audioMetaPath, bgmRel, body, FRAME_SUM (+8 more)
 
 ### Community 253 - "Community 253"
-Cohesion: 0.17
-Nodes (19): applyDuration(), applyMeta(), applyPoster(), applyStatus(), assignGlobal(), buildFrame(), DEFAULT_FRAME_STATUS, emptyGlobals() (+11 more)
-
-### Community 254 - "Community 254"
 Cohesion: 0.10
 Nodes (17): 3D buildings, Adding a map, Animating lines, Animating the camera, Curved lines (geodesic/great circle), Drawing lines, Map style, Markers (+9 more)
 
-### Community 255 - "Community 255"
+### Community 254 - "Community 254"
 Cohesion: 0.10
 Nodes (17): Matching dimensions of a video, Return value, Setting a default outName, Setting duration based on a video, Setting duration based on multiple videos, Transforming props, Using calculateMetadata, Getting video dimensions (+9 more)
 
-### Community 256 - "Community 256"
+### Community 255 - "Community 255"
 Cohesion: 0.16
 Nodes (20): action(), buildBook(), buildProjectActions(), chapterNumberFromFile(), chapterProse(), collectThemes(), exportManuscript(), inverseRelationshipType() (+12 more)
 
-### Community 257 - "Community 257"
+### Community 256 - "Community 256"
 Cohesion: 0.11
 Nodes (18): Create 4-week production schedule, Cursor install notes, Dedup check, Format targets, Idea format, Kill list, Manual override, Meeting notes (+10 more)
 
-### Community 258 - "Community 258"
+### Community 257 - "Community 257"
 Cohesion: 0.11
 Nodes (18): AI Content Ops, Architecture, Configuration, Content Atoms (for transformer), Content Drafts (for scorer/gate), 🚦 Content Quality Gate (`scripts/content-quality-gate.py`), 📊 Content Quality Scorer (`scripts/content-quality-scorer.py`), 🔄 Content Transform (`scripts/content-transform.py`) (+10 more)
 
-### Community 259 - "Community 259"
+### Community 258 - "Community 258"
 Cohesion: 0.11
 Nodes (18): 1. Install Dependencies, 2. Configure Environment, 3. Run Account Research, 4. Run Cascade Enrichment, 5. Run Full Lead Pipeline, Account Research Output, Adding New Research Sources, API Compatibility (+10 more)
 
-### Community 260 - "Community 260"
+### Community 259 - "Community 259"
 Cohesion: 0.11
 Nodes (19): Aphorism Formula, Binary Contrast, Countdown and Tail Negation, Dramatic Fragmentation, Engagement Bait, False Agency, False Balance, Fractal Recap (+11 more)
 
-### Community 261 - "Community 261"
+### Community 260 - "Community 260"
 Cohesion: 0.11
 Nodes (18): 1. Hypothesis, 2. Safety Checks, 3. Execute, 4. Observe, 5. Document, Anti-Patterns, CF-Specific, Chaos Engineering (+10 more)
 
-### Community 262 - "Community 262"
+### Community 261 - "Community 261"
 Cohesion: 0.11
 Nodes (18): 1. Define Pipeline Config, 2. Implement Pipeline Class, 3. Add Tests, 4. Register Pipeline, Common Patterns, ContentX Pipeline Development, Cost Management, Creating a New Pipeline (+10 more)
 
-### Community 263 - "Community 263"
+### Community 262 - "Community 262"
 Cohesion: 0.11
 Nodes (19): About the Author, Category Scoring (Each 0-10), Common Mistakes, Core Principle, Error Handling, Examples, Further Reading, Implementation Notes (+11 more)
 
-### Community 264 - "Community 264"
+### Community 263 - "Community 263"
 Cohesion: 0.11
 Nodes (18): 0) Triage: swarm vs solo (anti-slop), Anti-hallucination (reduce agent fiction), Approval gates, Canary harness → full harness, Cast, Done criteria, Evals (stop slop), Launch protocol (Task tool) (+10 more)
 
-### Community 265 - "Community 265"
+### Community 264 - "Community 264"
 Cohesion: 0.11
 Nodes (19): Commands, `mem0 add`, `mem0 config clear`, `mem0 config get`, `mem0 config set`, `mem0 config show`, `mem0 delete`, `mem0 entity delete` (+11 more)
 
-### Community 266 - "Community 266"
+### Community 265 - "Community 265"
 Cohesion: 0.11
 Nodes (18): Best Practices, Client Tool Options, Client Tool Return Values, Client Tools, Client Tools, Complete Example, Defining Client Tools, end_call (+10 more)
 
-### Community 267 - "Community 267"
+### Community 266 - "Community 266"
 Cohesion: 0.11
 Nodes (19): Configuration, cURL, cURL, ElevenLabs Agents Platform, Error Handling, JavaScript, JavaScript, Managing Agents (+11 more)
 
-### Community 268 - "Community 268"
+### Community 267 - "Community 267"
 Cohesion: 0.11
 Nodes (18): As Audio Input, As Background Image, As Talking Photo Source, Asset Limitations, Asset Upload and Management, Best Practices, Complete Upload Workflow, curl (+10 more)
 
-### Community 269 - "Community 269"
+### Community 268 - "Community 268"
 Cohesion: 0.11
 Nodes (18): Authentication, Failure Handling, Generation, Good Fits, Grok Media, Grok-Specific Prompt Guidance, Image API, Image edit (+10 more)
 
-### Community 270 - "Community 270"
+### Community 269 - "Community 269"
 Cohesion: 0.11
 Nodes (19): Color tokens, Combinations, Critical Constraints, CSS, Cursor, Discrete Text Sequence, GSAP Timeline + Discrete State Logic, How It Works (+11 more)
 
-### Community 271 - "Community 271"
+### Community 270 - "Community 270"
 Cohesion: 0.11
 Nodes (19): Color-shift transition (no scale), Combinations, Critical Constraints, CSS, Delayed inner content reveal, GSAP Timeline, How It Works, How to Choose Values (+11 more)
 
-### Community 272 - "Community 272"
+### Community 271 - "Community 271"
 Cohesion: 0.11
 Nodes (18): Account Usage Helper, Audio Effects And Video Effects, Auth And Endpoint, Avatar Parameters, Callback Notes, Capability Boundaries, Cost Governance, Elements Helper (+10 more)
 
-### Community 273 - "Community 273"
+### Community 272 - "Community 272"
 Cohesion: 0.11
 Nodes (18): Annulus (Ring), ArcBetweenPoints, Best Practices, Circle, Circle Methods, Common Shape Operations, Dot, Ellipse (+10 more)
 
-### Community 274 - "Community 274"
+### Community 273 - "Community 273"
 Cohesion: 0.14
 Nodes (12): get_coef_colors(), InteractiveScene, Solving Damped Harmonic Oscillator ODE Demonstrates animated equation solving…, Show F = ma formulation: mx'' = -kx - μx, Generate gradient colors for position, velocity, acceleration., Show guess x(t) = e^{st} and plug it in., Plug in hypothesis and solve the characteristic equation., Animated walkthrough of solving x'' + μx' + kx = 0 using the exponential… (+4 more)
 
-### Community 275 - "Community 275"
+### Community 274 - "Community 274"
 Cohesion: 0.11
 Nodes (19): 10. SVG / canvas / variable fonts (other authored techniques), 13. CLI — 25 commands, 14. Linter — 60+ rules, 17. Studio — in-browser NLE, 18. Determinism guarantees, 19. Variables / parameterization, 20. Sub-compositions, 21. Global runtime APIs (`window.*`) (+11 more)
 
-### Community 276 - "Community 276"
+### Community 275 - "Community 275"
 Cohesion: 0.11
 Nodes (18): Chat Completions and function tools, Choose the target model by role, Core principle, Images, PDFs, files, and long context, Inventory before editing, Migration posture, Optional: multi-agent beta, Optional: Pro mode (+10 more)
 
-### Community 277 - "Community 277"
+### Community 276 - "Community 276"
 Cohesion: 0.24
 Nodes (18): build_default_marketplace(), build_marketplace_entry(), build_plugin_json(), create_stub_file(), display_name_from_plugin_name(), load_json(), main(), normalize_plugin_name() (+10 more)
 
-### Community 278 - "Community 278"
+### Community 277 - "Community 277"
 Cohesion: 0.22
 Nodes (17): api_request(), delete_key_file(), handle_auth_login(), handle_auth_logout(), handle_auth_status(), handle_bootstrap(), handle_help(), load_env_file() (+9 more)
 
-### Community 279 - "Community 279"
+### Community 278 - "Community 278"
 Cohesion: 0.18
 Nodes (17): format_display_name(), generate_short_description(), main(), parse_interface_overrides(), read_frontmatter_name(), write_openai_yaml(), yaml_quote(), create_resource_dirs() (+9 more)
 
-### Community 280 - "Community 280"
+### Community 279 - "Community 279"
 Cohesion: 0.11
 Nodes (19): Add Layout Group (Vertical/Horizontal/Grid), Complete Example: Main Menu Screen, Create a Complete UI Screen, Create Button (With Label), Create Canvas (Foundation for All UI), Create EventSystem (Required Once Per Scene for UI Interaction), Create Input Field (With Reference Wiring), Create Panel (Background Container) (+11 more)
 
-### Community 281 - "Community 281"
+### Community 280 - "Community 280"
 Cohesion: 0.16
 Nodes (17): cross_breed(), detect_content_type(), extract_elements(), generate_variants(), get_client(), main(), Generate N variants of a content element., Score all variants with the expert panel in a single API call. (+9 more)
 
-### Community 282 - "Community 282"
+### Community 281 - "Community 281"
 Cohesion: 0.11
 Nodes (17): 1. Set up the project scaffold, 2. Add the skill to Claude Code, 3. Clone a site, 🧬 Clone Site, Component Spec Format, File Structure, How Parallel Building Works, License (+9 more)
 
-### Community 283 - "Community 283"
+### Community 282 - "Community 282"
 Cohesion: 0.20
 Nodes (17): fetch_feed_quotes(), generate_hook(), load_feeds(), main(), make_id(), datetime, Suggest X, LinkedIn, or both based on content characteristics., Generate a punchy X-ready opening line from a quote. (+9 more)
 
-### Community 284 - "Community 284"
+### Community 283 - "Community 283"
 Cohesion: 0.11
 Nodes (17): 1. Install dependencies, 2. Run a CRO audit, 3. Generate lead magnets from survey data, AI Conversion Ops, Architecture, Configuration, 🎯 CRO Audit Tool, CRO Scoring Model (+9 more)
 
-### Community 285 - "Community 285"
+### Community 284 - "Community 284"
 Cohesion: 0.17
 Nodes (17): content_hash(), download_video(), generate_caption_and_title(), gws(), list_videos(), load_processed(), main(), Load set of already-processed video IDs. (+9 more)
 
-### Community 286 - "Community 286"
+### Community 285 - "Community 285"
 Cohesion: 0.11
 Nodes (18): A launch email, de-slopped, A Living Pattern Catalogue, A report paragraph, made specific without inventing anything, A writer's draft, edited without flattening, Before and After, Better Writing, Compatibility, Contributing (+10 more)
 
-### Community 287 - "Community 287"
+### Community 286 - "Community 286"
 Cohesion: 0.11
 Nodes (17): Code Quality, ContentX Engineering Standards, Dependency Rule, Directory Architecture, Environment `.env.d/`, File Management Rules, Git Commits, Import Order (+9 more)
 
-### Community 288 - "Community 288"
+### Community 287 - "Community 287"
 Cohesion: 0.11
 Nodes (17): 10. CLOSE THE LIBRARIAN CARD, 1. PULL 30-DAY METRICS, 2. ROLL UP PROMPT METRICS, 3. SCORE CF ACROSS 7 AUDIT DIMENSIONS (Intelliverse pattern), 4. PROPOSE VERSION PROMOTIONS, 5. PRUNE DEAD PROMPTS, 6. RECONCILE CHARACTER BANK, 7. ROLL UP CF_IMPROVER_ISSUES.csv (+9 more)
 
-### Community 289 - "Community 289"
+### Community 288 - "Community 288"
 Cohesion: 0.11
 Nodes (17): Deploy a New Service, Deploy Order (MANDATORY for new environments), ECR Image Push (Quick Reference), Ingress Patterns, IntelliVerse Deployment Runbook, Post-Deployment Verification, Pre-Deployment Checklist, References (+9 more)
 
-### Community 290 - "Community 290"
+### Community 289 - "Community 289"
 Cohesion: 0.11
 Nodes (18): Add with agent mode, Agent Mode for LLM Consumption, Basic import, Check CLI connectivity in CI, CI/CD Patterns, Error handling in agent mode, File format, File Import (+10 more)
 
-### Community 291 - "Community 291"
+### Community 290 - "Community 290"
 Cohesion: 0.11
 Nodes (18): add() -- Store Memories, Additional Methods, Advanced Add Options, Batch Operations (TypeScript), Breaking Changes in v3, Common Filter Patterns, Common Pitfalls, delete() / deleteAll() -- Remove Memories (+10 more)
 
-### Community 292 - "Community 292"
+### Community 291 - "Community 291"
 Cohesion: 0.11
 Nodes (18): As Audio Input, As Background Image, As Talking Photo Source, Asset Limitations, Asset Upload and Management, Best Practices, Complete Upload Workflow, curl (+10 more)
+
+### Community 292 - "Community 292"
+Cohesion: 0.11
+Nodes (18): Available Font Properties, Basic Text Overlay, Best Practices, Call to Action, Common Font Families, Common Positions, Common Text Overlay Patterns, Coordinate System (+10 more)
 
 ### Community 293 - "Community 293"
 Cohesion: 0.11
-Nodes (18): Available Font Properties, Basic Text Overlay, Best Practices, Call to Action, Common Font Families, Common Positions, Common Text Overlay Patterns, Coordinate System (+10 more)
+Nodes (17): Benefits Over Polling, Express.js Handler, Flask Handler with Verification, HTTPS Required, Hybrid Approach, Idempotency, Monitoring, Request with Webhook (+9 more)
 
 ### Community 294 - "Community 294"
 Cohesion: 0.11
-Nodes (17): Benefits Over Polling, Express.js Handler, Flask Handler with Verification, HTTPS Required, Hybrid Approach, Idempotency, Monitoring, Request with Webhook (+9 more)
+Nodes (17): By Cost, By Quality, By Speed, Constraint-Based Selection, Decision Tree, Detailed Model Comparisons, Editing Existing Images, FLUX.1 Models (+9 more)
 
 ### Community 295 - "Community 295"
 Cohesion: 0.11
-Nodes (17): By Cost, By Quality, By Speed, Constraint-Based Selection, Decision Tree, Detailed Model Comparisons, Editing Existing Images, FLUX.1 Models (+9 more)
+Nodes (18): As Audio Input, As Background Image, As Talking Photo Source, Asset Limitations, Asset Upload and Management, Best Practices, Complete Upload Workflow, curl (+10 more)
 
 ### Community 296 - "Community 296"
 Cohesion: 0.11
-Nodes (18): As Audio Input, As Background Image, As Talking Photo Source, Asset Limitations, Asset Upload and Management, Best Practices, Complete Upload Workflow, curl (+10 more)
+Nodes (18): Available Font Properties, Basic Text Overlay, Best Practices, Call to Action, Common Font Families, Common Positions, Common Text Overlay Patterns, Coordinate System (+10 more)
 
 ### Community 297 - "Community 297"
 Cohesion: 0.11
-Nodes (18): Available Font Properties, Basic Text Overlay, Best Practices, Call to Action, Common Font Families, Common Positions, Common Text Overlay Patterns, Coordinate System (+10 more)
+Nodes (17): Bouncy pop (RARE — explicitly-playful only), Calm settle (refined / enterprise / "premium calm") — default, Combinations, Critical Constraints, CSS, Firm settle (default product reveal) — default, Geometry & tokens, GSAP Timeline (+9 more)
 
 ### Community 298 - "Community 298"
 Cohesion: 0.11
-Nodes (17): Bouncy pop (RARE — explicitly-playful only), Calm settle (refined / enterprise / "premium calm") — default, Combinations, Critical Constraints, CSS, Firm settle (default product reveal) — default, Geometry & tokens, GSAP Timeline (+9 more)
+Nodes (10): argv, audioMeta, audioMetaPath, base, hyperframesDir, intervalMs, outPath, started (+2 more)
 
 ### Community 299 - "Community 299"
 Cohesion: 0.11
-Nodes (10): argv, audioMeta, audioMetaPath, base, hyperframesDir, intervalMs, outPath, started (+2 more)
-
-### Community 300 - "Community 300"
-Cohesion: 0.11
 Nodes (17): Animated Portraits, Animated Slide Backgrounds, B-Roll Clips, Bad Prompts, Branded Intro/Outro, Combining with Other Tools, Common Resolutions, Good Prompts (+9 more)
 
-### Community 301 - "Community 301"
+### Community 300 - "Community 300"
 Cohesion: 0.13
 Nodes (13): AttentionMatrixVisualization, MultiHeadedAttention, PositionalEncoding, Scene, ThreeDScene, Attention Mechanism Visualization - Converted from 3b1b ManimGL to ManimCE…, Shows how attention scores form a matrix pattern., Explains multi-head attention mechanism with 3D visualization. Shows multiple… (+5 more)
 
-### Community 302 - "Community 302"
+### Community 301 - "Community 301"
 Cohesion: 0.11
 Nodes (17): 3D Axes, 3D Graphics in Manim, 3D Parametric Curves, 3D Primitives, Animated Camera Movement, Arrow3D and Line3D, Best Practices, Camera Orientation (+9 more)
 
-### Community 303 - "Community 303"
+### Community 302 - "Community 302"
 Cohesion: 0.11
 Nodes (17): Arrow, Arrow Variations, Best Practices, Brace, Brace Directions, Connecting Mobjects, CurvedArrow, DashedLine (+9 more)
 
-### Community 304 - "Community 304"
+### Community 303 - "Community 303"
 Cohesion: 0.12
 Nodes (12): ContextAnimation, NumericEmbedding, Animation, DecimalMatrix, RandomizeMatrixEntries, A matrix display for neural network weights., A vector display for embeddings., Animation showing context flowing between tokens. (+4 more)
 
-### Community 305 - "Community 305"
+### Community 304 - "Community 304"
 Cohesion: 0.15
 Nodes (11): get_random_var_label_group(), MaxRandomProcess, Animation, InteractiveScene, Randomize, Visualization of max(rand(), rand()) process with animated tracking dots. Shows…, Animation that randomizes a ValueTracker's value at a given frequency., Animation that leaves a trail of fading dots at specified positions. (+3 more)
 
-### Community 306 - "Community 306"
+### Community 305 - "Community 305"
 Cohesion: 0.15
 Nodes (11): get_random_var_label_group(), Animation, InteractiveScene, Randomize, Visualization of sqrt(rand()) process showing how the square root transforms a…, Animation that randomizes a ValueTracker's value at a given frequency., Animation that leaves a trail of fading dots at specified positions., Create a group with a tracker, arrow tip indicator, and label for a random… (+3 more)
 
-### Community 307 - "Community 307"
+### Community 306 - "Community 306"
 Cohesion: 0.14
 Nodes (12): LoadingDots, OrbitalTransit, PendulumSwing, InteractiveScene, Transit Animation Simple but elegant animations showing objects crossing in…, Classic loading animation with dots. Demonstrates phase-shifted periodic motion., A wave propagating across the screen. Good for demonstrating wave motion or…, Venus (small dot) transiting across the Sun. Shows how astronomers measured… (+4 more)
 
-### Community 308 - "Community 308"
+### Community 307 - "Community 307"
 Cohesion: 0.14
 Nodes (12): Interactive3DTemplate, LightingTemplate, ParametricSurfaceTemplate, Scene, 3D Scene Template for ManimGL Template for creating 3D animations with camera…, Template for interactive 3D exploration. Use with: manimgl…, Basic 3D scene template. Key concepts: - Use self.camera.frame (or self.frame)…, Template for 3D objects with textures. (+4 more)
+
+### Community 308 - "Community 308"
+Cohesion: 0.18
+Nodes (17): applyDuration(), applyMeta(), applyPoster(), applyStatus(), buildFrame(), DEFAULT_FRAME_STATUS, endsFrameSection(), FRAME_STATUSES (+9 more)
 
 ### Community 309 - "Community 309"
 Cohesion: 0.11
@@ -3417,1060 +3416,1060 @@ Cohesion: 0.15
 Nodes (12): Adopt existing projects, CLI tools used, Cross-project reuse, Examples, Files, Flags, How it works, media-use (+4 more)
 
 ### Community 513 - "Community 513"
-Cohesion: 0.15
-Nodes (13): Composition root, Distributed rendering, Fonts, Lottie, Media, Parameters, React patterns, Reading this table (+5 more)
+Cohesion: 0.18
+Nodes (11): Aa(), Animation(), Ca(), Da(), la(), na(), Ua(), Va() (+3 more)
 
 ### Community 514 - "Community 514"
 Cohesion: 0.15
-Nodes (12): 1. Set up the color palette, 2. Configure typography, 3. Apply layout rules, 4. Use style_prompt_full for AI guidance, Applying the Style, Design Brief Format, Example: Applying Swiss Style, Field Mapping (+4 more)
+Nodes (13): Composition root, Distributed rendering, Fonts, Lottie, Media, Parameters, React patterns, Reading this table (+5 more)
 
 ### Community 515 - "Community 515"
 Cohesion: 0.15
-Nodes (12): Analysis Checklist, Colors, Example Output, Extract from Video, Extraction Prompt, Keyframe Sampling Strategy, Layout, Mood (+4 more)
+Nodes (12): 1. Set up the color palette, 2. Configure typography, 3. Apply layout rules, 4. Use style_prompt_full for AI guidance, Applying the Style, Design Brief Format, Example: Applying Swiss Style, Field Mapping (+4 more)
 
 ### Community 516 - "Community 516"
+Cohesion: 0.15
+Nodes (12): Analysis Checklist, Colors, Example Output, Extract from Video, Extraction Prompt, Keyframe Sampling Strategy, Layout, Mood (+4 more)
+
+### Community 517 - "Community 517"
 Cohesion: 0.19
 Nodes (5): Confirm it succeeded, Gate, Run the capture, Step 0: Capture, What lives in `capture/` (reference table — DO NOT read these here)
 
-### Community 517 - "Community 517"
+### Community 518 - "Community 518"
 Cohesion: 0.15
 Nodes (13): Gate, How to Handle Responses, "Let me see options", Mixed direction, Question 1: What's this video for?, Question 2: What style/vibe?, Question 3: What's the ONE thing this video must communicate?, Question 4: Narration? (+5 more)
 
-### Community 518 - "Community 518"
+### Community 519 - "Community 519"
 Cohesion: 0.15
 Nodes (13): A beat is a shot — pick the framing before writing CSS, Animation Sequence — must span the ENTIRE beat, Beat Timing, Camera motion is the subject, not the elements, Composition + Accents, Concept, Existing beat-level fields (below) layer on top of the shot grammar above, Forbidden patterns (the video-as-webpage failures) (+5 more)
 
-### Community 519 - "Community 519"
+### Community 520 - "Community 520"
 Cohesion: 0.15
 Nodes (13): Audition voices, Background music, Captions, Generate a test clip before full narration — calibrate timing first, Generate full narration, If Step 2 said "no narration", Map timestamps to beats, Save timing data for Step 5 (+5 more)
 
-### Community 520 - "Community 520"
+### Community 521 - "Community 521"
 Cohesion: 0.15
 Nodes (12): Field guide, `interface` fields, `interface` fields, Marketplace field guide, Marketplace generation rules, Marketplace JSON sample spec, Path conventions and defaults, Plugin entry fields (+4 more)
 
-### Community 521 - "Community 521"
+### Community 522 - "Community 522"
 Cohesion: 0.15
 Nodes (13): 4.2.1 ARKit Requirements, 4.2.2 Marketing Content Restrictions, 4.2.3 App Independence and Resource Downloads, 4.2.3(i) Standalone Functionality, 4.2.3(ii) Download Disclosure, 4.2.6 Template and App Generation Services, 4.2.7(a) Connection Requirements, 4.2.7(b) Software Execution (+5 more)
 
-### Community 522 - "Community 522"
+### Community 523 - "Community 523"
 Cohesion: 0.15
 Nodes (12): Approved understanding, Bus notes / re-orients, Contracts (APIs / models / events), Dependency graph, Eval alignment (optional), File locks (leases), Harness, Lanes (+4 more)
 
-### Community 523 - "Community 523"
+### Community 524 - "Community 524"
 Cohesion: 0.17
 Nodes (11): Ad Copy, Anti-Patterns to Avoid, Autoresearch Skill, Content Types & Score Dimensions, Cursor install notes, Email Sequences, Expert Panel (5 Personas), Form Pages (+3 more)
 
-### Community 524 - "Community 524"
+### Community 525 - "Community 525"
 Cohesion: 0.24
 Nodes (11): filter_drafts_by_quality(), load_quality_scores(), main(), Save filtered drafts with quality metadata., Run the complete quality gate process., Run the quality scorer on the drafts file., Load the latest quality scoring results., Filter drafts based on quality scores. (+3 more)
 
-### Community 525 - "Community 525"
+### Community 526 - "Community 526"
 Cohesion: 0.17
 Nodes (11): Cursor install notes, 🔁 Feedback for [Source Skill], Feedback History (below the result), Patterns to add to source skill, Step 1: Intake — Understand What's Being Scored, Step 3: Select Scoring Rubric, Step 5: Output Format, Suggested skill improvements (+3 more)
 
-### Community 526 - "Community 526"
+### Community 527 - "Community 527"
 Cohesion: 0.17
 Nodes (11): AI Finance Ops, Benchmark Thresholds, CFO Briefing Generator, Codebase Cost Estimator, Customization, File Structure, How It Works, License (+3 more)
 
-### Community 527 - "Community 527"
+### Community 528 - "Community 528"
 Cohesion: 0.17
 Nodes (11): AI Engine References, Body Length Rules, Breakup Email (Final Step), Cold Email Copy Rules, CTAs, First Sentence Rules, Links, Personalization Rules (+3 more)
 
-### Community 528 - "Community 528"
+### Community 529 - "Community 529"
 Cohesion: 0.24
 Nodes (11): analyze_source_group(), classify_status(), fetch_prospects(), load_config(), main(), parse_revenue(), Map database status to binary approved/rejected for analysis., Parse revenue_range string to midpoint integer. Handles formats like:… (+3 more)
 
-### Community 529 - "Community 529"
+### Community 530 - "Community 530"
 Cohesion: 0.17
 Nodes (11): A/B Variant Handling, Adding New Folders, Caption + Title Style Guide, Configuration, Cursor install notes, Dependencies, Drive Folder Setup, Output Format (+3 more)
 
-### Community 530 - "Community 530"
+### Community 531 - "Community 531"
 Cohesion: 0.24
 Nodes (11): analyze_with_claude(), create_full_transcript_text(), format_timestamp(), load_transcript(), main(), process_single(), Process a single transcript file., Load Whisper JSON transcript (+3 more)
 
-### Community 531 - "Community 531"
+### Community 532 - "Community 532"
 Cohesion: 0.27
 Nodes (11): cut_clip(), find_candidate_segments(), get_anthropic_client(), main(), Find candidate segments from transcript using basic heuristics., Score a single segment with the expert panel., Cut a clip using FFmpeg with re-encoding for accuracy., Transcribe video with Whisper, return segments and words. (+3 more)
 
-### Community 532 - "Community 532"
+### Community 533 - "Community 533"
 Cohesion: 0.17
 Nodes (11): Business Jargon, Emphasis Crutches, Empty Importance, Essay-Scaffold Closers, Mechanical Transitions, Phrases to Cut or Replace, Quick Rewrite Moves, Softening and Intensifying Adverbs (+3 more)
 
-### Community 533 - "Community 533"
+### Community 534 - "Community 534"
 Cohesion: 0.17
 Nodes (11): Additional Resources, API Code, CF-Specific Checks, Code Review Skill, Pipeline Code, Providing Feedback, Quick Start, Review Checklist (+3 more)
 
-### Community 534 - "Community 534"
+### Community 535 - "Community 535"
 Cohesion: 0.17
 Nodes (11): Common Pitfalls, Quick-Start Checklist, Step 1: Typographic Architecture, Step 2: Motion Design Principles, Step 3: Composition and Layout, Step 4: Color and Atmosphere, Step 5: Image and Video Integration, Step 6: Micro-interactions and Details (+3 more)
 
-### Community 535 - "Community 535"
+### Community 536 - "Community 536"
 Cohesion: 0.17
 Nodes (11): Anti-Patterns, CF Prompt Registry, Code Usage, Evaluation, File Structure, Optimization, Principles, Prompt Design Skill (+3 more)
 
-### Community 536 - "Community 536"
+### Community 537 - "Community 537"
 Cohesion: 0.17
 Nodes (11): 1. PREFLIGHT, 2. TRIGGER, 3. POST THE OPERATOR CARD, 4. COMMENT ON THIS DISPATCHER CARD + COMPLETE, Canonical endpoints, Cost discipline, Definition of done, IVX CF Run Dispatcher (+3 more)
 
-### Community 537 - "Community 537"
+### Community 538 - "Community 538"
 Cohesion: 0.17
 Nodes (11): Authentication & Authorization, CF-Specific Checks, Data Protection, Infrastructure, Input Validation, LLM-Specific, Purpose, Review Areas (+3 more)
 
-### Community 538 - "Community 538"
+### Community 539 - "Community 539"
 Cohesion: 0.17
 Nodes (11): Acceptance (non-negotiable), Calendar slot mode, CLI fallback, Content Factory Video Loop Skill, Minimal happy path, One-liner from calendar, Output contract (always), Read first (+3 more)
 
-### Community 539 - "Community 539"
+### Community 540 - "Community 540"
 Cohesion: 0.17
 Nodes (11): Common failures, Communication patterns, Gastown swarm dispatcher, Mental model: rigs and polecats, Multi-repo parallel swarm, Safety guardrails, Single-repo coding job, Surfacing results (+3 more)
 
-### Community 540 - "Community 540"
+### Community 541 - "Community 541"
 Cohesion: 0.17
 Nodes (11): Core parameters for GPT Image models, Edit-specific parameters, Endpoints, gpt-image-2 sizes, Image API quick reference, Important boundary, Limits and notes, Model summary (+3 more)
 
-### Community 541 - "Community 541"
+### Community 542 - "Community 542"
 Cohesion: 0.17
 Nodes (12): Claude.ai, Claude API (Skills API), CLI (Claude Code, OpenCode, OpenClaw, or any tool that supports skills), Installation, License, Links, Mem0 CLI Skill for Claude, Prerequisites (+4 more)
 
-### Community 542 - "Community 542"
+### Community 543 - "Community 543"
 Cohesion: 0.17
 Nodes (11): add(messages, config), Configuration, get(memoryId) / getAll(config) / update(memoryId, data) / delete(memoryId) / deleteAll(config) / history(memoryId), Installation, Key Differences: Platform vs OSS, Mem0 Node.js / TypeScript SDK Reference, Memory Class, Methods (+3 more)
 
-### Community 543 - "Community 543"
+### Community 544 - "Community 544"
 Cohesion: 0.17
 Nodes (11): Claude.ai, Claude API (Skills API), CLI (Claude Code, OpenCode, OpenClaw, or any tool that supports skills), Installation, License, Links, Mem0 Skill for Claude, Prerequisites (+3 more)
 
-### Community 544 - "Community 544"
+### Community 545 - "Community 545"
 Cohesion: 0.17
 Nodes (12): All Supported Frameworks, AutoGen, Common Pattern, CrewAI, LangChain, LangGraph, LlamaIndex, Mem0 Integration Patterns (+4 more)
 
-### Community 545 - "Community 545"
+### Community 546 - "Community 546"
 Cohesion: 0.27
 Nodes (11): fetch_page(), fetch_url(), get_index(), list_section(), main(), Fetch a specific documentation page., Fetch the full documentation index from llms.txt., List all known pages in a documentation section. (+3 more)
 
-### Community 547 - "Community 547"
+### Community 548 - "Community 548"
 Cohesion: 0.17
 Nodes (12): 1. Client-Side Tracking, 2. Retry with Exponential Backoff, 3. Queue-Based Architecture, 4. Async with Semaphore, Best Practices, Current Limits, Handling Strategies, HTTP 429 Response (+4 more)
 
-### Community 548 - "Community 548"
+### Community 549 - "Community 549"
 Cohesion: 0.17
 Nodes (12): Basic Structure, Best Practices, Converting JSON to Natural Language, From JSON, JSON Structured Prompting, Multi-Character Scene, Product Scene with Colors, Single Subject Example (+4 more)
 
-### Community 549 - "Community 549"
+### Community 550 - "Community 550"
 Cohesion: 0.17
 Nodes (12): Character Consistency, Character-Consistent Series, Creative Exploration / Ideation, E-commerce Product Pipeline, Editorial with Typography, Hero Images / Premium Content, Local Development / Testing, Photo Editing / Retouching (+4 more)
 
-### Community 550 - "Community 550"
+### Community 551 - "Community 551"
 Cohesion: 0.17
 Nodes (11): Do Not, GSAP with Vue, Svelte, and Other Frameworks, Learn More, Principles (All Frameworks), Scoping Selectors, ScrollTrigger Cleanup, Svelte, Vue 3 (Composition API) (+3 more)
 
-### Community 551 - "Community 551"
+### Community 552 - "Community 552"
 Cohesion: 0.17
 Nodes (11): Batch Reads and Writes, Best practices, Do Not, Frequently updated properties (e.g. mouse followers), GSAP Performance, Many Elements (Stagger, Lists), Prefer Transform and Opacity, Reduce Simultaneous Work (+3 more)
 
-### Community 552 - "Community 552"
+### Community 553 - "Community 553"
 Cohesion: 0.17
 Nodes (11): Controlling Playback, Creating a Timeline, Do Not, GSAP Timeline, Labels, Nesting Timelines, Official GSAP Best practices, Position Parameter (+3 more)
 
-### Community 553 - "Community 553"
+### Community 554 - "Community 554"
 Cohesion: 0.17
 Nodes (11): Basic Pattern, Contract, Deterministic Rendering, Frosted Blur via Downsample Pass, Render-environment prerequisite (WebGPU + html-in-canvas), Rounded-Rect SDF (Liquid Glass Pill), Timeline Registration, Transparent vs Opaque Canvas (+3 more)
 
-### Community 554 - "Community 554"
+### Community 555 - "Community 555"
 Cohesion: 0.17
 Nodes (12): Card Morph Anchor, Combinations, Critical Constraints, CSS (hero-frame layout), GSAP Timeline, How It Works, How to Choose Values, HTML (+4 more)
 
-### Community 555 - "Community 555"
+### Community 556 - "Community 556"
 Cohesion: 0.17
 Nodes (11): Animation choreography, Beat Direction, Concept, Contents, Depth layers, Mood direction, Per-Beat Direction, Rhythm Planning (+3 more)
 
-### Community 556 - "Community 556"
+### Community 557 - "Community 557"
 Cohesion: 0.17
 Nodes (11): Banned, Contents, Dark Backgrounds, Finding Fonts, Fonts That Embed (auto-resolve), Guardrails, OpenType Features for Data, Selection Thinking (+3 more)
 
-### Community 557 - "Community 557"
+### Community 558 - "Community 558"
 Cohesion: 0.17
 Nodes (11): Expressive narration contract, ffmpeg requirement, HeyGen word-timestamp shape, Long scripts, Multilingual (Kokoro voice prefix → language), Provider chain, Self-contained HeyGen (no CLI) — `scripts/heygen-tts.mjs`, Speed (+3 more)
 
-### Community 558 - "Community 558"
+### Community 559 - "Community 559"
 Cohesion: 0.17
 Nodes (12): All types, Caption blocks, Contributing a Block or Component to the Registry, Quality Gate, Step 1: Clarify, Step 2: Scaffold, Step 3: Build, Step 4: Validate (+4 more)
 
-### Community 559 - "Community 559"
+### Community 560 - "Community 560"
 Cohesion: 0.21
 Nodes (8): ContextAnimation, NumericEmbedding, Animation showing context flow from source words to target word. Creates arcing…, A vertical vector of decimal numbers representing an embedding. Displays values…, AttentionPatterns, Demonstrates how attention allows words to influence each other. Shows…, Step-by-step visualization of scaled dot-product attention., ScaledDotProductAttention
 
-### Community 560 - "Community 560"
+### Community 561 - "Community 561"
 Cohesion: 0.17
 Nodes (11): Best Practices, Bounding Box Corners, Copying Mobjects, Creating Custom VMobjects, Method Chaining, Mobject Hierarchy, Mobject Properties, Mobjects in Manim (+3 more)
 
-### Community 561 - "Community 561"
+### Community 562 - "Community 562"
 Cohesion: 0.17
 Nodes (11): Best Practices, Chained Transformations, MoveToTarget, Path Arc Transforms, ReplacementTransform, Transform, Transform Animations, Transform vs ReplacementTransform (+3 more)
 
-### Community 562 - "Community 562"
+### Community 563 - "Community 563"
 Cohesion: 0.20
 Nodes (8): BlochSphere3D, InteractiveScene, QuantumStateCollapse, Bloch Sphere 3D Visualization ============================= Displays a quantum…, Shows a state vector evolving on the Bloch sphere with a tracing tail., Demonstrates the concept of quantum state collapse upon measurement., Visualize a quantum state as a vector on the Bloch sphere., StateVectorEvolution
 
-### Community 563 - "Community 563"
+### Community 564 - "Community 564"
 Cohesion: 0.20
 Nodes (8): DiffractionGratingSimple, DoubleSlitExperiment, PathDifferenceExplanation, Scene, Double Slit Interference Visualization Demonstrates the classic double-slit…, Visualizes the double-slit experiment with wave interference. Shows plane wave…, Explains the path difference concept in interference. Shows how different path…, Simplified diffraction grating visualization showing multiple slits.
 
-### Community 564 - "Community 564"
+### Community 565 - "Community 565"
 Cohesion: 0.20
 Nodes (8): ChangeOfBasisVisualization, DiagonalMatrixPowers, EigenvalueEquations, Scene, Eigenvalue Equations ==================== Shows the key mathematical equations…, Shows how the change of basis matrix S transforms coordinates between standard…, Displays the fundamental eigenvalue/eigenvector equations with proper color…, Shows the key insight: diagonal matrices are easy to raise to powers. This…
 
-### Community 565 - "Community 565"
+### Community 566 - "Community 566"
 Cohesion: 0.20
 Nodes (8): ComplexExpSpiral, ExpDerivative, ExpFamilyGraph, InteractiveScene, Exponential Function and Its Derivative Demonstrates the fundamental property…, Show family of exponentials e^{st} for different values of s. When s > 0:…, Visual demonstration of the exponential function's defining property. Key…, Visualize e^{(a+bi)t} as a spiral in the complex plane. Shows how real part…
 
-### Community 566 - "Community 566"
+### Community 567 - "Community 567"
 Cohesion: 0.20
 Nodes (8): AreaUnderCurve, ExponentialDecay, InteractiveScene, Integration Visualization Shows integration as accumulating area under a curve,…, Shows Riemann sum approximation converging to true integral. Rectangles get…, Basic visualization of definite integral as area under curve. Shows smooth…, Visualize the integral of e^(-x) from 0 to infinity. Shows that the total area…, RiemannSums
 
-### Community 567 - "Community 567"
+### Community 568 - "Community 568"
 Cohesion: 0.20
 Nodes (8): LayeredParallax, ParallaxFromObserverPOV, ParallaxStarfield, InteractiveScene, Parallax Effect with 3D Starfield Demonstrates the parallax effect - how nearby…, Demonstrates parallax with explicitly layered star planes. Shows three distinct…, A 3D scene showing parallax effect with stars at different distances. Key…, Same parallax demo but from the observer's point of view. This variant shows…
 
-### Community 568 - "Community 568"
+### Community 569 - "Community 569"
 Cohesion: 0.20
 Nodes (8): GateComposition, HadamardGateDetail, InteractiveScene, QuantumGatesVisualization, Quantum Gates Visualization =========================== Demonstrates quantum…, Detailed visualization of the Hadamard gate transformation., Shows how quantum gates transform qubit states., Shows how multiple gates compose to create quantum circuits.
 
-### Community 569 - "Community 569"
+### Community 570 - "Community 570"
 Cohesion: 0.20
 Nodes (8): Scene, RadialWaveDemo, Radial Wave Visualization A beautiful visualization of a radial wave emanating…, Demonstrates a radial wave visualization using procedural graphics. Shows how…, 3D visualization of wave propagation from a point source. Shows the wave as…, Shows interference pattern from two point sources. Demonstrates constructive…, WaveInterferencePattern, WavePropagation3D
 
-### Community 570 - "Community 570"
+### Community 571 - "Community 571"
 Cohesion: 0.21
 Nodes (8): NumericEmbedding, DecimalMatrix, InteractiveScene, Token Embeddings Flow Visualization Shows tokens being converted to embeddings…, Map a value to a color based on sign and magnitude., A column vector (embedding) with color-coded entries., TokenEmbeddingsFlow, value_to_color()
 
-### Community 571 - "Community 571"
+### Community 572 - "Community 572"
 Cohesion: 0.21
 Nodes (8): DecimalMatrix, InteractiveScene, Value Matrix Transformation Visualization Shows how the Value matrix transforms…, Map a value to a color based on sign and magnitude., A matrix with color-coded entries based on value., value_to_color(), ValueMatrixTransform, WeightMatrix
 
-### Community 572 - "Community 572"
+### Community 573 - "Community 573"
 Cohesion: 0.17
 Nodes (11): Animation Parameters, Animation System Overview, Creation Animations, Indication Animations, LaggedStart and Groups, ManimGL Animations, Movement Animations, Playing Animations (+3 more)
 
-### Community 573 - "Community 573"
+### Community 574 - "Community 574"
 Cohesion: 0.20
 Nodes (8): AnimationShowcase, BasicSceneTemplate, MinimalScene, Scene, Basic Scene Template for ManimGL This is a standard 2D scene template. Copy and…, A basic scene template showing common patterns. Modify this template for your…, Minimal scene template - just the essentials., Template showing various animation types.
 
-### Community 574 - "Community 574"
+### Community 575 - "Community 575"
 Cohesion: 0.18
 Nodes (5): [cmd, ...rest], font(), gridFilters(), opt, pos
 
-### Community 575 - "Community 575"
+### Community 576 - "Community 576"
 Cohesion: 0.17
 Nodes (12): A. Match a template, B. Free-compose (no template fits), C. Asset treatment (only when the user supplied assets and they fit), Copy (you own the words), Inputs, Planning (Step 3) — pick the brand, fill every frame, Self-check, Step A — pick the brand spine (one preset, unmodified) (+4 more)
 
-### Community 576 - "Community 576"
+### Community 577 - "Community 577"
 Cohesion: 0.17
 Nodes (12): Directory layout, music-to-video — one music-grounded, beat-synced video workflow, Quick Reference, Resume table, Step 0: Setup, BGM, and inputs, Step 1: Analyze the music, Step 2: Frame skeleton (structure only), Step 3: Fill the plan (user-gated) (+4 more)
 
-### Community 578 - "Community 578"
+### Community 579 - "Community 579"
 Cohesion: 0.17
 Nodes (12): cURL Example, Format Requirements, JavaScript Example, Meeting Transcription with Custom Terms, Python Example, Request Parameters, Response Fields, Response Structure (+4 more)
 
-### Community 579 - "Community 579"
+### Community 580 - "Community 580"
 Cohesion: 0.17
 Nodes (11): Adding new synthetic-UI components, Authoring pattern, Design rules (inherited from the v3 retune), Provenance, `ProviderChip` (companion component), Related skills, Synthetic Screen Recording (Remotion TerminalScene), The component — `TerminalScene` (+3 more)
 
-### Community 580 - "Community 580"
+### Community 581 - "Community 581"
 Cohesion: 0.17
 Nodes (12): 6.10 Use React DOM Resource Hints, 6.11 Use useTransition Over Manual Loading States, 6.1 Animate SVG Wrapper Instead of SVG Element, 6.2 CSS content-visibility for Long Lists, 6.3 Hoist Static JSX Elements, 6.4 Optimize SVG Precision, 6.5 Prevent Hydration Mismatch Without Flickering, 6.6 Suppress Expected Hydration Mismatches (+4 more)
 
-### Community 581 - "Community 581"
+### Community 582 - "Community 582"
 Cohesion: 0.17
 Nodes (11): Analysis Checklist, Colors, Example Output, Extract from Website, Extraction Prompt, Layout, Mood, Motion (+3 more)
 
-### Community 582 - "Community 582"
+### Community 583 - "Community 583"
 Cohesion: 0.17
 Nodes (12): 1. Copy SFX to project, 2. Build the root index.html, 3. Build each composition — USE SUB-AGENTS, 4. After all compositions are built — reconciliation check, 5. Read each beat HTML top-to-bottom — REQUIRED gate before Step 6, Brand-defaults check (whole-video, after every beat passes its own read), Parallel sub-agent snapshots are stale — re-snapshot after all complete, Per-composition process (+4 more)
 
-### Community 583 - "Community 583"
+### Community 584 - "Community 584"
 Cohesion: 0.17
 Nodes (12): Format, Quick Reference, Reference Files, Step 0: Capture & Understand the Brand, Step 1: Brand Identity, Step 2: Strategy & Messaging, Step 3: Storyboard + Script 💬, Step 4: VO, Timing + Captions 💬 (+4 more)
 
-### Community 584 - "Community 584"
+### Community 585 - "Community 585"
 Cohesion: 0.29
 Nodes (11): absoluteUrl(), extractLatestModelInfo(), fs, main(), modelToSkillSlug(), normalizeInfo(), parseArgs(), parseFlatInfo() (+3 more)
 
-### Community 585 - "Community 585"
+### Community 586 - "Community 586"
 Cohesion: 0.17
 Nodes (11): Choosing a Story Structure, CLI Maintenance, Creating an Arc, Cross-Referencing, Foreshadowing Tracking, Managing Plot Points, Overview, Plot Structure (+3 more)
 
-### Community 586 - "Community 586"
+### Community 587 - "Community 587"
 Cohesion: 0.17
 Nodes (10): API Access, API Key Setup, Bootstrap workflow, Data hierarchy, Pagination, Required scopes, API — REST API wrapper & auth, Data & Analytics — ClickHouse data warehouse (+2 more)
 
-### Community 587 - "Community 587"
+### Community 588 - "Community 588"
 Cohesion: 0.17
 Nodes (11): 1) Understanding Eval (after Research), 2) Plan Eval (Plan Critic — before build), 3) Code Eval (after Working / with Review), 4) Asset / copy / mascot Eval (Generation), 5) Harness Eval, 6) Master merge Eval (final report), Alignment worksheet (human vs LLM judge), Gate flip (automation rule) (+3 more)
 
-### Community 588 - "Community 588"
+### Community 589 - "Community 589"
 Cohesion: 0.17
 Nodes (11): CLI Maintenance, Creating A Faction, Creating a Location, Creating a System, Creating An Artifact, Cross-Referencing, Overview, Prerequisites (+3 more)
 
-### Community 589 - "Community 589"
+### Community 590 - "Community 590"
 Cohesion: 0.27
 Nodes (9): Args, detectRuntime(), ensurePackage(), getThemeConfig(), main(), parseArgs(), printHelp(), Theme (+1 more)
 
-### Community 590 - "Community 590"
+### Community 591 - "Community 591"
 Cohesion: 0.18
 Nodes (10): Clone Site, Cursor install notes, Full Technical Reference, How It Works, Output, Quick Start, Requirements, Setup (first time only) (+2 more)
 
-### Community 591 - "Community 591"
+### Community 592 - "Community 592"
 Cohesion: 0.18
 Nodes (10): AI Conversion Ops, Configuration, CRO Audit (`cro_audit.py`), Cursor install notes, Dependencies, Recommended Workflow, Survey-to-Lead-Magnet Engine (`survey_lead_magnet.py`), Tools (+2 more)
 
-### Community 592 - "Community 592"
+### Community 593 - "Community 593"
 Cohesion: 0.18
 Nodes (10): Add-On Recommendations (mention but don't build), Capacity Math Formula, Cursor install notes, Phase 2: Expert Panel Recursive Scoring, Reference Files, Round Structure, Rules, Scoring Criteria (per panelist's lens — see `references/expert-panel.md`) (+2 more)
 
-### Community 593 - "Community 593"
+### Community 594 - "Community 594"
 Cohesion: 0.25
 Nodes (10): _estimate_traffic_value(), _fetch_domain_metrics(), format_markdown(), generate_briefing(), main(), Generate a complete pre-call briefing., Format briefing as readable markdown., Stub: Fetch domain authority, backlinks, and traffic estimates. In production,… (+2 more)
 
-### Community 594 - "Community 594"
+### Community 595 - "Community 595"
 Cohesion: 0.18
 Nodes (10): Channel Analytics Feedback Loop, Cursor install notes, Output Interpretation, Packaging Skeletons (Proven Formats), Predefined Channel Sets, Prerequisites, Usage, When to Use (+2 more)
 
-### Community 595 - "Community 595"
+### Community 596 - "Community 596"
 Cohesion: 0.18
 Nodes (10): CF-Specific, Data Versioning, Dataset Lineage, DVC Pattern, Pipelines, Reproducibility Checklist, Reproducing, Setup (+2 more)
 
-### Community 596 - "Community 596"
+### Community 597 - "Community 597"
 Cohesion: 0.18
 Nodes (10): Bulkhead, CF-Specific, Circuit Breaker, Fallback, Fault Tolerance Skill, Implementation, Patterns, Purpose (+2 more)
 
-### Community 597 - "Community 597"
+### Community 598 - "Community 598"
 Cohesion: 0.18
 Nodes (10): API Latency, CF-Specific, Common Bottlenecks, GPU Inference, Memory, Optimization Loop, Performance Optimization Skill, Profiling Tools (+2 more)
 
-### Community 598 - "Community 598"
+### Community 599 - "Community 599"
 Cohesion: 0.18
 Nodes (10): CF Pipeline Pattern, Memory Management, Observability, Parallelism, Pipeline Architecture, Pipeline Orchestration Skill, Purpose, Quality Gates (+2 more)
 
-### Community 599 - "Community 599"
+### Community 600 - "Community 600"
 Cohesion: 0.18
 Nodes (10): Chapter Endings, Chapter Openings, Continuity, Dialogue, Pacing, POV Consistency, Scene Structure, Sensory Detail (+2 more)
 
-### Community 600 - "Community 600"
+### Community 601 - "Community 601"
 Cohesion: 0.18
 Nodes (10): Character Management, CLI Maintenance, Creating a Character, Cross-Referencing, Family Trees, Managing Relationships, Overview, Prerequisites (+2 more)
 
-### Community 601 - "Community 601"
+### Community 602 - "Community 602"
 Cohesion: 0.18
 Nodes (10): App Store screenshots, all locales, Common failures, Content Factory pipeline runner, Examples, Game trailer (one-shot), Learning series episode, Prerequisites, Quality + cost guardrails (+2 more)
 
-### Community 602 - "Community 602"
+### Community 603 - "Community 603"
 Cohesion: 0.18
 Nodes (10): Commands: .md → SKILL.md, Conversion Format, Finding Files to Migrate, Locations, Migrate a Command (.md → SKILL.md), Migrate a Rule (.mdc → SKILL.md), Migrate Rules and Slash Commands to Skills, Notes (+2 more)
 
-### Community 603 - "Community 603"
+### Community 604 - "Community 604"
 Cohesion: 0.18
 Nodes (10): Common failures, Debug path (service unhealthy), Kubernetes GPU sidecar rollout, New service path (adding a GPU sidecar), Prerequisites, Safety guardrails, Surfacing results, The workflow (+2 more)
 
-### Community 604 - "Community 604"
+### Community 605 - "Community 605"
 Cohesion: 0.18
 Nodes (11): Create a transactional email, Creating and managing transactional emails, Ensure a draft email message, Get a transactional email, List transactional emails, Publish a transactional email draft, Send a transactional email, Transactional Emails (+3 more)
 
-### Community 605 - "Community 605"
+### Community 606 - "Community 606"
 Cohesion: 0.18
 Nodes (6): Agent Mode Envelope Format, Entity ID Resolution, Filter Building, Global Options, Mem0 CLI Command Reference, Output Mode Support Matrix
 
-### Community 606 - "Community 606"
+### Community 607 - "Community 607"
 Cohesion: 0.18
 Nodes (11): Architectural Differences, Common Gotcha, Constructor, Entity ID Passing (v3), Method Naming, OSS Config Naming, OSS Scope Parameter Naming, Parameter Passing (+3 more)
 
-### Community 607 - "Community 607"
+### Community 608 - "Community 608"
 Cohesion: 0.18
 Nodes (11): Adaptive Polling, Basic Flow, Batch Processing with Polling, Best Practices, Complete Example: Submit and Poll, Exponential Backoff (Recommended), Polling Patterns, Polling Strategies (+3 more)
 
-### Community 608 - "Community 608"
+### Community 609 - "Community 609"
 Cohesion: 0.18
 Nodes (10): 1. Core Principles (core), 2. Model Selection (model, flux2, flux1), 3. Text-to-Image Prompting (t2i), 4. Image-to-Image Editing (i2i), 5. JSON Structured Prompting (json), 6. Color Specification (hex), 7. Typography and Text (typography), 8. Multi-Reference Editing (multi) (+2 more)
 
-### Community 609 - "Community 609"
+### Community 610 - "Community 610"
 Cohesion: 0.18
 Nodes (11): 3D Page Scroll, Combinations, Critical Constraints, CSS (hero-frame layout), GSAP Timeline, How It Works, How to Choose Values, HTML (+3 more)
 
-### Community 610 - "Community 610"
+### Community 611 - "Community 611"
 Cohesion: 0.18
 Nodes (11): Combinations, Critical Constraints, CSS (hero-frame layout), GSAP Timeline, How It Works, How to Choose Values, HTML, Key Principles (+3 more)
 
-### Community 611 - "Community 611"
+### Community 612 - "Community 612"
 Cohesion: 0.18
 Nodes (11): Combinations, Critical Constraints, CSS, Cursor Click Ripple, GSAP Timeline, How It Works, How to Choose Values, HTML (+3 more)
 
-### Community 612 - "Community 612"
+### Community 613 - "Community 613"
 Cohesion: 0.18
 Nodes (11): Combinations, Critical Constraints, CSS, GSAP Timeline + Random Glyph Logic, Hacker Flip 3D Reveal, How It Works, How to Choose Values, HTML (+3 more)
 
-### Community 613 - "Community 613"
+### Community 614 - "Community 614"
 Cohesion: 0.18
 Nodes (10): Camera & Viewport, Data & Stats, Effect Recipes (moved from hyperframes-creative), Idle & Ambient, Layout & Network, Rules Index, See Also, SVG & Icons (+2 more)
 
-### Community 614 - "Community 614"
+### Community 615 - "Community 615"
 Cohesion: 0.18
 Nodes (11): Beat & Easing, Combinations, Critical Constraints, CSS, GSAP Timeline, How It Works, How to Choose Values, HTML (+3 more)
 
-### Community 615 - "Community 615"
+### Community 616 - "Community 616"
 Cohesion: 0.18
 Nodes (10): Architecture data format, Building the picker, Content tokens in preview_html, Contents, Design Picker, Example architecture object, Mood board data format, Prerequisites (+2 more)
 
-### Community 616 - "Community 616"
+### Community 617 - "Community 617"
 Cohesion: 0.29
 Nodes (10): compute_band_edges(), compute_fft_bands(), decode_audio(), extract(), main(), ndarray, Decode audio to mono float32 samples via ffmpeg., Logarithmically-spaced frequency band edges from MIN_FREQ to MAX_FREQ. (+2 more)
 
-### Community 617 - "Community 617"
+### Community 618 - "Community 618"
 Cohesion: 0.18
 Nodes (10): Background Removal, Canonical 3-layer template (plate + content + cutout), Compositing patterns — pick the right one, Device (`--device`), Layer separation (`--background-output`), Output Format, Quality (`--quality`), Text-behind-subject pattern (two non-obvious rules) (+2 more)
 
-### Community 618 - "Community 618"
+### Community 619 - "Community 619"
 Cohesion: 0.18
 Nodes (11): Blocks, Branding + 3D UI (2), Code Animations (9), Code snippets (24), Liquid Glass (7), Maps + data viz (8), Shader transitions (14), Showcases (6) (+3 more)
 
-### Community 619 - "Community 619"
+### Community 620 - "Community 620"
 Cohesion: 0.22
 Nodes (7): DampedSolutionsDemo, OverdampedVsUnderdamped, InteractiveScene, Damped Spring Solutions on S-Plane Visualization of how the damped harmonic…, Interactive visualization of damped spring solutions on the s-plane. The…, Create a vertical slider for a parameter., Side-by-side comparison of overdamped and underdamped behavior.
 
-### Community 620 - "Community 620"
+### Community 621 - "Community 621"
 Cohesion: 0.22
 Nodes (7): EigenvectorFlowField, LinearSystemPhasePortrait, Scene, Eigenvector Flow Field ====================== Visualizes the flow of a linear…, Shows different types of equilibria based on eigenvalues: - Both positive:…, Create a small phase portrait for a given matrix., Shows the vector field for a linear ODE system dx/dt = Ax. The eigenvectors are…
 
-### Community 621 - "Community 621"
+### Community 622 - "Community 622"
 Cohesion: 0.22
 Nodes (8): MultipleSprings, InteractiveScene, Spring-Mass System with Live Graph A physics simulation showing a spring-mass…, Main demonstration scene showing spring-mass oscillation., Spring-mass system with real-time x(t) graph plotting. Shows how position…, Multiple springs with different parameters side by side. Great for comparing…, SpringMassDemo, SpringWithGraph
 
-### Community 622 - "Community 622"
+### Community 623 - "Community 623"
 Cohesion: 0.18
 Nodes (10): Adding vs Playing, Class Attributes, Interactive Mode, InteractiveScene (Recommended), ManimGL Scenes, Scene (Base Class), Scene Methods, Scene Types (+2 more)
 
-### Community 623 - "Community 623"
+### Community 624 - "Community 624"
 Cohesion: 0.24
 Nodes (11): _a(), Context(), Db(), Eb(), fb(), Gc(), Gw(), Hc() (+3 more)
 
-### Community 624 - "Community 624"
+### Community 625 - "Community 625"
 Cohesion: 0.18
 Nodes (11): card-flyby, Group duration discipline, held-message-living-field · phrase_flow, held-text-strobe-burst, intro-kinetic-cascade, logo-split-lockup-pulse, poster-tile-mosaic, roll-flipbook-word-cycle (+3 more)
 
-### Community 625 - "Community 625"
+### Community 626 - "Community 626"
 Cohesion: 0.18
 Nodes (8): argv, destDir, fromAbs, fromDir, hyperframesDir, into, landed, MEDIA
 
-### Community 626 - "Community 626"
+### Community 627 - "Community 627"
 Cohesion: 0.18
 Nodes (10): Available options, Google Fonts with @remotion/google-fonts, Loading a local font, Loading multiple weights, Local fonts with @remotion/fonts, Prerequisites, Prerequisites, Using fonts in Remotion (+2 more)
 
-### Community 627 - "Community 627"
+### Community 628 - "Community 628"
 Cohesion: 0.18
 Nodes (11): Code-split components (`React.lazy`), Custom `presentation` in `<TransitionSeries>`, `<Loop>` with stateful children, Patterns that always work, Patterns that work with caveats, React patterns the skill refuses, Remotion's `<Img>` with crossOrigin, Reporting gaps to the user (+3 more)
 
-### Community 628 - "Community 628"
+### Community 629 - "Community 629"
 Cohesion: 0.18
 Nodes (11): `<AbsoluteFill>` → positioned div, `<Composition>` → root `#stage`, Crossfading scene boundaries, `<Freeze>`, `<Loop>`, Multiple parallel tracks, Nested `<Sequence>` flattens, `<Sequence>` → time-windowed div (+3 more)
 
-### Community 629 - "Community 629"
+### Community 630 - "Community 630"
 Cohesion: 0.18
 Nodes (11): How to grade your own translation, Overview, Remotion to HyperFrames, Step 1: Lint the source, Step 2: Plan the translation, Step 3: Generate the HF composition, Step 4: Validate, Step 5: Document gaps (+3 more)
 
-### Community 630 - "Community 630"
+### Community 631 - "Community 631"
 Cohesion: 0.18
 Nodes (7): cURL / REST API, Environment Variables, Getting an API Key, Installation, JavaScript / TypeScript, Migrating from deprecated packages, Python
 
-### Community 631 - "Community 631"
+### Community 632 - "Community 632"
 Cohesion: 0.29
 Nodes (11): assertLexicallyInsideRoot(), assertSafeProjectDirectory(), assertSafeProjectParent(), assertSafeProjectPath(), ensureDirectory(), ensureFile(), isPathInside(), lstatIfExists() (+3 more)
 
-### Community 632 - "Community 632"
+### Community 633 - "Community 633"
 Cohesion: 0.20
 Nodes (9): 1. Resolve the app-id, 2. Load and validate the pack, 3. Surface the context, 4. Flag placeholder guardrails, Allowed / Forbidden, Escalation, Inputs, IVX Ads Context Bootstrap (+1 more)
 
-### Community 633 - "Community 633"
+### Community 634 - "Community 634"
 Cohesion: 0.20
 Nodes (9): Autoresearch for Marketing, Configuration, Credit, How It Works, Output Files, Quick Start, Requirements, The Expert Panel (+1 more)
 
-### Community 634 - "Community 634"
+### Community 635 - "Community 635"
 Cohesion: 0.20
 Nodes (9): Configuration, Content Eval, Expert Panel, Getting Started, License, Output, Requirements, Usage (+1 more)
 
-### Community 635 - "Community 635"
+### Community 636 - "Community 636"
 Cohesion: 0.20
 Nodes (9): 1. Viral Hook Expert, 2. Algorithm Expert, 3. Founder Brand Strategist, 4. B2B Buyer Persona Expert, 5. Content Differentiation Expert, 6. Short-form Adaptation Expert, 7. Debate/Engagement Expert, Content Eval Expert Panel (+1 more)
 
-### Community 636 - "Community 636"
+### Community 637 - "Community 637"
 Cohesion: 0.29
 Nodes (9): load_financial_data(), main(), model_base_case(), model_bear_case(), model_bull_case(), Lose significant portion of revenue (e.g., top clients churn)., Load financial summary JSON., Current trajectory continues. No growth, no cuts. (+1 more)
 
-### Community 637 - "Community 637"
+### Community 638 - "Community 638"
 Cohesion: 0.29
 Nodes (9): append_log(), call_email_finder(), enrich(), load_config(), main(), Append run stats to enrichment log., Load enrichment configuration. Falls back to env vars if no config file., Call email finder API. Returns (email, credits_used) or (None, 0). (+1 more)
 
-### Community 638 - "Community 638"
+### Community 639 - "Community 639"
 Cohesion: 0.36
 Nodes (9): count_sent_today(), load_history(), main(), Send via a CLI tool (e.g., gog, msmtp, mailx)., Basic validation for outbound content. Returns (ok, text)., save_history(), send_email_cli(), send_email_smtp() (+1 more)
 
-### Community 639 - "Community 639"
+### Community 640 - "Community 640"
 Cohesion: 0.29
 Nodes (9): _calculate_roi_projection(), format_markdown(), generate_packages(), main(), Scale service deliverables based on tier., Generate ROI projection based on investment level and services., Generate all 4 pricing tiers., Format packages as a proposal-ready markdown document. (+1 more)
 
-### Community 640 - "Community 640"
+### Community 641 - "Community 641"
 Cohesion: 0.20
 Nodes (9): ASCII Diagrams, License, Quick Start, Requirements, Structure, The Humanizer, Voice Customization, What It Does (+1 more)
 
-### Community 641 - "Community 641"
+### Community 642 - "Community 642"
 Cohesion: 0.20
 Nodes (9): Data Sources, Example Post (Your Best One), Sentence Style, Signature Moves, Tone, Topics You're Known For, Voice Template, Words You Actually Use (+1 more)
 
-### Community 642 - "Community 642"
+### Community 643 - "Community 643"
 Cohesion: 0.20
 Nodes (9): Agent checklist, Auth / session caution, Browser Automation, Core patterns (playwright-cli / Playwright), Flake control, Prefer project E2E first, Related, When NOT to use (+1 more)
 
-### Community 643 - "Community 643"
+### Community 644 - "Community 644"
 Cohesion: 0.20
 Nodes (9): Before commit / PR (gather in parallel), Checklist, Conventional Commits, Create PR, GitHub PR Workflow, Hard rules, List open PRs by priority, Related (+1 more)
 
-### Community 644 - "Community 644"
+### Community 645 - "Community 645"
 Cohesion: 0.20
 Nodes (9): Background music mix, CF-Specific Flow, Consistency, Cost Optimization, Generation Strategy, Pipeline Stages, Purpose, Quality Checklist (+1 more)
 
-### Community 645 - "Community 645"
+### Community 646 - "Community 646"
 Cohesion: 0.20
 Nodes (9): Appearance, Backstory, Character Arc, Character Template, Location References, Motivations & Goals, Personality & Traits, Timeline (+1 more)
 
-### Community 646 - "Community 646"
+### Community 647 - "Community 647"
 Cohesion: 0.20
 Nodes (9): Common rock-solid pipelines, Content Factory — Hermes playbook (UPDATED 2026-07-23), Fail discipline, Fallback curl (health / missing MCP only), If ContentX MCP HTTP fails (Hermes image), MCP server (one primary), Required generate job order, Standing rules (read first) (+1 more)
 
-### Community 647 - "Community 647"
+### Community 648 - "Community 648"
 Cohesion: 0.20
 Nodes (9): 1. Decide whether to use a canvas, 2. Write the canvas, Design guidance, Introducing the canvas, Pre-delivery self-check, Slop patterns — forbidden, Troubleshooting, Visual hierarchy (+1 more)
 
-### Community 648 - "Community 648"
+### Community 649 - "Community 649"
 Cohesion: 0.20
 Nodes (9): Cancel / delete a task, Choosing local vs cloud, Create (delegate) a task, Delegating tasks to the Hermes cloud workers (EKS), List / inspect, Monitoring a delegated task, Path A — card-intake HTTP API (admin-actions board), Path B — kubectl exec (any board, incl. content-factory / ads) (+1 more)
 
-### Community 649 - "Community 649"
+### Community 650 - "Community 650"
 Cohesion: 0.20
 Nodes (9): Desktop app (IX Agency), Local Hermes on your system — the intelli-verse-x way, One-shot install (recommended), Related, Required env (`~/.hermes/.env`), Updating, Verify the install, What the seeded config gives you (+1 more)
 
-### Community 650 - "Community 650"
+### Community 651 - "Community 651"
 Cohesion: 0.20
 Nodes (9): Authentication, Base URL, Common Errors, Contents, Loops HTTP API and SDK Reference, Official SDKs, Rate Limits, Source URLs (+1 more)
 
-### Community 651 - "Community 651"
+### Community 652 - "Community 652"
 Cohesion: 0.20
 Nodes (10): Base Endpoints, FLUX.1 Models, FLUX.2 Models, Image Input for Editing, Key Behaviors, Model Endpoints & Pricing, Multi-Reference I2I, Polling vs Webhooks (+2 more)
 
-### Community 652 - "Community 652"
+### Community 653 - "Community 653"
 Cohesion: 0.20
 Nodes (10): Full Example: Brief to Production Prompt, Input Brief, Output Prompt, Premium Report, Product Comparison, Ready-to-Use Templates, Social Ad (30 seconds), Strategy Presentation (+2 more)
 
-### Community 653 - "Community 653"
+### Community 654 - "Community 654"
 Cohesion: 0.20
 Nodes (10): Authentication, Best Practices, Core Workflow, Create Video, Default Workflow, Foundation, Quick Reference, Reference Files (+2 more)
 
-### Community 654 - "Community 654"
+### Community 655 - "Community 655"
 Cohesion: 0.20
 Nodes (9): Audio and on-screen text, Conversational editing (the differentiator), Gemini Omni Flash (Google DeepMind), Generation prompting, Hard limitations (preview), Reference images (`<FIRST_FRAME>` / `<IMAGE_REF_N>` tags), Sources, Timecode syntax (+1 more)
 
-### Community 655 - "Community 655"
+### Community 656 - "Community 656"
 Cohesion: 0.20
 Nodes (10): Advanced Features, Core Video Creation, Default Workflow, Foundation, HeyGen API (Deprecated), Integration, Quick Reference, Reference Files (+2 more)
 
-### Community 656 - "Community 656"
+### Community 657 - "Community 657"
 Cohesion: 0.20
 Nodes (9): Anime.js for HyperFrames, Avoid, Basic Pattern, Contract, Credits And References, Good Uses, Module Builds, Timeline Pattern (+1 more)
 
-### Community 657 - "Community 657"
+### Community 658 - "Community 658"
 Cohesion: 0.20
 Nodes (9): Animated Property Allowlist, Best Practices, Common vars (cheatsheet), Core Tween Methods, Credits And References, Do Not, HyperFrames Contract, HyperFrames GSAP (+1 more)
 
-### Community 658 - "Community 658"
+### Community 659 - "Community 659"
 Cohesion: 0.20
 Nodes (9): Avoid, Contract, Credits And References, dotLottie Pattern, Good Uses, Lottie for HyperFrames, lottie-web Pattern, Multiple Animations (+1 more)
 
-### Community 659 - "Community 659"
+### Community 660 - "Community 660"
 Cohesion: 0.20
 Nodes (9): AnimationMixer Pattern, Avoid, Basic Pattern, Contract, Credits And References, Good Uses, Loading Addons (`GLTFLoader`, `OrbitControls`, etc.), Three.js for HyperFrames (+1 more)
 
-### Community 660 - "Community 660"
+### Community 661 - "Community 661"
 Cohesion: 0.20
 Nodes (9): Agent Conventions, Cross-Skill Hand-Offs, HyperFrames CLI, Lambda (Cloud Rendering), Minimum Completion Gate, Routing, Static gates, Visual smoke test — required when the project uses sub-compositions (+1 more)
 
-### Community 661 - "Community 661"
+### Community 662 - "Community 662"
 Cohesion: 0.20
 Nodes (9): Composition Pattern, Dynamic Class Safety, HyperFrames Tailwind, Quick Debug Checklist, v4 Browser Runtime Rules, Validation, Version Contract, Video-Specific Guardrails (+1 more)
 
-### Community 662 - "Community 662"
+### Community 663 - "Community 663"
 Cohesion: 0.20
 Nodes (9): Building a composition, Editing existing compositions, HyperFrames Core, Non-negotiable rules (silent bugs `lint`/`validate`/`inspect` won't catch), One paused timeline, References, Root must be sized (silent layout bug), Two root forms (not interchangeable) (+1 more)
 
-### Community 663 - "Community 663"
+### Community 664 - "Community 664"
 Cohesion: 0.20
 Nodes (10): Combining Patterns, Emotional Arc, Narrative Patterns for Math Explainers, Pacing Guidelines, Pattern 1: Mystery → Investigation → Resolution, Pattern 2: Build Up → Payoff, Pattern 3: Two Perspectives → Unity, Pattern 4: Wrong → Less Wrong → Right (+2 more)
 
-### Community 664 - "Community 664"
+### Community 665 - "Community 665"
 Cohesion: 0.24
 Nodes (6): MLPNetworkIcon, InteractiveScene, MLP Network Icon - A simple visualization of a multilayer perceptron structure…, Creates a classic MLP icon with three layers: - Input layer - Hidden layer…, Creates an MLP icon with three layers. Args: dot_buff: Spacing between neurons…, Maps a numeric value to a color based on its sign and magnitude.
 
-### Community 665 - "Community 665"
+### Community 666 - "Community 666"
 Cohesion: 0.20
 Nodes (10): Delaying, Importing Audio, Looping, Muting, Pitch, Prerequisites, Speed, Trimming (+2 more)
 
-### Community 666 - "Community 666"
-Cohesion: 0.20
-Nodes (9): Delaying, Looping, Pitch, Prerequisites, Sizing and Position, Speed, Trimming, Using videos in Remotion (+1 more)
-
 ### Community 667 - "Community 667"
 Cohesion: 0.20
-Nodes (10): CI integration, Critical: encoder config, Eval: how to validate a translation end-to-end, Per-fixture flow, Reading `diff/summary.json`, The three scripts, Threshold rule of thumb, Validated tier thresholds (+2 more)
+Nodes (9): Delaying, Looping, Pitch, Prerequisites, Sizing and Position, Speed, Trimming, Using videos in Remotion (+1 more)
 
 ### Community 668 - "Community 668"
 Cohesion: 0.20
-Nodes (10): Asset paths, `<Audio>`, `delayRender()` / `continueRender()`, `<IFrame>`, `<Img>`, Media translation: Audio, Video, Img, IFrame, staticFile, Trim / playbackRate, `<Video>` and `<OffthreadVideo>` (+2 more)
+Nodes (10): CI integration, Critical: encoder config, Eval: how to validate a translation end-to-end, Per-fixture flow, Reading `diff/summary.json`, The three scripts, Threshold rule of thumb, Validated tier thresholds (+2 more)
 
 ### Community 669 - "Community 669"
 Cohesion: 0.20
-Nodes (9): Best Practices, JavaScript, Manual Commit (Default), Providing Context, Python, Supported Audio Formats, Transcript Types, Transcripts and Commit Strategies (+1 more)
+Nodes (10): Asset paths, `<Audio>`, `delayRender()` / `continueRender()`, `<IFrame>`, `<Img>`, Media translation: Audio, Video, Img, IFrame, staticFile, Trim / playbackRate, `<Video>` and `<OffthreadVideo>` (+2 more)
 
 ### Community 670 - "Community 670"
 Cohesion: 0.20
-Nodes (9): Component Architecture (CRITICAL), Core Principles, Creating a New Rule, Impact Levels, Implementation Patterns (MEDIUM), React Composition Patterns, Rules, State Management (HIGH) (+1 more)
+Nodes (9): Best Practices, JavaScript, Manual Commit (Default), Providing Context, Python, Supported Audio Formats, Transcript Types, Transcripts and Commit Strategies (+1 more)
 
 ### Community 671 - "Community 671"
 Cohesion: 0.20
-Nodes (9): 3.1 Authenticate Server Actions Like API Routes, 3.2 Avoid Duplicate Serialization in RSC Props, 3.3 Cross-Request LRU Caching, 3.4 Hoist Static I/O to Module Level, 3.5 Minimize Serialization at RSC Boundaries, 3.6 Parallel Data Fetching with Component Composition, 3.7 Parallel Nested Data Fetching, 3.9 Use after() for Non-Blocking Operations (+1 more)
+Nodes (9): Component Architecture (CRITICAL), Core Principles, Creating a New Rule, Impact Levels, Implementation Patterns (MEDIUM), React Composition Patterns, Rules, State Management (HIGH) (+1 more)
 
 ### Community 672 - "Community 672"
 Cohesion: 0.20
-Nodes (9): 1. Eliminating Waterfalls (async), 2. Bundle Size Optimization (bundle), 3. Server-Side Performance (server), 4. Client-Side Data Fetching (client), 5. Re-render Optimization (rerender), 6. Rendering Performance (rendering), 7. JavaScript Performance (js), 8. Advanced Patterns (advanced) (+1 more)
+Nodes (9): 3.1 Authenticate Server Actions Like API Routes, 3.2 Avoid Duplicate Serialization in RSC Props, 3.3 Cross-Request LRU Caching, 3.4 Hoist Static I/O to Module Level, 3.5 Minimize Serialization at RSC Boundaries, 3.6 Parallel Data Fetching with Component Composition, 3.7 Parallel Nested Data Fetching, 3.9 Use after() for Non-Blocking Operations (+1 more)
 
 ### Community 673 - "Community 673"
 Cohesion: 0.20
-Nodes (6): Connectors, Design Principles, Figma, HeyGen Video Agent, HTML Slides, paper.design
+Nodes (9): 1. Eliminating Waterfalls (async), 2. Bundle Size Optimization (bundle), 3. Server-Side Performance (server), 4. Client-Side Data Fetching (client), 5. Re-render Optimization (rerender), 6. Rendering Performance (rendering), 7. JavaScript Performance (js), 8. Advanced Patterns (advanced) (+1 more)
 
 ### Community 674 - "Community 674"
 Cohesion: 0.20
-Nodes (10): Color Styles, Field Mapping, Figma Connector, Figma Plugin Integration, Layout Grids, Overview, Style Guide Frame, Text Styles (+2 more)
+Nodes (6): Connectors, Design Principles, Figma, HeyGen Video Agent, HTML Slides, paper.design
 
 ### Community 675 - "Community 675"
 Cohesion: 0.20
-Nodes (10): 4.5.1 Approved RSS Feeds and Scraping, 4.5.2 Apple Music, 4.5.2(i) MusicKit on iOS, 4.5.2(ii) Additional Licenses, 4.5.2(iii) Apple Music User Data, 4.5.3 Do Not Spam Apple Services, 4.5.4 Push Notifications, 4.5.5 Game Center Player IDs (+2 more)
+Nodes (10): Color Styles, Field Mapping, Figma Connector, Figma Plugin Integration, Layout Grids, Overview, Style Guide Frame, Text Styles (+2 more)
 
 ### Community 676 - "Community 676"
 Cohesion: 0.20
-Nodes (10): 2. `sw.events_rep`, Common Event Names (from app 1 over 7 days, ordered by volume), Hard Query Guardrails, Key Details, `meta` JSON Keys, `props` JSON Keys (varies by event name), Purpose, Schema (+2 more)
+Nodes (10): 4.5.1 Approved RSS Feeds and Scraping, 4.5.2 Apple Music, 4.5.2(i) MusicKit on iOS, 4.5.2(ii) Additional Licenses, 4.5.2(iii) Apple Music User Data, 4.5.3 Do Not Spam Apple Services, 4.5.4 Push Notifications, 4.5.5 Game Center Player IDs (+2 more)
 
 ### Community 677 - "Community 677"
 Cohesion: 0.20
-Nodes (10): 4. `sw.events_hr_agg`, Critical Constraints, Data & Analytics - Superwall ClickHouse Data Warehouse — Master Documentation, Execution Environment, Key Details, Purpose, ReplacingMergeTree vs AggregatingMergeTree, Schema (+2 more)
+Nodes (10): 2. `sw.events_rep`, Common Event Names (from app 1 over 7 days, ordered by volume), Hard Query Guardrails, Key Details, `meta` JSON Keys, `props` JSON Keys (varies by event name), Purpose, Schema (+2 more)
 
 ### Community 678 - "Community 678"
 Cohesion: 0.20
-Nodes (8): FFmpeg in Remotion, Trimming videos, Adaptive Silence Detection, Identifying leading and trailing silence, Interpreting the output, Step 1: Measure loudness with `loudnorm`, Step 2: Detect silences using adaptive threshold, Using with Remotion's `<Video>` component
+Nodes (10): 8. `open_revenue.paywall_open_events_agg`, Critical Constraints, Data & Analytics - Superwall ClickHouse Data Warehouse — Master Documentation, Execution Environment, Key Details, Purpose, ReplacingMergeTree vs AggregatingMergeTree, Schema (+2 more)
 
 ### Community 679 - "Community 679"
 Cohesion: 0.20
-Nodes (9): Animated flight route example, Basic map example, Camera guidance, Core rules, Lines, Markers and labels, Prerequisites, Rendering (+1 more)
+Nodes (8): FFmpeg in Remotion, Trimming videos, Adaptive Silence Detection, Identifying leading and trailing silence, Interpreting the output, Step 1: Measure loudness with `loudnorm`, Step 2: Detect silences using adaptive threshold, Using with Remotion's `<Video>` component
 
 ### Community 680 - "Community 680"
 Cohesion: 0.20
-Nodes (9): Delaying, Looping, Pitch, Prerequisites, Sizing and Position, Speed, Trimming, Using videos in Remotion (+1 more)
+Nodes (9): Animated flight route example, Basic map example, Camera guidance, Core rules, Lines, Markers and labels, Prerequisites, Rendering (+1 more)
 
 ### Community 681 - "Community 681"
 Cohesion: 0.20
-Nodes (9): Economic System, Education System, Magic System, Military System, Political System, Religion System, Social System, Technology System (+1 more)
+Nodes (9): Delaying, Looping, Pitch, Prerequisites, Sizing and Position, Speed, Trimming, Using videos in Remotion (+1 more)
 
 ### Community 682 - "Community 682"
-Cohesion: 0.22
-Nodes (8): Bring-up gates (Day 0), Functional gates (Days 1-3), Gate A — Pod doctor, Gate B — GPU rollout, Gate C — Alert triage, Go / no-go, kagent evaluation checklist, Safety gates (continuous, Days 1-14)
+Cohesion: 0.20
+Nodes (9): Economic System, Education System, Magic System, Military System, Political System, Religion System, Social System, Technology System (+1 more)
 
 ### Community 683 - "Community 683"
 Cohesion: 0.22
-Nodes (8): Claude ROI — Value Per Claude Hour, Method 1: Git History (preferred), Method 2: File Modification Timestamps (no git), Method 3: Fallback Estimate (no timestamps), Output Format, Step 1: Determine Actual Claude Clock Time, Step 2: Calculate Value per Claude Hour, Step 3: Claude Efficiency vs. Human Developer
+Nodes (8): Bring-up gates (Day 0), Functional gates (Days 1-3), Gate A — Pod doctor, Gate B — GPU rollout, Gate C — Alert triage, Go / no-go, kagent evaluation checklist, Safety gates (continuous, Days 1-14)
 
 ### Community 684 - "Community 684"
 Cohesion: 0.22
-Nodes (9): Copula Avoidance, False Ranges, Language Patterns, Negative Parallelism, Nominalisation and Noun Density, Overused AI Vocabulary, Passive Voice and Subjectless Fragments, Rule of Three (+1 more)
+Nodes (8): Claude ROI — Value Per Claude Hour, Method 1: Git History (preferred), Method 2: File Modification Timestamps (no git), Method 3: Fallback Estimate (no timestamps), Output Format, Step 1: Determine Actual Claude Clock Time, Step 2: Calculate Value per Claude Hour, Step 3: Claude Efficiency vs. Human Developer
 
 ### Community 685 - "Community 685"
 Cohesion: 0.22
-Nodes (8): CF-Specific, Docstring Format (Google Style), Documentation Skill, Principles, Purpose, Quality Gates, Types, Voice & tone (project technical writing)
+Nodes (9): Copula Avoidance, False Ranges, Language Patterns, Negative Parallelism, Nominalisation and Noun Density, Overused AI Vocabulary, Passive Voice and Subjectless Fragments, Rule of Three (+1 more)
 
 ### Community 686 - "Community 686"
 Cohesion: 0.22
-Nodes (8): Artifacts, CF Graphify (repo navigation graph), Done-when, Point, Related, When to load, Windows note, Workflow
+Nodes (8): CF-Specific, Docstring Format (Google Style), Documentation Skill, Principles, Purpose, Quality Gates, Types, Voice & tone (project technical writing)
 
 ### Community 687 - "Community 687"
 Cohesion: 0.22
-Nodes (8): Batch Processing, CF-Specific, Control Methods, Generation Config, Image Generation Skill, Pipeline Stages, Purpose, Quality Checklist
+Nodes (8): Artifacts, CF Graphify (repo navigation graph), Done-when, Point, Related, When to load, Windows note, Workflow
 
 ### Community 688 - "Community 688"
 Cohesion: 0.22
-Nodes (8): Anti-patterns, CF LLM Model Usage, Decision tree, Hard rules (why they matter), One-line cheat sheet (keep in sync with the doc), Related, When this skill wins, Workflow
+Nodes (8): Batch Processing, CF-Specific, Control Methods, Generation Config, Image Generation Skill, Pipeline Stages, Purpose, Quality Checklist
 
 ### Community 689 - "Community 689"
 Cohesion: 0.22
-Nodes (8): CF-Specific, Common Refactorings, Process, Purpose, Quality Gates, Refactoring Skill, Safety Rules, When to Refactor
+Nodes (8): Anti-patterns, CF LLM Model Usage, Decision tree, Hard rules (why they matter), One-line cheat sheet (keep in sync with the doc), Related, When this skill wins, Workflow
 
 ### Community 690 - "Community 690"
 Cohesion: 0.22
-Nodes (8): Checklist, Draft template (for the user), Hard constraints, Related, Rule shape (prefer small), Suggest Cursor Rules, When to trigger, Workflow
+Nodes (8): CF-Specific, Common Refactorings, Process, Purpose, Quality Gates, Refactoring Skill, Safety Rules, When to Refactor
 
 ### Community 691 - "Community 691"
 Cohesion: 0.22
-Nodes (8): A–F classification (from bug-fixing), Agent checklist, CF tools (prefer these), External systematic pointers (keep short), Orchestra-inspired pattern, Related, Route here first (CF truth), Systematic Debugging
+Nodes (8): Checklist, Draft template (for the user), Hard constraints, Related, Rule shape (prefer small), Suggest Cursor Rules, When to trigger, Workflow
 
 ### Community 692 - "Community 692"
 Cohesion: 0.22
-Nodes (8): BarChartProps, ChartDataPoint, ChartReferenceLine, ChartSeries, ChartTone, LineChartProps, PieChartProps, ValueAxisProps
+Nodes (8): A–F classification (from bug-fixing), Agent checklist, CF tools (prefer these), External systematic pointers (keep short), Orchestra-inspired pattern, Related, Route here first (CF truth), Systematic Debugging
 
 ### Community 693 - "Community 693"
 Cohesion: 0.22
-Nodes (8): Common failures, Game trailer factory, Prerequisites, Surfacing results, The workflow, Triggering directly (single-shot, no kanban), Variants, When to use this skill
+Nodes (8): BarChartProps, ChartDataPoint, ChartReferenceLine, ChartSeries, ChartTone, LineChartProps, PieChartProps, ValueAxisProps
 
 ### Community 694 - "Community 694"
 Cohesion: 0.22
-Nodes (8): Content And Design, Dark Mode And Rendering, Layout And Design, Loops-Specific Notes, Personalization, Practical Review Heuristics, Source URLs, Subject, Preview, And Sender Identity
+Nodes (8): Common failures, Game trailer factory, Prerequisites, Surfacing results, The workflow, Triggering directly (single-shot, no kanban), Variants, When to use this skill
 
 ### Community 695 - "Community 695"
 Cohesion: 0.22
-Nodes (8): Choose The Right Email Type, Email Types And Program Strategy, Lifecycle Program Design, Loops-Specific Notes, Measurement, New-Sender Strategy, Product Updates, Source URLs
+Nodes (8): Content And Design, Dark Mode And Rendering, Layout And Design, Loops-Specific Notes, Personalization, Practical Review Heuristics, Source URLs, Subject, Preview, And Sender Identity
 
 ### Community 696 - "Community 696"
 Cohesion: 0.22
-Nodes (8): Attachments, Domain And Team Boundaries, Group Inboxes, Loops Operational Caveats, Marketing Vs Transactional Behavior, Practical Guidance, Source URLs, Webhooks
+Nodes (8): Choose The Right Email Type, Email Types And Program Strategy, Lifecycle Program Design, Loops-Specific Notes, Measurement, New-Sender Strategy, Product Updates, Source URLs
 
 ### Community 697 - "Community 697"
 Cohesion: 0.22
-Nodes (4): API Key Setup, For Agents Making Direct API Calls, Get a Key, Quick Validation
+Nodes (8): Attachments, Domain And Team Boundaries, Group Inboxes, Loops Operational Caveats, Marketing Vs Transactional Behavior, Practical Guidance, Source URLs, Webhooks
 
 ### Community 698 - "Community 698"
 Cohesion: 0.22
-Nodes (8): Choosing a Workflow, ComfyUI Workflows in OpenMontage, Failure Handling, Model and LoRA Setup, Output Node Contract, Provenance, Server Contract, Templated vs Fixed Nodes
+Nodes (4): API Key Setup, For Agents Making Direct API Calls, Get a Key, Quick Validation
 
 ### Community 699 - "Community 699"
 Cohesion: 0.22
-Nodes (9): Critical Rules, Example Prompt, FLUX Best Practices, Model Selection, Prompt Structure Formula, Quick Reference, Related, Rules Reference (+1 more)
+Nodes (8): Choosing a Workflow, ComfyUI Workflows in OpenMontage, Failure Handling, Model and LoRA Setup, Output Node Contract, Provenance, Server Contract, Templated vs Fixed Nodes
 
 ### Community 700 - "Community 700"
 Cohesion: 0.22
-Nodes (8): Avoid, Basic Pattern, Contract, Credits And References, CSS Animations for HyperFrames, Good Uses, Stagger Pattern, Validation
+Nodes (9): Critical Rules, Example Prompt, FLUX Best Practices, Model Selection, Prompt Structure Formula, Quick Reference, Related, Rules Reference (+1 more)
 
 ### Community 701 - "Community 701"
 Cohesion: 0.22
-Nodes (8): Avoid, Basic Pattern, Contract, Credits And References, Good Uses, Stagger Pattern, Validation, Web Animations API for HyperFrames
+Nodes (8): Avoid, Basic Pattern, Contract, Credits And References, CSS Animations for HyperFrames, Good Uses, Stagger Pattern, Validation
 
 ### Community 702 - "Community 702"
 Cohesion: 0.22
-Nodes (9): 1 — Growth Bars (CSS `scaleY` stagger), 2 — Progress Fill, 3 — Star-Rating Fill (fractional), Combinations, Critical Constraints, How to Choose Values, Key Principles, Pairs with HF skills (+1 more)
+Nodes (8): Avoid, Basic Pattern, Contract, Credits And References, Good Uses, Stagger Pattern, Validation, Web Animations API for HyperFrames
 
 ### Community 703 - "Community 703"
 Cohesion: 0.22
-Nodes (8): Critical Constraints, Default: compose atomic rules, HyperFrames Animation, Load a blueprint when, Picking a runtime, Routing, Scripts, See Also
+Nodes (9): 1 — Growth Bars (CSS `scaleY` stagger), 2 — Progress Fill, 3 — Star-Rating Fill (fractional), Combinations, Critical Constraints, How to Choose Values, Key Principles, Pairs with HF skills (+1 more)
 
 ### Community 704 - "Community 704"
 Cohesion: 0.22
-Nodes (8): Audio Data Format, Audio-Reactive Animation, Constraints, Content, Not Medium, Guidelines, Mapping Audio to Visuals, Sampling Pattern, textShadow Gotcha
+Nodes (8): Critical Constraints, Default: compose atomic rules, HyperFrames Animation, Load a blueprint when, Picking a runtime, Routing, Scripts, See Also
 
 ### Community 705 - "Community 705"
 Cohesion: 0.22
-Nodes (8): Background Layer, Before Writing HTML, Color, House Style, Lazy Defaults to Question, Motion, Palettes, Typography
+Nodes (8): Audio Data Format, Audio-Reactive Animation, Constraints, Content, Not Medium, Guidelines, Mapping Audio to Visuals, Sampling Pattern, textShadow Gotcha
 
 ### Community 706 - "Community 706"
 Cohesion: 0.22
-Nodes (8): 1. Install the component, 2. Read the snippet, 3. Wire into your composition, 4. Lint and preview, 5. Customize, Scenario, Steps, Worked Example: Adding a Component
+Nodes (8): Background Layer, Before Writing HTML, Color, House Style, Lazy Defaults to Question, Motion, Palettes, Typography
 
 ### Community 707 - "Community 707"
+Cohesion: 0.22
+Nodes (8): 1. Install the component, 2. Read the snippet, 3. Wire into your composition, 4. Lint and preview, 5. Customize, Scenario, Steps, Worked Example: Adding a Component
+
+### Community 708 - "Community 708"
 Cohesion: 0.28
 Nodes (5): CubeProjection3D, InteractiveScene, Visualization of 3D cube projection along the diagonal. Shows how projecting a…, Demonstrates projecting a 3D cube along its main diagonal [1,1,1]. Shows: 1.…, Project v1 onto the orthogonal subspace of norm
 
-### Community 708 - "Community 708"
+### Community 709 - "Community 709"
 Cohesion: 0.25
 Nodes (6): FibonacciEigenvalues, FibonacciVisualization, Scene, Fibonacci Eigenvalues ===================== Shows how eigenvalues/eigenvectors…, Visual representation of Fibonacci spiral with golden ratio., Derives the closed-form Fibonacci formula using eigenvalues. F_n = (phi^n -…
 
-### Community 709 - "Community 709"
+### Community 710 - "Community 710"
 Cohesion: 0.22
 Nodes (6): GradientDescent3D, GradientDescentBasic, Scene, ThreeDScene, Basic gradient descent visualization on a 2D loss landscape. Demonstrates:…, 3D visualization of gradient descent on a loss surface.
 
-### Community 710 - "Community 710"
+### Community 711 - "Community 711"
 Cohesion: 0.25
 Nodes (6): InteractiveScene, ReLU Activation Function Visualization Shows the ReLU and GELU activation…, Visualizes the ReLU (Rectified Linear Unit) activation function and compares it…, Shows how ReLU affects neuron values - negative values become 0, positive…, ReLUNeuronBehavior, ReLUVisualization
 
-### Community 711 - "Community 711"
+### Community 712 - "Community 712"
 Cohesion: 0.25
 Nodes (6): FeatureDirectionThreshold, InteractiveScene, Vector Space and Dot Products for MLPs Shows how dot products can be used to…, Visualizes how the dot product between a feature direction and an embedding…, Shows how a threshold on the dot product creates a decision boundary. Positive…, VectorDotProduct
 
-### Community 712 - "Community 712"
+### Community 713 - "Community 713"
 Cohesion: 0.22
 Nodes (7): CENTER, COUNTRIES, __dirname, framesDir, MARGIN, N, IMPORTANT: tileSize:256 matches Esri/CARTO raster endpoints. MapLibre's…
 
-### Community 713 - "Community 713"
-Cohesion: 0.22
-Nodes (8): Audio Visualization in Remotion, Bass-Reactive Effects, Loading Audio Data, Postprocessing, Prerequisites, Spectrum Bar Visualization, Volume-Based Waveform, Waveform Visualization
-
 ### Community 714 - "Community 714"
 Cohesion: 0.22
-Nodes (8): Alternative, Basic usage, Getting GIF duration, Looping behavior, Playback speed, Sizing and fit, Styling, Using Animated images in Remotion
+Nodes (8): Audio Visualization in Remotion, Bass-Reactive Effects, Loading Audio Data, Postprocessing, Prerequisites, Spectrum Bar Visualization, Volume-Based Waveform, Waveform Visualization
 
 ### Community 715 - "Community 715"
 Cohesion: 0.22
-Nodes (7): Dynamic image paths, Getting image dimensions, Important restrictions, Remote images, Sizing and positioning, The `<Img>` component, Using images in Remotion
+Nodes (8): Alternative, Basic usage, Getting GIF duration, Looping behavior, Playback speed, Sizing and fit, Styling, Using Animated images in Remotion
 
 ### Community 716 - "Community 716"
 Cohesion: 0.22
-Nodes (9): Async calculateMetadata (NOT translatable), Boolean props, Default props, Nested object / array props, Numeric props that need typed parsing, Parameter translation: Zod schemas, defaultProps, calculateMetadata, Sync calculateMetadata (translatable), When the composition uses props for computed prop derivation (+1 more)
+Nodes (7): Dynamic image paths, Getting image dimensions, Important restrictions, Remote images, Sizing and positioning, The `<Img>` component, Using images in Remotion
 
 ### Community 717 - "Community 717"
 Cohesion: 0.22
-Nodes (9): Conversion: frames → seconds, Custom count-up / number tweens, interpolate driving non-numeric properties, interpolate — linear, interpolate — multi-segment, interpolate with custom easing, spring → GSAP back.out, Stagger via per-instance prop (+1 more)
+Nodes (9): Async calculateMetadata (NOT translatable), Boolean props, Default props, Nested object / array props, Numeric props that need typed parsing, Parameter translation: Zod schemas, defaultProps, calculateMetadata, Sync calculateMetadata (translatable), When the composition uses props for computed prop derivation (+1 more)
 
 ### Community 718 - "Community 718"
 Cohesion: 0.22
-Nodes (9): Client-Side Real-Time Streaming, Installation, JavaScript Implementation, Manual Audio Chunking, Microphone Options, React Implementation, `scribe.status` Values, Security (+1 more)
+Nodes (9): Conversion: frames → seconds, Custom count-up / number tweens, interpolate driving non-numeric properties, interpolate — linear, interpolate — multi-segment, interpolate with custom easing, spring → GSAP back.out, Stagger via per-instance prop (+1 more)
 
 ### Community 719 - "Community 719"
 Cohesion: 0.22
-Nodes (9): 1. Eliminating Waterfalls (CRITICAL), 2. Bundle Size Optimization (CRITICAL), 3. Server-Side Performance (HIGH), 4. Client-Side Data Fetching (MEDIUM-HIGH), 5. Re-render Optimization (MEDIUM), 6. Rendering Performance (MEDIUM), 7. JavaScript Performance (LOW-MEDIUM), 8. Advanced Patterns (LOW) (+1 more)
+Nodes (9): Client-Side Real-Time Streaming, Installation, JavaScript Implementation, Manual Audio Chunking, Microphone Options, React Implementation, `scribe.status` Values, Security (+1 more)
 
 ### Community 720 - "Community 720"
 Cohesion: 0.22
-Nodes (8): Frame Object, Frame Path Convention, Null Fields, Output Format, Result JSON, Top-Level Fields, Transcript Segment, Using with Claude
+Nodes (9): 1. Eliminating Waterfalls (CRITICAL), 2. Bundle Size Optimization (CRITICAL), 3. Server-Side Performance (HIGH), 4. Client-Side Data Fetching (MEDIUM-HIGH), 5. Re-render Optimization (MEDIUM), 6. Rendering Performance (MEDIUM), 7. JavaScript Performance (LOW-MEDIUM), 8. Advanced Patterns (LOW) (+1 more)
 
 ### Community 721 - "Community 721"
 Cohesion: 0.22
-Nodes (8): Example: No-Avatar Motion Graphics, Field Mapping, HeyGen Video Agent Connector, Overview, Prompt Template, Supported Styles, Tips, Workflow
+Nodes (8): Frame Object, Frame Path Convention, Null Fields, Output Format, Result JSON, Top-Level Fields, Transcript Segment, Using with Claude
 
 ### Community 722 - "Community 722"
 Cohesion: 0.22
-Nodes (8): CSS Variables Template, Example: Swiss Style Slides, Field Mapping, frontend-slides Constraints, HTML Slides Connector (frontend-slides), Overview, Tips, Workflow
+Nodes (8): Example: No-Avatar Motion Graphics, Field Mapping, HeyGen Video Agent Connector, Overview, Prompt Template, Supported Styles, Tips, Workflow
 
 ### Community 723 - "Community 723"
 Cohesion: 0.22
-Nodes (9): Assets, Colors, Extensions, Layout, Metadata, Mood, Motion, Optional Fields (+1 more)
+Nodes (8): CSS Variables Template, Example: Swiss Style Slides, Field Mapping, frontend-slides Constraints, HTML Slides Connector (frontend-slides), Overview, Tips, Workflow
 
 ### Community 724 - "Community 724"
+Cohesion: 0.22
+Nodes (9): Assets, Colors, Extensions, Layout, Metadata, Mood, Motion, Optional Fields (+1 more)
+
+### Community 725 - "Community 725"
 Cohesion: 0.39
 Nodes (8): default_cachebuster(), load_manifest(), main(), parse_args(), Namespace, Path, sanitize_cachebuster(), with_cachebuster()
 
-### Community 725 - "Community 725"
+### Community 726 - "Community 726"
 Cohesion: 0.22
 Nodes (8): Filing beads against the right rig, Games & Quiz, intelli-verse-x product portfolio, Skills repos, The product map, The "which product is this in?" decision tree, Tooling & infra, When to use this skill
 
-### Community 726 - "Community 726"
+### Community 727 - "Community 727"
 Cohesion: 0.22
 Nodes (8): Animation Stack in QuizVerse, Common Presets (from UIAnimationPresets.cs), Context Files (load only if needed), Coroutine Sequencing (when DOTween is unavailable), Critical Rules, DOTween Patterns, Memory Safety, When to Use
 
-### Community 727 - "Community 727"
+### Community 728 - "Community 728"
 Cohesion: 0.22
 Nodes (8): Audio Architecture, AudioSource GameObjects (4 in scene), Cleanup, Common Errors, Key Scripts, Patterns, VideoPlayer (1 in scene), When to Use
 
-### Community 728 - "Community 728"
+### Community 729 - "Community 729"
 Cohesion: 0.22
 Nodes (8): HUD Screen Layout（画面配置規則）, Overview, Quick Start, References, Tool Selection Guide, Unity Game UI Toolkit Design Skill, 基本的なUIDocument構成, 配置の原則
 
-### Community 729 - "Community 729"
+### Community 730 - "Community 730"
 Cohesion: 0.22
 Nodes (8): Audio Visualization in Remotion, Bass-Reactive Effects, Loading Audio Data, Postprocessing, Prerequisites, Spectrum Bar Visualization, Volume-Based Waveform, Waveform Visualization
 
-### Community 730 - "Community 730"
+### Community 731 - "Community 731"
 Cohesion: 0.22
 Nodes (8): Alternative, Basic usage, Getting GIF duration, Looping behavior, Playback speed, Sizing and fit, Styling, Using Animated images in Remotion
 
-### Community 731 - "Community 731"
+### Community 732 - "Community 732"
 Cohesion: 0.25
 Nodes (7): Agent Vault — fetching secrets from Infisical at runtime, Caching, Rotation flow, The read pattern, The setup (already done), When NOT to use this, When to use this skill
 
-### Community 732 - "Community 732"
+### Community 733 - "Community 733"
 Cohesion: 0.25
 Nodes (7): AI Marketing Skills (router), Disambiguation (Content Factory), Mandatory agent behavior, Pack map (say → load), Related CF skills, Secrets & safety, Update / reinstall
 
-### Community 733 - "Community 733"
+### Community 734 - "Community 734"
 Cohesion: 0.25
 Nodes (7): Cost & Speed, Deck Generator, How It Works, Output Options, Quick Start, Requirements, Style Presets
 
-### Community 734 - "Community 734"
+### Community 735 - "Community 735"
 Cohesion: 0.25
 Nodes (7): Anomaly Detection, Cash & Liquidity, Cost Structure (% of Revenue), Debt & Obligations, Financial Metrics Guide, Revenue & Profitability, Scaling Thresholds by Revenue
 
-### Community 735 - "Community 735"
+### Community 736 - "Community 736"
 Cohesion: 0.25
 Nodes (7): Cash Flow Statement XLSX Format, Common Parsing Pitfalls, File Detection Heuristics, P&L by Customer CSV Format, P&L Detail XLSX Format, P&L Summary CSV Format, QuickBooks Export Formats
 
-### Community 736 - "Community 736"
+### Community 737 - "Community 737"
 Cohesion: 0.25
 Nodes (7): ASO ideation + screenshot brief, Common failures, Prerequisites, Quality + safety, Surfacing results, The workflow, When to use this skill
 
-### Community 737 - "Community 737"
+### Community 738 - "Community 738"
 Cohesion: 0.25
 Nodes (7): Benchmark Design, Benchmarking Skill, CF Benchmarks, Metrics, Process, Purpose, Quality Gates
 
-### Community 738 - "Community 738"
+### Community 739 - "Community 739"
 Cohesion: 0.25
 Nodes (7): CF-Specific, Cost Drivers, Cost Optimization Skill, Cost-Quality Tradeoff, GPU Optimization, LLM Cost Optimization, Purpose
 
-### Community 739 - "Community 739"
+### Community 740 - "Community 740"
 Cohesion: 0.25
 Nodes (7): CF Integration, Configuration, Diffusion Pipeline Design Skill, Optimization, Pipeline Components, Purpose, Quality Gates
 
-### Community 740 - "Community 740"
+### Community 741 - "Community 741"
 Cohesion: 0.25
 Nodes (7): Continuous Save Cadence, Failure Mode, Hindsight Memory (Content Factory), Other Tools, Project Tags, Quick Start, What to Retain
 
-### Community 741 - "Community 741"
+### Community 742 - "Community 742"
 Cohesion: 0.25
 Nodes (8): 1. Typography as Architecture, 2. Layout & Composition, 3. Motion & Animation, 4. Color & Contrast, 5. Scroll-Based Design, 6. Performance & Loading, 7. Micro-Interactions, The Seven Pillars of 10/10 Design
 
-### Community 742 - "Community 742"
+### Community 743 - "Community 743"
 Cohesion: 0.25
 Nodes (7): Agent workflow, Install (official), Loops Email (Loops.so), Related, Secrets, What each Loops skill covers, When to use (CF / product)
 
-### Community 743 - "Community 743"
+### Community 744 - "Community 744"
 Cohesion: 0.25
 Nodes (7): Continuous Save Cadence, Identity, Layer Split, Mem0 Cursor Memory (Content Factory), Quick Start, Tools (MCP `mem0`), What to Save (Mem0)
 
-### Community 744 - "Community 744"
+### Community 745 - "Community 745"
 Cohesion: 0.25
 Nodes (7): CF-Specific, GPU Techniques, Memory Management Skill, Purpose, Python Techniques, Quality Gates, Targets
 
-### Community 745 - "Community 745"
+### Community 746 - "Community 746"
 Cohesion: 0.25
 Nodes (7): Automated Metrics, CF-Specific, Dimensions, Manual Review, Purpose, Report Template, Visual Evaluation Skill
 
-### Community 746 - "Community 746"
+### Community 747 - "Community 747"
 Cohesion: 0.25
 Nodes (7): CF Integration, Cost, Pipeline, Purpose, Quality Gates, Tools, Voice Generation Skill
 
-### Community 747 - "Community 747"
+### Community 748 - "Community 748"
 Cohesion: 0.25
 Nodes (7): CheckboxProps, IconButtonProps, SelectOption, SelectProps, TextAreaProps, TextInputProps, ToggleProps
 
-### Community 748 - "Community 748"
+### Community 749 - "Community 749"
 Cohesion: 0.25
 Nodes (7): Bead metadata expectations, Common tools, Hermes → Gas Town bridge, The default playbook, The mental model, What NOT to do, When to escalate to humans
 
-### Community 749 - "Community 749"
+### Community 750 - "Community 750"
 Cohesion: 0.25
 Nodes (7): Hindsight Memory, Notes, Other Useful Tools, Quick Start, Troubleshooting, When to Recall (trigger scenarios), When to Retain (write facts back)
 
-### Community 750 - "Community 750"
+### Community 751 - "Community 751"
 Cohesion: 0.25
 Nodes (7): Daily operations, Diagnosing common failures, Install flags (install.sh), Operations: install, lifecycle, diagnose, Path convention, Routing table (what to do based on status), /status JSON fields
 
-### Community 751 - "Community 751"
+### Community 752 - "Community 752"
 Cohesion: 0.25
 Nodes (8): Code Examples, Creating and editing a campaign, Creating and publishing a transactional email, curl, JavaScript SDK, Next.js App Router event send, Python, Stripe webhook example
 
-### Community 752 - "Community 752"
+### Community 753 - "Community 753"
 Cohesion: 0.25
 Nodes (7): Audience And Consent, Core Guidance, Importing And Audience Expansion, Lists vs Segments, Loops-Specific Notes, Preference And Unsubscribe Management, Source URLs
 
-### Community 753 - "Community 753"
+### Community 754 - "Community 754"
 Cohesion: 0.25
 Nodes (8): Add a memory, Delete a single memory, Delete all memories for a user, Get a specific memory, List all memories for a user, Quick Reference, Search memories, Update a memory
 
-### Community 754 - "Community 754"
+### Community 755 - "Community 755"
 Cohesion: 0.25
 Nodes (8): Agent / JSON Mode, Common Edge Cases, Install, Mem0 CLI, Node and Python Parity, References, Related Mem0 Skills, Setup
 
-### Community 756 - "Community 756"
+### Community 757 - "Community 757"
 Cohesion: 0.25
 Nodes (8): Async Client, cURL, Mem0 Platform Quickstart, Next Steps, Prerequisites, Python Setup, Sample Response, TypeScript / JavaScript Setup
 
-### Community 757 - "Community 757"
+### Community 758 - "Community 758"
 Cohesion: 0.25
 Nodes (8): auth, call_limits, conversation (inside conversation_config), guardrails, platform_settings, privacy, Top-Level Fields, widget
 
-### Community 758 - "Community 758"
+### Community 759 - "Community 759"
 Cohesion: 0.25
 Nodes (8): Basic Webhook, Server Implementation (Node.js), Server Implementation (Python), Webhook Request Format, Webhook Response Format, Webhook Tool Options, Webhook Tools, Webhook with Authentication
 
-### Community 759 - "Community 759"
+### Community 760 - "Community 760"
 Cohesion: 0.25
 Nodes (7): Azure AI Speech — Speech-to-Text, Limits & tips, Parameters that matter, Response shape (mapped to the transcriber schema), Setup, Using it in a pipeline, Why Fast Transcription (not Batch)
 
-### Community 760 - "Community 760"
+### Community 761 - "Community 761"
 Cohesion: 0.25
 Nodes (7): Current API, Doubao TTS, OpenMontage Usage, Parameters, Recommended Workflow, Safety, Troubleshooting
 
-### Community 761 - "Community 761"
+### Community 762 - "Community 762"
 Cohesion: 0.25
 Nodes (7): Defaults, Easing, Easing, Stagger, and Function-Based Values, Easing Vocabulary (character & mood), Function-Based Values, gsap.matchMedia (preview only), Stagger
 
-### Community 762 - "Community 762"
+### Community 763 - "Community 763"
 Cohesion: 0.25
 Nodes (7): Creating a Timeline, Inside Sub-Compositions: prefer `fromTo` over `from`, Labels, Nesting Timelines, Playback Control (debug / preview only), Position Parameter, Timelines and Labels
 
-### Community 763 - "Community 763"
+### Community 764 - "Community 764"
 Cohesion: 0.25
 Nodes (7): Contents, CSS Transitions, Hard Rules (CSS), Scene Template, Shader Transitions, Shader Transitions, Transition Catalog
 
-### Community 764 - "Community 764"
+### Community 765 - "Community 765"
 Cohesion: 0.25
 Nodes (7): Discipline (motion-heavy work), inspect, lint, lint, validate, inspect, snapshot, Motion verification (`*.motion.json` sidecar), snapshot, validate
 
-### Community 765 - "Community 765"
+### Community 766 - "Community 766"
 Cohesion: 0.25
 Nodes (7): Asset Preprocessing, benchmark, compositions, docs, info, info, upgrade, compositions, docs, benchmark, telemetry, asset preprocessing, telemetry, upgrade
 
-### Community 766 - "Community 766"
+### Community 767 - "Community 767"
 Cohesion: 0.25
 Nodes (7): Example, Frontmatter (global direction), Notes, Parsed manifest, Per-frame sections, `SCRIPT.md` (out of scope here), Storyboard format — `STORYBOARD.md` + parsed manifest
 
-### Community 767 - "Community 767"
+### Community 768 - "Community 768"
 Cohesion: 0.25
 Nodes (7): Composition Patterns, Contents, Picture-in-Picture (Video in a Frame), Slide Show with Section Headers, Text Behind Subject (transparent webm overlay), Title Card with Fade, Top-Level Composition Example
 
-### Community 768 - "Community 768"
+### Community 769 - "Community 769"
 Cohesion: 0.25
 Nodes (7): Example, Narration & Script, Number Pronunciation, Pacing, Structure, The Opening Line, Tone
 
-### Community 769 - "Community 769"
+### Community 770 - "Community 770"
 Cohesion: 0.25
 Nodes (7): Background music (BGM), Driving it from the request, Failure modes, HeyGen retrieval (default), Local generation (fallback) — Lyria → MusicGen, Lyria knobs (direct recipe use), Mood inference (the generate prompt)
 
-### Community 770 - "Community 770"
+### Community 771 - "Community 771"
 Cohesion: 0.25
 Nodes (7): 1. Install the block, 2. Wire into index.html, 3. Lint and preview, 4. Customize (optional), Scenario, Steps, Worked Example: Adding a Block
 
-### Community 771 - "Community 771"
+### Community 772 - "Community 772"
 Cohesion: 0.29
 Nodes (5): Caption Template, Component Template, Contribute Templates, registry-item.json Templates, VFX Template
 
-### Community 772 - "Community 772"
+### Community 773 - "Community 773"
 Cohesion: 0.29
 Nodes (5): HexagonCubeCorrespondence, InteractiveScene, Visualization showing the correspondence between hexagonal tilings and 3D cube…, Shows how a hexagonal tiling corresponds to viewing 3D cube stacks from above.…, Create three visible faces of a cube (half-cube) that would be seen from the…
 
-### Community 773 - "Community 773"
+### Community 774 - "Community 774"
 Cohesion: 0.29
 Nodes (6): get_lozenge(), LozengeTiling, InteractiveScene, Visualization of lozenge (rhombus) tiling patterns. Shows how lozenges can tile…, Create a lozenge (rhombus) shape with 60/120 degree angles., Demonstrates lozenge tiling of the plane. Shows: 1. A single lozenge with angle…
 
-### Community 774 - "Community 774"
+### Community 775 - "Community 775"
 Cohesion: 0.29
 Nodes (5): InteractiveScene, QubitKetNotation, QubitStateVector, Qubit State Vector Visualization ================================ Shows a 2D…, Shows the relationship between vector coordinates and ket notation.
 
-### Community 775 - "Community 775"
+### Community 776 - "Community 776"
 Cohesion: 0.29
 Nodes (5): Scene, Simple ManimGL test without LaTeX Run: PATH="/Library/TeX/texbin:$PATH" manimgl…, Basic shapes test - no LaTeX required., Simple3D, SimpleTest
 
-### Community 776 - "Community 776"
+### Community 777 - "Community 777"
 Cohesion: 0.25
 Nodes (7): Critical correctness (GSAP / seek), IR → composition, Layout before animation, Motion-Graphics Builder, Reuse-first (the default), The HF contract (non-negotiable), Verify-fix
 
-### Community 777 - "Community 777"
+### Community 778 - "Community 778"
 Cohesion: 0.25
 Nodes (7): asset-fusion — category module (search-driven · the net-new IP), Build (reuse-first + hand-author the affordance), Highlight + circle recipe (the common case), Plan (Director Part 2) — the fusion logic, Render gotchas (codified — skipping these breaks the render), Source (Step 2), Vocabulary / leans on
 
-### Community 778 - "Community 778"
-Cohesion: 0.25
-Nodes (7): Ambiguity — resolve BEFORE localizing, Degradation path (if locate.mjs itself is unavailable), locate — find "X" in an image (no detector API assumed), Notes, Routing — pick the cheapest path that's actually available, The grid loop (you read images between steps), Why this exists
-
 ### Community 779 - "Community 779"
 Cohesion: 0.25
-Nodes (6): Aa(), Ca(), na(), Vb(), wb(), Xb()
+Nodes (7): Ambiguity — resolve BEFORE localizing, Degradation path (if locate.mjs itself is unavailable), locate — find "X" in an image (no detector API assumed), Notes, Routing — pick the cheapest path that's actually available, The grid loop (you read images between steps), Why this exists
 
 ### Community 780 - "Community 780"
 Cohesion: 0.25
@@ -5165,192 +5164,192 @@ Cohesion: 0.33
 Nodes (6): File shape, Frame block — required fields, Group entry — exactly one of three kinds, Rules, Self-check (the planner runs `validate-plan.mjs`), STORYBOARD.md format — frames → groups
 
 ### Community 958 - "Community 958"
-Cohesion: 0.33
-Nodes (5): Build, Frame worker — per-frame composition author (music-to-video), Inputs (your dispatch context), Self-check, What comes fixed — realize it as given
+Cohesion: 0.40
+Nodes (6): assignGlobal(), emptyGlobals(), findFrontmatterRange(), parseFrontmatter(), parseFrontmatterEntries(), stripQuotes()
 
 ### Community 959 - "Community 959"
 Cohesion: 0.33
-Nodes (5): Calculate Metadata, Default Props, Folders, Nesting compositions within another, Stills
+Nodes (5): Build, Frame worker — per-frame composition author (music-to-video), Inputs (your dispatch context), Self-check, What comes fixed — realize it as given
 
 ### Community 960 - "Community 960"
 Cohesion: 0.33
-Nodes (6): Adding AI voiceover to a Remotion composition, Delaying audio start, Dynamic composition duration with calculateMetadata, Generating audio with ElevenLabs, Prerequisites, Rendering audio in the component
+Nodes (5): Calculate Metadata, Default Props, Folders, Nesting compositions within another, Stills
 
 ### Community 961 - "Community 961"
 Cohesion: 0.33
-Nodes (5): How to render and evaluate, Tier 2 — title-image-outro, Translation walk-through, What it tests, Why threshold 0.95?
+Nodes (6): Adding AI voiceover to a Remotion composition, Delaying audio start, Dynamic composition duration with calculateMetadata, Generating audio with ElevenLabs, Prerequisites, Rendering audio in the component
 
 ### Community 962 - "Community 962"
 Cohesion: 0.33
-Nodes (6): Pattern: `<TransitionSeries>` is `<Series>` with overlap, Presentation table, Timing translations, Transitions translation: @remotion/transitions → HF crossfades / shader-transitions, When the source uses a custom Presentation, When to use HF shader-transitions
+Nodes (5): How to render and evaluate, Tier 2 — title-image-outro, Translation walk-through, What it tests, Why threshold 0.95?
 
 ### Community 963 - "Community 963"
 Cohesion: 0.33
-Nodes (5): ElevenLabs API Key Setup, Step 0: Check for an existing API key first, Step 1: Request the API key, Step 2: Validate and configure, Workflow
+Nodes (6): Pattern: `<TransitionSeries>` is `<Series>` with overlap, Presentation table, Timing translations, Transitions translation: @remotion/transitions → HF crossfades / shader-transitions, When the source uses a custom Presentation, When to use HF shader-transitions
 
 ### Community 964 - "Community 964"
 Cohesion: 0.33
-Nodes (5): 1. Component Architecture (architecture), 2. State Management (state), 3. Implementation Patterns (patterns), 4. React 19 APIs (react19), Sections
+Nodes (5): ElevenLabs API Key Setup, Step 0: Check for an existing API key first, Step 1: Request the API key, Step 2: Validate and configure, Workflow
 
 ### Community 965 - "Community 965"
 Cohesion: 0.33
-Nodes (6): 1.1 Defer Await Until Needed, 1.2 Dependency-Based Parallelization, 1.3 Prevent Waterfall Chains in API Routes, 1.4 Promise.all() for Independent Operations, 1.5 Strategic Suspense Boundaries, 1. Eliminating Waterfalls
+Nodes (5): 1. Component Architecture (architecture), 2. State Management (state), 3. Implementation Patterns (patterns), 4. React 19 APIs (react19), Sections
 
 ### Community 966 - "Community 966"
 Cohesion: 0.33
-Nodes (5): Creating a New Rule, Getting Started, React Best Practices, Rule File Structure, Structure
+Nodes (6): 1.1 Defer Await Until Needed, 1.2 Dependency-Based Parallelization, 1.3 Prevent Waterfall Chains in API Routes, 1.4 Promise.all() for Independent Operations, 1.5 Strategic Suspense Boundaries, 1. Eliminating Waterfalls
 
 ### Community 967 - "Community 967"
 Cohesion: 0.33
-Nodes (6): 11. Media: video, audio, TTS, Audio mixer, Background removal, Transcription, TTS (Kokoro-82M, local), Video compositing
+Nodes (5): Creating a New Rule, Getting Started, React Best Practices, Rule File Structure, Structure
 
 ### Community 968 - "Community 968"
 Cohesion: 0.33
-Nodes (6): 15. Player — `<hyperframes-player>` web component, Attributes, Events, Media mirror, Public API, Runtime auto-inject
+Nodes (6): 11. Media: video, audio, TTS, Audio mixer, Background removal, Transcription, TTS (Kokoro-82M, local), Video compositing
 
 ### Community 969 - "Community 969"
+Cohesion: 0.33
+Nodes (6): 15. Player — `<hyperframes-player>` web component, Attributes, Events, Media mirror, Public API, Runtime auto-inject
+
+### Community 970 - "Community 970"
 Cohesion: 0.53
 Nodes (5): default_marketplace_path(), main(), parse_args(), Namespace, Path
 
-### Community 970 - "Community 970"
+### Community 971 - "Community 971"
 Cohesion: 0.33
 Nodes (6): 1.2.1(a) Age Rating and Access Restrictions, 1.2.1 Creator Content, 1.2 User-Generated Content, Content That Results in Removal, Incidental Mature "NSFW" Content, Required UGC Features (ALL MANDATORY)
 
-### Community 971 - "Community 971"
+### Community 972 - "Community 972"
 Cohesion: 0.33
 Nodes (5): Context Files (load only if needed), Core Patterns, Key Interfaces, Non-Goals (NEVER do without explicit request), When to Use
 
-### Community 972 - "Community 972"
+### Community 973 - "Community 973"
 Cohesion: 0.33
 Nodes (5): Custom Inspector Pattern, Editor Window Pattern, Existing Editor Scripts, Rules, When to Use
 
-### Community 973 - "Community 973"
+### Community 974 - "Community 974"
 Cohesion: 0.33
 Nodes (5): Context Files (load only if needed), Implementation Flow, Required Patterns, Script Templates, When to Use
 
-### Community 974 - "Community 974"
+### Community 975 - "Community 975"
 Cohesion: 0.33
 Nodes (5): Context Files (load only if needed), Economy Stack, Key GameObjects, Rules, When to Use
 
-### Community 975 - "Community 975"
+### Community 976 - "Community 976"
 Cohesion: 0.33
 Nodes (5): 19 Quiz Modes (under Screen_Canvas/Quizzes/), Context Files (load only if needed), Data Pipeline, Key GameObjects, When to Use
 
-### Community 976 - "Community 976"
+### Community 977 - "Community 977"
 Cohesion: 0.33
 Nodes (5): Dashboard Links, Deep-linking to a specific paywall, Deep-linking to a specific user, With applicationId, Without applicationId
 
-### Community 977 - "Community 977"
+### Community 978 - "Community 978"
 Cohesion: 0.33
 Nodes (6): 1. `sw.applications_rep`, Key Details, Multi-Platform App Pattern, Purpose, Schema, Vetted Queries
 
-### Community 978 - "Community 978"
+### Community 979 - "Community 979"
 Cohesion: 0.33
 Nodes (6): 3. `sw.demand_score_events_rep`, Demand Score Distribution (from app 16022, 7-day window), Key Details, Purpose, Schema, Vetted Queries
 
-### Community 979 - "Community 979"
+### Community 980 - "Community 980"
 Cohesion: 0.33
 Nodes (6): 6. `sw.user_attributes_rep`, Common Attribute Keys (app 1), Key Details, Purpose, Schema, Vetted Queries
 
-### Community 980 - "Community 980"
+### Community 981 - "Community 981"
 Cohesion: 0.33
 Nodes (6): 7. `open_revenue.attributed_events_by_ts_rep`, ARPU (Revenue per Paywall Open), Dedup Pattern for Revenue, Purpose, Schema, Trial Event Definitions
 
-### Community 981 - "Community 981"
+### Community 982 - "Community 982"
 Cohesion: 0.33
 Nodes (5): Dashboard Links, Documentation, Platform doc prefixes, SDK Source (for debugging), Webhooks & Integrations
 
-### Community 982 - "Community 982"
+### Community 983 - "Community 983"
 Cohesion: 0.33
 Nodes (5): Context Files (load only if needed), Conventions, MCP Test Commands, Test Structure, When to Use
 
-### Community 983 - "Community 983"
+### Community 984 - "Community 984"
 Cohesion: 0.33
 Nodes (6): 1. PanelSettings未設定, 2. flex-grow: 0のまま, 3. Safe Area座標系の混同, 4. @media queriesの使用, 5. パフォーマンスを考慮しないスタイル, Common Mistakes
 
-### Community 984 - "Community 984"
+### Community 985 - "Community 985"
 Cohesion: 0.33
 Nodes (5): Calculate Metadata, Default Props, Folders, Nesting compositions within another, Stills
 
-### Community 985 - "Community 985"
+### Community 986 - "Community 986"
 Cohesion: 0.33
 Nodes (5): Bézier easing, Composing interpolations, Easing direction for enter/exit animations, Examples (copy-paste curves), Preset easings (`Easing.in` / `Easing.out` / named curves)
 
-### Community 986 - "Community 986"
+### Community 987 - "Community 987"
 Cohesion: 0.33
 Nodes (5): Canary examples (QuizVerse), Must not, Order (mandatory), Return, Sid Harness Agent
 
-### Community 987 - "Community 987"
+### Community 988 - "Community 988"
 Cohesion: 0.33
 Nodes (5): Code review (after build), Must not, Plan critic (before build), Return, Sid Review / Plan Critic Agent
 
-### Community 988 - "Community 988"
+### Community 989 - "Community 989"
 Cohesion: 0.33
 Nodes (5): Budgets, Exit, `/loop` arming, Sid Orchestra Loop, Stages
 
-### Community 989 - "Community 989"
+### Community 990 - "Community 990"
 Cohesion: 0.33
 Nodes (5): Behavior and Options, Communication, Notes, Scripts, Skill Installer
 
-### Community 990 - "Community 990"
+### Community 991 - "Community 991"
 Cohesion: 0.33
 Nodes (5): Conventions, Overview, Story Initialization, When to Use, Workflow
 
-### Community 991 - "Community 991"
+### Community 992 - "Community 992"
 Cohesion: 0.33
 Nodes (5): CLI Access, Commands, Failure Handling, Overview, Story Maintenance
 
-### Community 992 - "Community 992"
+### Community 993 - "Community 993"
 Cohesion: 0.33
 Nodes (6): API Verification Workflows, Batch API Lookup, Finding Shaders and Materials in Project, Full API Verification Before Writing Code, Manual and Package Documentation, Verifying APIs Across Unity Versions
 
-### Community 993 - "Community 993"
+### Community 994 - "Community 994"
 Cohesion: 0.33
 Nodes (6): Asset Management Workflows, Create and Apply Material, Create Procedural Texture, Instantiate Prefab in Scene, Organize Assets into Folders, Search and Process Assets
 
-### Community 994 - "Community 994"
+### Community 995 - "Community 995"
 Cohesion: 0.33
 Nodes (6): Camera & Cinemachine Workflows, Camera Inspection Workflow, Camera Without Cinemachine, Multi-Camera Setup with Blending, Scene View Screenshot Workflow, Setting Up a Third-Person Camera
 
-### Community 995 - "Community 995"
+### Community 996 - "Community 996"
 Cohesion: 0.33
 Nodes (5): Artifact Template, Current State, Description, Function, History
 
-### Community 996 - "Community 996"
+### Community 997 - "Community 997"
 Cohesion: 0.33
 Nodes (5): Conflicts, Faction Template, Members, Power Base, Purpose
 
-### Community 997 - "Community 997"
+### Community 998 - "Community 998"
 Cohesion: 0.70
 Nodes (4): die(), guardrail_gateway_dispatch(), log(), install-worker-launchd.sh script
 
-### Community 998 - "Community 998"
+### Community 999 - "Community 999"
 Cohesion: 0.40
 Nodes (4): Content Pillars — B2B Marketing Company, Pillar 1: Unified Platform (Product), Pillar 2: Embedded Delivery (Service Model), Pillar 3: Force Multiplier (Aspiration)
 
-### Community 999 - "Community 999"
+### Community 1000 - "Community 1000"
 Cohesion: 0.40
 Nodes (4): Always, Content Voice Rules — Founder Voice, Dedup Rule, Never
 
-### Community 1000 - "Community 1000"
+### Community 1001 - "Community 1001"
 Cohesion: 0.40
 Nodes (4): Context, Expert Panel: Instagram Visual Content, Scoring Criteria, The 6 Experts
 
-### Community 1001 - "Community 1001"
+### Community 1002 - "Community 1002"
 Cohesion: 0.40
 Nodes (4): Context, Expert Panel: X Articles (Long-Form X Posts), Scoring Criteria, The 10 Experts
 
-### Community 1002 - "Community 1002"
+### Community 1003 - "Community 1003"
 Cohesion: 0.40
 Nodes (4): Calendar Time Formula, Coding Efficiency by Company Type, Organizational Overhead, Weekly Time Allocation (Typical Developer)
 
-### Community 1003 - "Community 1003"
+### Community 1004 - "Community 1004"
 Cohesion: 0.40
 Nodes (4): Full Team Cost Calculation, Full Team Multiplier, Supporting Role Ratios, Team Composition by Company Stage
-
-### Community 1005 - "Community 1005"
-Cohesion: 0.40
-Nodes (5): 5. Build Tools & Frameworks, Astro (Content Sites), Next.js (React Apps), Nuxt (Vue Apps), Vite (Recommended for Simple Sites)
 
 ### Community 1006 - "Community 1006"
 Cohesion: 0.40
@@ -5489,100 +5488,100 @@ Cohesion: 0.40
 Nodes (5): Frame skeleton (Step 2) — read the music, lay out the frames, How to lay out frames (run in order), Self-check, The trust boundary (read this first), What the skeleton looks like
 
 ### Community 1041 - "Community 1041"
-Cohesion: 0.60
-Nodes (5): Animation(), Da(), la(), Ua(), Va()
-
-### Community 1042 - "Community 1042"
 Cohesion: 0.40
 Nodes (5): kb(), ob(), ra(), rb(), Za()
 
-### Community 1043 - "Community 1043"
+### Community 1042 - "Community 1042"
 Cohesion: 0.40
 Nodes (4): Integrate in one pass, Pairs with, The one trap: never give the word a second source, Using `text-spectral-rays` — it OWNS its wordmark
 
-### Community 1044 - "Community 1044"
+### Community 1043 - "Community 1043"
 Cohesion: 0.40
 Nodes (4): Checking if a video can be decoded, The `canDecode()` function, Usage, Using with Blob
 
-### Community 1045 - "Community 1045"
+### Community 1044 - "Community 1044"
 Cohesion: 0.40
 Nodes (5): Getting audio duration, Getting audio duration with Mediabunny, In Node.js and Bun, Usage, Using with staticFile in Remotion
 
-### Community 1046 - "Community 1046"
+### Community 1045 - "Community 1045"
 Cohesion: 0.40
 Nodes (5): Getting video dimensions, Getting video dimensions with Mediabunny, Usage, Using with local files, Using with staticFile in Remotion
 
-### Community 1047 - "Community 1047"
+### Community 1046 - "Community 1046"
 Cohesion: 0.40
 Nodes (5): Getting video duration, Getting video duration with Mediabunny, In Node.js and Bun, Usage, Video files from the public/ directory
 
-### Community 1048 - "Community 1048"
+### Community 1047 - "Community 1047"
 Cohesion: 0.40
 Nodes (4): Displaying a Lottie file, Prerequisites, Styling and animating, Using Lottie Animations in Remotion
 
-### Community 1049 - "Community 1049"
+### Community 1048 - "Community 1048"
 Cohesion: 0.40
 Nodes (4): How to render and evaluate, Tier 1 — title-card-fade, Translation walk-through, What it tests
 
-### Community 1051 - "Community 1051"
+### Community 1050 - "Community 1050"
 Cohesion: 0.40
 Nodes (4): Cases, Tier 4 — escape-hatch, Validation, What it tests
 
-### Community 1052 - "Community 1052"
+### Community 1051 - "Community 1051"
 Cohesion: 0.40
 Nodes (5): committed_transcript, committed_transcript_with_timestamps, partial_transcript, Received Events (Server → Client), session_started
 
-### Community 1053 - "Community 1053"
+### Community 1052 - "Community 1052"
 Cohesion: 0.40
 Nodes (5): Commit Strategies, Event Types, JavaScript (Client-Side with React), Python (Server-Side), Real-Time Streaming
 
-### Community 1054 - "Community 1054"
+### Community 1053 - "Community 1053"
 Cohesion: 0.40
 Nodes (5): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching
 
-### Community 1055 - "Community 1055"
+### Community 1054 - "Community 1054"
 Cohesion: 0.40
 Nodes (4): Guidelines Source, How It Works, Usage, Web Interface Guidelines
 
-### Community 1056 - "Community 1056"
+### Community 1055 - "Community 1055"
 Cohesion: 0.40
 Nodes (4): chime, description, duration, file
 
-### Community 1057 - "Community 1057"
+### Community 1056 - "Community 1056"
 Cohesion: 0.40
 Nodes (5): 16. Engine + Producer — rendering pipeline, Encoding controls, Engine subsystems, Output formats, Producer-only
 
-### Community 1058 - "Community 1058"
+### Community 1057 - "Community 1057"
 Cohesion: 0.40
 Nodes (5): 5. Visual effects + textures, Glow, Grain / noise, Light / film, Marker/emphasis patterns (css-patterns.md)
 
-### Community 1059 - "Community 1059"
+### Community 1058 - "Community 1058"
 Cohesion: 0.40
 Nodes (5): 6. Caption techniques, Animation styles, Audio sources for caption timing, Per-word styling triggers, Positioning helpers
 
-### Community 1060 - "Community 1060"
+### Community 1059 - "Community 1059"
 Cohesion: 0.40
 Nodes (5): 7. Audio-reactive animation, Banned in audio-reactive, Data shape, Extraction, Mappings documented
 
-### Community 1061 - "Community 1061"
+### Community 1060 - "Community 1060"
 Cohesion: 0.40
 Nodes (4): Payoff, Promise Template, Setup, Tracking Notes
 
-### Community 1062 - "Community 1062"
+### Community 1061 - "Community 1061"
 Cohesion: 0.40
 Nodes (4): Evidence, Question, Question Template, Resolution Plan
 
-### Community 1063 - "Community 1063"
+### Community 1062 - "Community 1062"
 Cohesion: 0.40
 Nodes (4): Hard rules, IVX QuestX Fraud Pulse, Output, Tool plan
 
-### Community 1064 - "Community 1064"
+### Community 1063 - "Community 1063"
 Cohesion: 0.40
 Nodes (4): Common Patterns (QuizVerse-Specific), Context Files (load only if needed), Investigation Protocol, When to Use
 
-### Community 1065 - "Community 1065"
+### Community 1064 - "Community 1064"
 Cohesion: 0.40
 Nodes (4): Audit Checklist, Context Files (load only if needed), Guardrails, When to Use
+
+### Community 1065 - "Community 1065"
+Cohesion: 0.40
+Nodes (5): 4. `sw.events_hr_agg`, Key Details, Purpose, Schema, Vetted Queries
 
 ### Community 1066 - "Community 1066"
 Cohesion: 0.40
@@ -5590,107 +5589,107 @@ Nodes (5): 5. `sw.subscription_status_rep`, Key Details, Purpose, Schema, Vetted
 
 ### Community 1067 - "Community 1067"
 Cohesion: 0.40
-Nodes (5): 8. `open_revenue.paywall_open_events_agg`, Key Details, Purpose, Schema, Vetted Queries
+Nodes (5): 1. Diegetic（ダイエジェティック）, 2. Non-Diegetic（ノンダイエジェティック）, 3. Spatial（スペーシャル）, 4. Meta（メタ）, Game UI Types（ゲームUI分類）
 
 ### Community 1068 - "Community 1068"
 Cohesion: 0.40
-Nodes (5): 1. Diegetic（ダイエジェティック）, 2. Non-Diegetic（ノンダイエジェティック）, 3. Spatial（スペーシャル）, 4. Meta（メタ）, Game UI Types（ゲームUI分類）
+Nodes (5): 1. インラインスタイルを避ける, 2. :hover擬似クラスの最適化, 3. 深いネストを避ける, 4. VisualElementのプール, Performance Best Practices
 
 ### Community 1069 - "Community 1069"
 Cohesion: 0.40
-Nodes (5): 1. インラインスタイルを避ける, 2. :hover擬似クラスの最適化, 3. 深いネストを避ける, 4. VisualElementのプール, Performance Best Practices
+Nodes (5): C# VisualElement API, PanelSettings Scale Modes, Tool Reference, USS Flexbox Properties, USS Size Properties
 
 ### Community 1070 - "Community 1070"
 Cohesion: 0.40
-Nodes (5): C# VisualElement API, PanelSettings Scale Modes, Tool Reference, USS Flexbox Properties, USS Size Properties
+Nodes (4): Google Fonts with @remotion/google-fonts, Prerequisites, Using fonts in Remotion, Using in components
 
 ### Community 1071 - "Community 1071"
 Cohesion: 0.40
-Nodes (4): Google Fonts with @remotion/google-fonts, Prerequisites, Using fonts in Remotion, Using in components
+Nodes (4): Available options, Loading a local font, Loading multiple weights, Prerequisites
 
 ### Community 1072 - "Community 1072"
 Cohesion: 0.40
-Nodes (4): Available options, Loading a local font, Loading multiple weights, Prerequisites
+Nodes (4): Displaying a Lottie file, Prerequisites, Styling and animating, Using Lottie Animations in Remotion
 
 ### Community 1073 - "Community 1073"
 Cohesion: 0.40
-Nodes (4): Displaying a Lottie file, Prerequisites, Styling and animating, Using Lottie Animations in Remotion
+Nodes (4): Duties, Lease rules, Message format, Sid Communication (Bus) Agent
 
 ### Community 1074 - "Community 1074"
 Cohesion: 0.40
-Nodes (4): Duties, Lease rules, Message format, Sid Communication (Bus) Agent
+Nodes (4): Anti-hallucination, Duties, Sid Master (Conductor), Voice
 
 ### Community 1075 - "Community 1075"
 Cohesion: 0.40
-Nodes (4): Anti-hallucination, Duties, Sid Master (Conductor), Voice
+Nodes (4): Duties, Lane card format, Must not, Sid Planning Agent
 
 ### Community 1076 - "Community 1076"
 Cohesion: 0.40
-Nodes (4): Duties, Lane card format, Must not, Sid Planning Agent
+Nodes (4): Duties, Must not, Must return (stamped), Sid Research Agent
 
 ### Community 1077 - "Community 1077"
 Cohesion: 0.40
-Nodes (4): Duties, Must not, Must return (stamped), Sid Research Agent
+Nodes (4): Duties, Must not, Must return, Sid Working Agent
 
 ### Community 1078 - "Community 1078"
 Cohesion: 0.40
-Nodes (4): Duties, Must not, Must return, Sid Working Agent
+Nodes (4): Active run, <ENDED_AT> · <LANE_ID> · <ROLE>, Log entries, Sid Orchestra Lane Log
 
 ### Community 1079 - "Community 1079"
 Cohesion: 0.40
-Nodes (4): Active run, <ENDED_AT> · <LANE_ID> · <ROLE>, Log entries, Sid Orchestra Lane Log
+Nodes (5): Add OpenUPM Registry and Install Package, Install a Package and Verify, Install from Git URL (e.g., NuGetForUnity), Package Management Workflows, Safe Package Removal
 
 ### Community 1080 - "Community 1080"
 Cohesion: 0.40
-Nodes (5): Add OpenUPM Registry and Install Package, Install a Package and Verify, Install from Git URL (e.g., NuGetForUnity), Package Management Workflows, Safe Package Removal
+Nodes (5): Basic ProBuilder Scene Build, Edit-Verify Loop Pattern, Known Limitations, ProBuilder vs Primitives Decision, ProBuilder Workflows
 
 ### Community 1081 - "Community 1081"
 Cohesion: 0.40
-Nodes (5): Basic ProBuilder Scene Build, Edit-Verify Loop Pattern, Known Limitations, ProBuilder vs Primitives Decision, ProBuilder Workflows
+Nodes (5): Batch Discovery (Multi-Search), Batch Operations, Cleanup Pattern, Mass Object Creation with Variations, Mass Property Update
 
 ### Community 1082 - "Community 1082"
 Cohesion: 0.40
-Nodes (5): Batch Discovery (Multi-Search), Batch Operations, Cleanup Pattern, Mass Object Creation with Variations, Mass Property Update
+Nodes (5): Detection, EventSystem — New Input System, EventSystem — Old Input Manager, Input System: Old vs New, When `activeInputHandler` is `"Both"`
 
 ### Community 1083 - "Community 1083"
 Cohesion: 0.40
-Nodes (5): Detection, EventSystem — New Input System, EventSystem — Old Input Manager, Input System: Old vs New, When `activeInputHandler` is `"Both"`
-
-### Community 1084 - "Community 1084"
-Cohesion: 0.40
 Nodes (5): Fresh Scene Before Building, Physics Requirements for Trigger-Based Interactions, Scene Generator Build Workflow, Script Overwrites with `manage_script(action="update")`, Wiring Object References Between Components
 
-### Community 1085 - "Community 1085"
+### Community 1084 - "Community 1084"
 Cohesion: 0.50
 Nodes (3): AI Creators, Business Creators, Competitor Channel Sets
 
-### Community 1086 - "Community 1086"
+### Community 1085 - "Community 1085"
 Cohesion: 0.50
 Nodes (3): Expert Panel: LinkedIn Posts, Scoring Criteria, The 10 Experts
 
-### Community 1087 - "Community 1087"
+### Community 1086 - "Community 1086"
 Cohesion: 0.50
 Nodes (3): Expert Panel: Newsletter, Scoring Criteria, The 10 Experts
 
-### Community 1088 - "Community 1088"
+### Community 1087 - "Community 1087"
 Cohesion: 0.50
 Nodes (3): Expert Panel: Recruiting, Scoring Criteria, The 10 Experts
 
-### Community 1089 - "Community 1089"
+### Community 1088 - "Community 1088"
 Cohesion: 0.50
 Nodes (3): Expert Panel: SEO Strategy, Scoring Criteria, The 10 Experts
 
-### Community 1090 - "Community 1090"
+### Community 1089 - "Community 1089"
 Cohesion: 0.50
 Nodes (3): Expert Panel: YouTube Shorts, Scoring Criteria, The 10 Experts
 
-### Community 1091 - "Community 1091"
+### Community 1090 - "Community 1090"
 Cohesion: 0.50
 Nodes (3): Hourly Productivity Rates by Code Type, Lines Per Hour (Senior Developer, 5+ years), Overhead Multipliers
 
-### Community 1092 - "Community 1092"
+### Community 1091 - "Community 1091"
 Cohesion: 0.50
 Nodes (3): Auto-load (Read all, then act), Debug Skills Pack, Flow reminder
+
+### Community 1092 - "Community 1092"
+Cohesion: 0.50
+Nodes (4): 4. Hello Monday (Copenhagen/NYC), Design Philosophy, Interactive Pattern, Technical Fingerprint
 
 ### Community 1093 - "Community 1093"
 Cohesion: 0.50
@@ -5836,179 +5835,175 @@ Nodes (4): Equations to Render, Geometric Objects, Graphs/Plots, Mathematical Co
 Cohesion: 0.50
 Nodes (4): Catalog, How to combine, Motion-primitive catalog — the free-compose menu, Timing & latency (applies to every primitive)
 
-### Community 1129 - "Community 1129"
+### Community 1131 - "Community 1131"
 Cohesion: 0.50
-Nodes (4): endsFrameSection(), openFrameSection(), parseFrames(), parseStoryboard()
+Nodes (3): Text animations, Typewriter Effect, Word Highlighting
 
 ### Community 1132 - "Community 1132"
 Cohesion: 0.50
-Nodes (3): Text animations, Typewriter Effect, Word Highlighting
+Nodes (3): Rendering Transparent Videos, Transparent ProRes, Transparent WebM (VP9)
 
 ### Community 1133 - "Community 1133"
 Cohesion: 0.50
-Nodes (3): Rendering Transparent Videos, Transparent ProRes, Transparent WebM (VP9)
-
-### Community 1134 - "Community 1134"
-Cohesion: 0.50
 Nodes (3): Trim and Delay, Trim the Beginning, Trim the End
 
-### Community 1138 - "Community 1138"
+### Community 1137 - "Community 1137"
 Cohesion: 0.50
 Nodes (3): Files, License, SFX Credits
 
-### Community 1139 - "Community 1139"
+### Community 1138 - "Community 1138"
 Cohesion: 0.50
 Nodes (4): click, description, duration, file
 
-### Community 1140 - "Community 1140"
+### Community 1139 - "Community 1139"
 Cohesion: 0.50
 Nodes (4): click-soft, description, duration, file
 
-### Community 1141 - "Community 1141"
+### Community 1140 - "Community 1140"
 Cohesion: 0.50
 Nodes (4): error, description, duration, file
 
-### Community 1142 - "Community 1142"
+### Community 1141 - "Community 1141"
 Cohesion: 0.50
 Nodes (4): glitch-1, description, duration, file
 
-### Community 1143 - "Community 1143"
+### Community 1142 - "Community 1142"
 Cohesion: 0.50
 Nodes (4): glitch-2, description, duration, file
 
-### Community 1144 - "Community 1144"
+### Community 1143 - "Community 1143"
 Cohesion: 0.50
 Nodes (4): glitch-3, description, duration, file
 
-### Community 1145 - "Community 1145"
+### Community 1144 - "Community 1144"
 Cohesion: 0.50
 Nodes (4): impact-bass-1, description, duration, file
 
-### Community 1146 - "Community 1146"
+### Community 1145 - "Community 1145"
 Cohesion: 0.50
 Nodes (4): impact-bass-2, description, duration, file
 
-### Community 1147 - "Community 1147"
+### Community 1146 - "Community 1146"
 Cohesion: 0.50
 Nodes (4): key-press, description, duration, file
 
-### Community 1148 - "Community 1148"
+### Community 1147 - "Community 1147"
 Cohesion: 0.50
 Nodes (4): notification, description, duration, file
 
-### Community 1149 - "Community 1149"
+### Community 1148 - "Community 1148"
 Cohesion: 0.50
 Nodes (4): ping, description, duration, file
 
-### Community 1150 - "Community 1150"
+### Community 1149 - "Community 1149"
 Cohesion: 0.50
 Nodes (4): pop, description, duration, file
 
-### Community 1151 - "Community 1151"
+### Community 1150 - "Community 1150"
 Cohesion: 0.50
 Nodes (4): riser, description, duration, file
 
-### Community 1152 - "Community 1152"
+### Community 1151 - "Community 1151"
 Cohesion: 0.50
 Nodes (4): sparkle, description, duration, file
 
-### Community 1153 - "Community 1153"
+### Community 1152 - "Community 1152"
 Cohesion: 0.50
 Nodes (4): typing, description, duration, file
 
-### Community 1154 - "Community 1154"
+### Community 1153 - "Community 1153"
 Cohesion: 0.50
 Nodes (4): whoosh, description, duration, file
 
-### Community 1155 - "Community 1155"
+### Community 1154 - "Community 1154"
 Cohesion: 0.50
 Nodes (4): whoosh-cinematic, description, duration, file
 
-### Community 1156 - "Community 1156"
+### Community 1155 - "Community 1155"
 Cohesion: 0.50
 Nodes (4): whoosh-short, description, duration, file
 
-### Community 1157 - "Community 1157"
+### Community 1156 - "Community 1156"
 Cohesion: 0.50
 Nodes (4): 12. Registry — 51 blocks + 4 components + 8 examples, Blocks by category, Components (4 reusable snippets), Examples (8 starter projects)
 
-### Community 1158 - "Community 1158"
+### Community 1157 - "Community 1157"
 Cohesion: 0.50
 Nodes (4): 1. Composition fundamentals, Data attributes recognized by the runtime, Resolution presets, Timeline contract
 
-### Community 1159 - "Community 1159"
+### Community 1158 - "Community 1158"
 Cohesion: 0.50
 Nodes (4): 8. HTML-in-canvas, Available patterns, Capability, Experimental VFX blocks using this
 
-### Community 1160 - "Community 1160"
+### Community 1159 - "Community 1159"
 Cohesion: 0.50
 Nodes (3): Current model map, Latest model guide, Maintenance notes
 
-### Community 1161 - "Community 1161"
+### Community 1160 - "Community 1160"
 Cohesion: 0.83
 Nodes (3): resolve-latest-model-info script, is_compatible_node(), run_if_compatible()
 
-### Community 1162 - "Community 1162"
+### Community 1161 - "Community 1161"
 Cohesion: 0.50
 Nodes (3): Context Files (load only if needed), Release Checklist, When to Use
 
-### Community 1163 - "Community 1163"
+### Community 1162 - "Community 1162"
 Cohesion: 0.50
 Nodes (4): 1. モバイルレスポンシブUIの作成, 2. スクロールビューの作成, 3. データバインディング, Common Workflows
 
-### Community 1164 - "Community 1164"
+### Community 1163 - "Community 1163"
 Cohesion: 0.50
 Nodes (4): Mobile Responsive Design, Safe Area対応, レスポンシブレイアウト構成, 動的レイアウト切り替え（Media Query代替）
 
-### Community 1167 - "Community 1167"
+### Community 1166 - "Community 1166"
 Cohesion: 0.50
 Nodes (3): Dynamic image paths, Getting image dimensions, Sizing and positioning
 
-### Community 1168 - "Community 1168"
+### Community 1167 - "Community 1167"
 Cohesion: 0.50
 Nodes (3): Text animations, Typewriter Effect, Word Highlighting
 
-### Community 1169 - "Community 1169"
+### Community 1168 - "Community 1168"
 Cohesion: 0.50
 Nodes (3): Rendering Transparent Videos, Transparent ProRes, Transparent WebM (VP9)
 
-### Community 1170 - "Community 1170"
+### Community 1169 - "Community 1169"
 Cohesion: 0.50
 Nodes (3): Trim and Delay, Trim the Beginning, Trim the End
 
-### Community 1171 - "Community 1171"
+### Community 1170 - "Community 1170"
 Cohesion: 0.50
 Nodes (3): Review Agent, Review the change, Write the result
 
-### Community 1172 - "Community 1172"
+### Community 1171 - "Community 1171"
 Cohesion: 0.50
 Nodes (3): Duties, Must not, Sid Generation Agent
 
-### Community 1173 - "Community 1173"
+### Community 1172 - "Community 1172"
 Cohesion: 0.50
 Nodes (3): Field descriptions and constraints, Full example, openai.yaml fields (full example + descriptions)
 
-### Community 1174 - "Community 1174"
+### Community 1173 - "Community 1173"
 Cohesion: 0.50
 Nodes (4): Editor Control Tools, execute_menu_item, manage_editor, read_console
 
-### Community 1175 - "Community 1175"
+### Community 1174 - "Community 1174"
 Cohesion: 0.50
 Nodes (4): Clone and Arrange Objects, Create Complete Scene from Scratch, Populate Scene with Grid of Objects, Scene Creation Workflows
 
-### Community 1202 - "Community 1202"
+### Community 1201 - "Community 1201"
 Cohesion: 0.67
 Nodes (3): 3. Shader transitions — @hyperframes/shader-transitions, Public API, The 14 shaders
 
-### Community 1203 - "Community 1203"
+### Community 1202 - "Community 1202"
 Cohesion: 0.67
 Nodes (3): 4. CSS scene transitions (30+ named patterns), By category, Timing presets
 
-### Community 1207 - "Community 1207"
+### Community 1206 - "Community 1206"
 Cohesion: 0.67
 Nodes (3): Docs Tools, `unity_docs`, `unity_reflect`
 
-### Community 1208 - "Community 1208"
+### Community 1207 - "Community 1207"
 Cohesion: 0.67
 Nodes (3): find_gameobjects, manage_scene, Scene Tools
 
@@ -6020,7 +6015,7 @@ Nodes (3): find_gameobjects, manage_scene, Scene Tools
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `3D Text Depth Layers` connect `Community 209` to `Community 69`?**
+- **Why does `3D Text Depth Layers` connect `Community 209` to `Community 68`?**
   _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `create-boards.sh script`, `install-config.sh script`, `queue-proof-run.sh script` to the rest of the system?**
   _9714 weakly-connected nodes found - possible documentation gaps or missing edges._
